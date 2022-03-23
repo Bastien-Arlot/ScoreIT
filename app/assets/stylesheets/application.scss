@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ :root {
+
+    --prim :#9e45d1  ;
+    --second : #66ced6;
+    --dark :#020003 ;
+    --medium-ligth :#777578 ;
+    --light : #f5f0fa;
+
+    --danger : rgb(255, 44, 44);
+    --success : rgb(50, 163, 5);
+ 
+  }
+
+
+
+body {
+    background-color: #f5f0fa;
+    margin: auto;
+}
+
+
+h1,h2,h3 {
+    font-family: 'Ubuntu';
+}
+
+p, h4 {
+    font-family: 'Maven Pro';
+}
