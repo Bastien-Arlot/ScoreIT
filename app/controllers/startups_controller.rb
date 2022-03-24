@@ -7,7 +7,11 @@ class StartupsController < ApplicationController
   end
 
   def create
-    @startup = Startup.new(startup_params)
+    @startup = Startup.new(
+      'user_id' => current_user.id,
+      'name' => params[:name],
+      'description' => params[:description]
+    )
     if @startup.save
       redirect_to root_path
     else
@@ -19,9 +23,5 @@ class StartupsController < ApplicationController
   def update
   end
 
-  private
 
-  def startup_params
-    params.require(:startup).permit(:user_id, :name, :description)
-  end
 end

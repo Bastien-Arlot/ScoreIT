@@ -19,4 +19,14 @@ class Score < ApplicationRecord
   has_one :category_strategy, dependent: :destroy
   has_one :answer_strategy, through: :category_strategy
 
+  after_create :create_category_team
+
+  def create_category_team
+    @category_team = CategoryTeam.new(
+      'score_id' => self.id
+    )
+    @category_team.save
+  end
+
+
 end
