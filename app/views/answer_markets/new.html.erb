@@ -1,0 +1,95 @@
+<div class="container">
+
+  <h1>Market</h1>
+
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+    <!--QUESTION 1-->
+    <p class="mt-3">Votre projet a-t-il une concurrence directe ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_market_1, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 1%><br>
+      <%= label_tag :answer_market_1, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 2%>
+
+    <!--QUESTION 2-->
+    <p class="mt-3">L’agressivité des prix est-elle un instrument pour gagner des parts de marché ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_market_2, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 1%><br>
+      <%= label_tag :answer_market_2, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 2%>
+
+    <!--QUESTION 3-->
+    <p class="mt-3" >Quelle est la taille du marché actuellement ciblé ?<span style="color:red">*</span> <i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="Il s'agit d'évaluer l'ensemble du Chiffre d'Affaires des acteurs de votre marché sur votre zone géographique."></i></p>
+      <%= range_field_tag :answer_market_3, in: 1...100, step: 1, class:"d-inline"%>
+      <p class="mx-3 d-inline align-top"><span id='sizemarket' >50</span> Millions d'euros</p>
+
+    <!--QUESTION 4-->
+    <p class="mt-3" >Quelle part du marché comptez-vous occuper dans 3 ans ? (En %)<span style="color:red">*</span></p>
+      <%= range_field_tag :answer_market_4, in: 1...100, step: 1, class:"d-inline"%>
+      <p class="mx-3 d-inline align-top"><span id='target' >50</span> %</p>
+
+    <!--QUESTION 5-->
+    <p class="mt-3" >A combien de défi(s), problème(s), manque(s) du marché souhaitez-vous répondre avec votre projet ?<span style="color:red">*</span></p>
+    <% 10.times do |t|%>
+      <%= radio_button_tag :answer_market_5, t%>
+      <%= label_tag :answer_market_5, t, class:"mx-2" %>
+    <br>
+    <%end%>
+      <%= radio_button_tag :answer_market_5, 10%>
+      <%= label_tag :answer_market_5, "10+", class:"mx-2" %><br>
+
+    <!--QUESTION 6-->
+    <p class="mt-3">La réglementation permet-elle des expérimentations dans votre domaine ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_market_2, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 1%><br>
+      <%= label_tag :answer_market_2, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 2%>
+
+    <!--QUESTION 7-->
+    <p class="mt-3" >Combien de clients avez-vous à date ?<span style="color:red">*</span></p>
+    <% 10.times do |t|%>
+      <%= radio_button_tag :answer_market_7, t%>
+      <%= label_tag :answer_market_7, t, class:"mx-2" %>
+    <br>
+    <%end%>
+      <%= radio_button_tag :answer_market_7, label_tag%>
+      <%= label_tag :answer_market_7, "10+", class:"mx-2" %><br>
+    
+    <!--QUESTION 8-->
+    <p class="mt-3" >Quel est le niveau de satisfaction de vos clients ? (sur une échelle de 1 à 10)<span style="color:red">*</span></p>
+    <% 10.times do |t|%>
+      <%= radio_button_tag :answer_market_8, t%>
+      <%= label_tag :answer_market_8, t, class:"mx-2" %>
+    <br>
+    <%end%>
+      <%= radio_button_tag :answer_market_8, 10%>
+      <%= label_tag :answer_market_8, "10+", class:"mx-2" %><br>
+
+
+    <br>
+    <small style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+      <%= submit_tag "Valider mes réponses", class:"btn btn-primary mb-5" %>
+  <% end %>
+
+</div>
+
+<script src="https://kit.fontawesome.com/4923ee3a4a.js" crossorigin="anonymous"></script>
+
+<script>
+let i = document.getElementById("answer_market_4");
+let y = document.getElementById("answer_market_3")
+
+y.addEventListener("change", function() {
+  console.log(typeof y.value)
+  if (y.value == "100"){
+      document.getElementById("sizemarket").textContent = "+ 100";
+  }else{
+      document.getElementById("sizemarket").textContent = y.value;
+  }
+}, false);
+
+i.addEventListener("change", function() {
+    document.getElementById("target").textContent = i.value;
+}, false);
+
+</script>
