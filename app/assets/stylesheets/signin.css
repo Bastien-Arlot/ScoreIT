@@ -1,0 +1,73 @@
+.signin-container{
+
+    height: 99vh;
+    width: 98vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.signin-title {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    height: 50px;
+    font-family: Ubuntu;
+    color: var(--prim);
+}
+
+.signin-box{
+    
+    height: 70%;
+    width: 70%;
+    background: linear-gradient(180deg, rgba(128,101,230,1) 0%, rgba(133,200,255,1) 100%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 17px;
+    
+}
+
+.signin-form-group{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.signin-form-check{
+    margin-left: 15px;
+}
+
+.signin-submit {
+    margin-top: 40px;
+    text-align: center;
+}
+.btn-home{
+    margin-top: 10px;
+    justify-self: right;
+}
+.btn-signinform{
+    margin-top: 10px!important;
+    background-color: none!important;
+    height: 90px!important;
+    width: 130px!important;
+    border-color: var(--prim)!important;
+    border-radius: 20px!important;
+    border-width: 1.5px!important;
+    font-family: Ubuntu!important;
+    color: var(--prim)!important;
+    font-size: 20px!important;
+}
+
+.btn-signinform:hover{
+    background-color: var(--prim)!important;
+    color: var(--light)!important;
+    border-color: none!important;
+}
+
+.links-submit-form{
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
