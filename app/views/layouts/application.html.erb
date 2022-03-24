@@ -7,9 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
+     <!-------- Font-awesome --------->
+      <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!--------- Bootstrap ------------>
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
-
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
   </head>
 
@@ -18,5 +22,11 @@
     <p class="alert"><%= alert %></p>
     <%= render 'layouts/navbar'  %>
     <%= yield %>
+     <%= render 'layouts/footer' %>
   </body>
+
+  <script
+      src="https://kit.fontawesome.com/5179dfb87c.js"
+      crossorigin="anonymous"
+    ></script>
 </html>
