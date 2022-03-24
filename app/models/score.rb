@@ -5,7 +5,7 @@ class Score < ApplicationRecord
   has_one :answer_team, through: :category_team
   
   has_one :category_finance, dependent: :destroy
-
+  has_one :answer_finance, through: :category_finance
 
 
 end
