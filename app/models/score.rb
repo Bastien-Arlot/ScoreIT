@@ -17,5 +17,6 @@ class Score < ApplicationRecord
   has_one :answer_innovation, through: :category_innovation
 
   has_one :category_strategy, dependent: :destroy
+  has_one :answer_strategy, through: :category_strategy
 
 end
