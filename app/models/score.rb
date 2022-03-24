@@ -7,5 +7,7 @@ class Score < ApplicationRecord
   has_one :category_finance, dependent: :destroy
   has_one :answer_finance, through: :category_finance
 
+  has_one :category_offer, dependent: :destroy
+
 
 end
