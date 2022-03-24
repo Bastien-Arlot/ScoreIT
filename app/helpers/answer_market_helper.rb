@@ -1,0 +1,2 @@
+module AnswerMarketHelper
+end
