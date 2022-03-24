@@ -19,4 +19,13 @@ class Score < ApplicationRecord
   has_one :category_strategy, dependent: :destroy
   has_one :answer_strategy, through: :category_strategy
 
+  after_create :create_category_market
+
+  def create_category_market
+    @category_market = CategoryMarket.new(
+      'score_id' => self.id
+    )
+    @category_market.save
+  end
+
 end
