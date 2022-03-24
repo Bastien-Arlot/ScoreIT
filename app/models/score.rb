@@ -11,5 +11,6 @@ class Score < ApplicationRecord
   has_one :answer_market, through: :category_market
   
   has_one :category_offer, dependent: :destroy
+  has_one :answer_offer, through: :category_offer
 
 end
