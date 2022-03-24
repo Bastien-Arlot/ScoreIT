@@ -1,0 +1,2 @@
+class CategoryTeam < ApplicationRecord
+end
