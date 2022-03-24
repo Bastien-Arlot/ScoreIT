@@ -51,8 +51,6 @@ ActiveRecord::Schema.define(version: 2022_03_24_124403) do
     t.integer "answer_market_6"
     t.integer "answer_market_7"
     t.integer "answer_market_8"
-    t.integer "answer_market_9"
-    t.integer "answer_market_10"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_market_id"
