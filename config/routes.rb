@@ -25,8 +25,12 @@ Rails.application.routes.draw do
         resources :answer_strategies, only: [:new, :create]
       end
 
+      resources :category_offers, except: [:index, :new, :create, :update, :destroy, :show] do
+        resources :answer_offers, only: [:new, :create]
+      end
+
     end
-    
+
   end
 
 

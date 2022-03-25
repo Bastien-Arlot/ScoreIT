@@ -16,8 +16,6 @@ class AnswerMarket < ApplicationRecord
 
   def scoring_market
 
-    puts "$"*800
-
     @total = 0
 
     if self.answer_market_1 == 1
@@ -41,7 +39,7 @@ class AnswerMarket < ApplicationRecord
     end
     puts @total
 
-    case self.answer_market_5 
+    case self.answer_market_5
       when 0
         @total = @total
       when 2..10
@@ -56,7 +54,7 @@ class AnswerMarket < ApplicationRecord
     end
     puts @total
 
-    case self.answer_market_7 
+    case self.answer_market_7
       when 2..9
         @total = @total + 1
       when 10
@@ -66,7 +64,7 @@ class AnswerMarket < ApplicationRecord
     end
     puts @total
 
-    case self.answer_market_8 
+    case self.answer_market_8
       when 5..7
         @total = @total + 1
       when 8..10

@@ -9,7 +9,6 @@ class CreateAnswerOffers < ActiveRecord::Migration[5.2]
       t.integer :answer_offer_6
       t.integer :answer_offer_7
       t.integer :answer_offer_8
-      t.integer :answer_offer_9
 
       t.timestamps
     end
