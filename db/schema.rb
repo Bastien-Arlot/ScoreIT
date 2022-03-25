@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2022_03_24_124403) do
     t.integer "answer_finance_3"
     t.integer "answer_finance_4"
     t.integer "answer_finance_5"
-    t.integer "answer_finance_6"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_finance_id"

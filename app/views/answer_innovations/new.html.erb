@@ -4,62 +4,62 @@
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-  <!--QUESTION 1-->
-  <p class="mt-3">Bénéficiez-vous du statut de "Jeune Entreprise Innovante" ou d'un prix récompensant votre innovation technologique ? <span style="color:red">*</span></p>
-  <%= label_tag :answer_innovation_1, "Oui", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_1, 1%><br>
-  <%= label_tag :answer_innovation_1, "Non", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_1, 2%>
+    <!--QUESTION 1-->
+    <p class="mt-3">Bénéficiez-vous du statut de "Jeune Entreprise Innovante" ou d'un prix récompensant votre innovation technologique ? <span style="color:red">*</span></p>
+      <%= label_tag :answer_innovation_1, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_1, 1%><br>
+      <%= label_tag :answer_innovation_1, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_1, 2%>
 
-  <!--QUESTION 2-->
-  <p class="mt-3">Depuis quand l’innovation est-elle en cours de développement ?<span style="color:red">*</span></p>
-  <%= label_tag :answer_innovation_2, "1 mois", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_2, 1%><br>
-  <%= label_tag :answer_innovation_2, "2 mois", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_2, 1%><br>
-  <%= label_tag :answer_innovation_2, "3 mois", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_2, 1%><br>
-  <%= label_tag :answer_innovation_2, "6 mois ou plus", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_2, 2%>
-
-
-  <!--QUESTION 3-->
-  <p class="mt-3" >Quelles sont vos dépenses annuelles moyennes en Recherche & Développement ?<span style="color:red">*</span> <i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="Il s'agit d'évaluer l'ensemble du Chiffre d'Affaires des acteurs de votre marché sur votre zone géographique."></i></p>
-  <%= range_field_tag :answer_innovation_3, min: 0...100, step: 1, class:"d-inline"%>
-  <p class="mx-3 d-inline align-top"><span id='sizeinnovation' >50</span> <span id='p3'> 000€</span></p>
-
-  <!--QUESTION 4-->
-  <p class="mt-3" >Votre technologie innovante est-elle brevetable ?<span style="color:red">*</span></p>
-  <%= label_tag :answer_innovation_4, "Oui", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_4, 1%><br>
-  <%= label_tag :answer_innovation_4, "Non", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_4, 2%><br>
+    <!--QUESTION 2-->
+    <p class="mt-3">Depuis quand l’innovation est-elle en cours de développement ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_innovation_2, "1 mois", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_2, 1%><br>
+      <%= label_tag :answer_innovation_2, "2 mois", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_2, 1%><br>
+      <%= label_tag :answer_innovation_2, "3 mois", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_2, 1%><br>
+      <%= label_tag :answer_innovation_2, "6 mois ou plus", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_2, 2%>
 
 
-  <!--QUESTION 5-->
-  <p class="mt-3" >Combien de brevets technologiques autour de votre innovation avez-vous déposé à ce jour ?<span style="color:red">*</span></p>
-  <% 5.times do |t|%>
-  <%= radio_button_tag :answer_innovation_5, t%>
-  <%= label_tag :answer_innovation_5, t, class:"mx-2" %>
-  <% end %>
+    <!--QUESTION 3-->
+    <p class="mt-3" >Quelles sont vos dépenses annuelles moyennes en Recherche & Développement ?<span style="color:red">*</span> <i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="Il s'agit d'évaluer l'ensemble du Chiffre d'Affaires des acteurs de votre marché sur votre zone géographique."></i></p>
+      <%= range_field_tag :answer_innovation_3, min: 0...100, step: 1, class:"d-inline"%>
+      <p class="mx-3 d-inline align-top"><span id='sizeinnovation' >50</span> <span id='p3'> 000€</span></p>
 
-  <!--QUESTION 6-->
-  <p class="mt-3">Dans le cadre de vos activités, récoltez-vous des données personnelles ? <span style="color:red">*</span></p>
-  <%= label_tag :answer_innovation_6, "Oui", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_6, 1%><br>
-  <%= label_tag :answer_innovation_6, "Non", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_6, 2%>
+    <!--QUESTION 4-->
+    <p class="mt-3" >Votre technologie innovante est-elle brevetable ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_innovation_4, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_4, 1%><br>
+      <%= label_tag :answer_innovation_4, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_4, 2%><br>
 
-  <!--QUESTION 7-->
-  <p class="mt-3" >Avez-vous mis en place des mesures de protection des données personnelles (déclaration CNIL, conformité RGDP, ...) ?<span style="color:red">*</span></p>
-  <%= label_tag :answer_innovation_7, "Oui", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_7, 1%><br>
-  <%= label_tag :answer_innovation_7, "Non", class:"mx-2" %>
-  <%= radio_button_tag :answer_innovation_7, 2%>
 
-  <br>
-  <small style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
-  <%= submit_tag "Valider mes réponses", class:"btn btn-primary mb-5" %>
+    <!--QUESTION 5-->
+    <p class="mt-3" >Combien de brevets technologiques autour de votre innovation avez-vous déposé à ce jour ?<span style="color:red">*</span></p>
+      <% 5.times do |t|%>
+      <%= radio_button_tag :answer_innovation_5, t%>
+      <%= label_tag :answer_innovation_5, t, class:"mx-2" %>
+      <% end %>
+
+    <!--QUESTION 6-->
+    <p class="mt-3">Dans le cadre de vos activités, récoltez-vous des données personnelles ? <span style="color:red">*</span></p>
+      <%= label_tag :answer_innovation_6, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_6, 1%><br>
+      <%= label_tag :answer_innovation_6, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_6, 2%>
+
+    <!--QUESTION 7-->
+    <p class="mt-3" >Avez-vous mis en place des mesures de protection des données personnelles (déclaration CNIL, conformité RGDP, ...) ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_innovation_7, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_7, 1%><br>
+      <%= label_tag :answer_innovation_7, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_innovation_7, 2%>
+
+    <br>
+    <small style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+      <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn btn-primary mb-5 " %>
   <% end %>
 
 </div>
@@ -69,8 +69,11 @@
 <script>
   let y = document.getElementById("answer_innovation_3")
 
+  window.addEventListener("load", function() {
+    y.value = "50";
+  });
+
   y.addEventListener("change", function() {
-    console.log(typeof y.value)
     if (y.value == "100"){
       document.getElementById("sizeinnovation").textContent = "+ 100";
       document.getElementById("p3").textContent = " 000€";

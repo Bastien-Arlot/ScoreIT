@@ -25,6 +25,10 @@ Rails.application.routes.draw do
         resources :answer_strategies, only: [:new, :create]
       end
 
+      resources :category_finances, except: [:index, :new, :create, :show, :update] do
+        resources :answer_finances, only: [:new, :create]
+      end
+
     end
     
   end
