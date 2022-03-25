@@ -3,7 +3,7 @@ class Startup < ApplicationRecord
   has_many :scores, dependent: :destroy
 
   validates :user_id, uniqueness: true
-  
+
   after_create :do_score
 
   def do_score
@@ -12,5 +12,5 @@ class Startup < ApplicationRecord
     )
     @score.save
   end
-
+  
 end

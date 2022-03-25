@@ -8,10 +8,11 @@ class StartupsController < ApplicationController
 
   def create
     @startup = Startup.new(
-      'user_id' => current_user.id,
       'name' => params[:name],
-      'description' => params[:description]
+      'description' => params[:description],
+      'user_id' => current_user.id
     )
+    
     if @startup.save
       redirect_to root_path
     else
@@ -22,6 +23,5 @@ class StartupsController < ApplicationController
 
   def update
   end
-
-
+  
 end
