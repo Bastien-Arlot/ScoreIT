@@ -12,7 +12,6 @@ class CreateAnswerStrategies < ActiveRecord::Migration[5.2]
       t.integer :answer_strategy_9
       t.integer :answer_strategy_10
       t.integer :answer_strategy_11
-      t.integer :answer_strategy_12
 
       t.timestamps
     end
