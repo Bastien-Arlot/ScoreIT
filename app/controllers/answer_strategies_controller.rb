@@ -7,7 +7,7 @@ class AnswerStrategiesController < ApplicationController
   def create
     @answer_strategy = AnswerStrategy.new(answer_strategy_params)
     if  @answer_strategy.save
-      redirect_to root_path
+      redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
       puts @answer_strategy.errors.full_messages
       render 'new'

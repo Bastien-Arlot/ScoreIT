@@ -6,7 +6,7 @@ class AnswerInnovationsController < ApplicationController
   def create
     @answer_innovation = AnswerInnovation.new(answer_innovation_params)
     if  @answer_innovation.save
-      redirect_to root_path
+      redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
       puts @answer_innovation.errors.full_messages
       render 'new'

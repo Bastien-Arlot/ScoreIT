@@ -6,7 +6,7 @@ class AnswerOffersController < ApplicationController
   def create
     @answer_offer = AnswerOffer.new(answer_offer_params)
     if  @answer_offer.save
-      redirect_to root_path
+      redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
       puts @answer_offer.errors.full_messages
       render 'new'

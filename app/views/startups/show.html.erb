@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <h1>Tableau de bord</h1>
+  <br/>
+  <% @scores.each do |score|%>
+    <% if score.startup_id == @startup.id%>
+      <%= link_to "Voir mes scores", startup_score_path(@startup.id, score.id) , class:"btn btn-lg rounded-pill", id:"jumbutton"%>
+    <% end %>
+  <% end %>
+  <% if !@startup.scores.last.name.nil?  %>
+    <h2 style="font-size:5rem;">Total :<%= @startup.scores.last.total_100 %>/100</h2>
+  <% end %>
+</div>

@@ -1,4 +1,6 @@
 class StartupsController < ApplicationController
+  before_action :authenticate_user
+
   def index
   end
 
@@ -21,7 +23,24 @@ class StartupsController < ApplicationController
     end
   end
 
+def show 
+
+  @startup = Startup.find(current_user.id) 
+  @scores = Score.all
+end
+
+
+
   def update
   end
   
+private
+
+def authenticate_user
+  unless current_user
+    flash[:danger] = "Please log in."
+    redirect_to new_user_session_path
+  end
+end
+
 end
