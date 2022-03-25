@@ -1,36 +1,31 @@
-
 <section class="header">
-    <header class="p-3 bg-nav ">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-    
-            <a href="<%=root_path%>" >
-                 <%= image_tag "logo.png", :size => "60x60" %> 
-            </a>
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li></li>
-            </ul>
-    
-                <div class="text-end">
-                    <a href="#" class="btn btn-nav">Equipe</a>
-                    <a href="#" class="btn btn-nav">Nous contacter</a>
-                    <span></span>
-
-                    <%  if user_signed_in? %>
-                 <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
-
-                    <% else %>
-                 <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
-                <span></span>
-                <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signin"%> 
-                <span></span>
-                </div>
-            </div>
-            </div>
-            <% end %>
-      </header>
-      
-      <div class="string"></div>
-  </section>
-
-  
+  <header class="p-3 bg-nav ">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="<%=root_path%>" >
+          <%= image_tag "logo.png", :size => "60x60" %>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li></li>
+        </ul>
+        <div class="text-end">
+          <a href="#" class="btn btn-nav">Equipe</a>
+          <a href="#" class="btn btn-nav">Nous contacter</a>
+          <span></span>
+          <% if user_signed_in? && !current_user.startup.nil? %>
+            <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+          <% end %>
+          <%  if user_signed_in? %>
+            <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
+          <% else %>
+            <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
+            <span></span>
+            <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signin"%>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </header>
+  <div class="string"></div>
+</section>

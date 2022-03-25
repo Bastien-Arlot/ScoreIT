@@ -7,7 +7,7 @@ class AnswerMarketsController < ApplicationController
   def create
     @answer_market = AnswerMarket.new(answer_market_params)
     if  @answer_market.save
-      redirect_to root_path
+      redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
       puts @answer_market.errors.full_messages
       render 'new'

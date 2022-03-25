@@ -7,7 +7,7 @@ class AnswerTeamsController < ApplicationController
   def create
     @answer_team = AnswerTeam.new(answer_team_params)
     if  @answer_team.save
-      redirect_to root_path
+      redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
       puts @answer_team.errors.full_messages
       render 'new'

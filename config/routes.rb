@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     omniauth_callbacks:  'users/omniauth_callbacks'
   }
 
-  resources :startups, only: [:index, :new, :create, :update] do
+  resources :startups, only: [:index, :new, :create, :update, :show] do
 
-    resources :scores, only: [:index, :new, :create, :update] do
+    resources :scores, only: [:index, :new, :create, :update, :show] do
 
       resources :category_markets, except: [:index, :new, :create, :update, :destroy, :show] do
         resources :answer_markets, only: [:new, :create]
