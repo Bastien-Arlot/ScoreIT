@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AnswerMarketControllerTest < ActionDispatch::IntegrationTest
+class AnswerMarketsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -170,8 +170,11 @@
 <%= radio_button_tag :answer_team_9, 2 %>
 
 <p>Combien de personnes ont quitté le projet depuis son lancement?</p>
-<%= label_tag :answer_team_10, "1" %>
+<%= label_tag :answer_team_10, "0" %>
 <%= radio_button_tag :answer_team_10, 1, :checked => true %>
+
+<%= label_tag :answer_team_10, "1" %>
+<%= radio_button_tag :answer_team_10, 2 %>
 
 <%= label_tag :answer_team_10, "2" %>
 <%= radio_button_tag :answer_team_10, 2 %>
@@ -179,10 +182,7 @@
 <%= label_tag :answer_team_10, "3" %>
 <%= radio_button_tag :answer_team_10, 2 %>
 
-<%= label_tag :answer_team_10, "4" %>
-<%= radio_button_tag :answer_team_10, 2 %>
-
-<%= label_tag :answer_team_10, "5+" %>
+<%= label_tag :answer_team_10, "4+" %>
 <%= radio_button_tag :answer_team_10, 2 %>
 
   <%= submit_tag "Soumettre" %>

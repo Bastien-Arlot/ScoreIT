@@ -1,4 +1,4 @@
-class AnswerMarketController < ApplicationController
+class AnswerMarketsController < ApplicationController
 
   def new
     @answer_market = AnswerMarket.new
@@ -16,8 +16,6 @@ class AnswerMarketController < ApplicationController
   end
 
   private
-
-
 
   def answer_market_params
     params.permit(:answer_market_1, :answer_market_2, :answer_market_3, :answer_market_4, :answer_market_5, :answer_market_6, :answer_market_7, :answer_market_8, :category_market_id)
