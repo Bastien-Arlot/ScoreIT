@@ -79,11 +79,6 @@
 
 
 
-<%  if !current_user.startup.nil? %>
-<%= link_to 'new score', new_score_path %>
-<%= link_to 'form', new_score_category_human_answer_human_path(current_user.startup.scores.last.id, current_user.startup.scores.last.category_human.id) %>
-<%= link_to 'form', new_score_category_finance_answer_finance_path(current_user.startup.scores.last.id, current_user.startup.scores.last.category_finance.id) %>
 
-<%  end %>
 
 <% end %>
