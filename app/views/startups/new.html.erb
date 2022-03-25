@@ -2,27 +2,22 @@
 <% @startup.errors.full_messages.each do |message| %>
 <%= message %>
 <%end%>
-<%end%>
+<%end%>    
+    <div class="title-container">
+        <h3>Bienvenue sur le formulaire de votre Start Up</h3>
+    </div>
+    <div class="form-container">
+        <div class="col-lg-6 banner-startupform" id="left">
+        <%= image_tag "startup-form.png", class:"img-banner-startup" %>
 
-<%= form_tag startups_path, method: "post" do %>
-  <div class="container contact " style="height:80vh">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="contact-info">
-          <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
-          <h2>Votre Startup</h2>
-          <h6>Créez votre startup dès à présent</h6>
+            <h3 class="startupform-h3">Renseignez les champs afin que votre start-up soit connue de tous</h3>
         </div>
-      </div>
-      <div class="col-md-9">
-        <div class="contact-form">
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="fname">Titre :</label>
-            <div class="col-sm-10">
-            <%= text_field_tag 'name', @startup.name , class: "form-control area"%>
-            </div>
-
-            <% if @startup.errors.any? %>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 formside" id="right">
+            <%= form_tag startups_path, method: "post" do %>
+                <div class="form-group col-md-8 col-sm-8 col-xs-8">
+                  <label for="exampleFormControlInput1" >Nom de l'entreprise</label>
+                  <%= text_field_tag 'name', @startup.name , class: "form-control", id:"StartupName"%>
+                  <% if @startup.errors.any? %>
               <% @startup.errors.full_messages.each do |message| %>
                 <% if message == "Title can't be blank" %>
                     <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
@@ -43,37 +38,24 @@
                 <% end %>
               <% end %>
             <% end %>
-
-
-
-          </div>
-          <div class="form-group mt-3">
-            <label class="control-label col-sm-2" for="lname">Description :</label>
-            <div class="col-sm-10">
-            <%= text_area_tag 'description', @startup.description , class: "form-control area"%>
-            </div>
-
-            <% if @startup.errors.any? %>
+                    
+                    <label for="exampleFormControlTextarea1">Description</label>
+                    <%= text_area_tag 'description', @startup.description , class: "form-control", id:"StartupDescription"%>
+                    <% if @startup.errors.any? %>
               <% @startup.errors.full_messages.each do |message| %>
                 <% if message == "Content can't be blank" %>
                     <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
                 <% end %>
               <% end %>
             <% end %>
+                <div class="col-sm-offset-2 col-sm-10 mt-3">
+                <%= submit_tag "Envoyer", id:"jumbutton", class:"btn btn-lg rounded-pill" %>
 
-          </div>
-
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10 mt-3">
-            <%= submit_tag "Envoyer", class: 'button' %>
-
-            </div>
-          </div>
+                </div>
+                </div>
+                
+            <% end %>
+              
         </div>
-      </div>
+        
     </div>
-    <a href="<%= root_path %>" class="btn btn-primary m-3 rounded-pill mt-4">👈 Revenir au menu</a>
-  </div>
-
-
-<% end %>
