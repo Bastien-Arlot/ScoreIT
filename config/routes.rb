@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/private'
+  get 'home/team'
+
   devise_for :users, controllers: {
     omniauth_callbacks:  'users/omniauth_callbacks'
   }
@@ -28,9 +30,13 @@ Rails.application.routes.draw do
       resources :category_finances, except: [:index, :new, :create, :show, :update] do
         resources :answer_finances, only: [:new, :create]
       end
+      
+      resources :category_offers, except: [:index, :new, :create, :update, :destroy, :show] do
+        resources :answer_offers, only: [:new, :create]
+      end
 
     end
-    
+
   end
 
 
