@@ -1,5 +1,5 @@
 class AnswerFinance < ApplicationRecord
-  belongs_to :category_finance 
+  belongs_to :category_finance
 
   validates :answer_finance_1, presence: true
   validates :answer_finance_2, presence: true
@@ -14,7 +14,7 @@ class AnswerFinance < ApplicationRecord
   def scoring_finance
     @total = 0
 
-    case self.answer_finance_1 
+    case self.answer_finance_1
       when 0..3
         @total = @total - 1
       when 3..10
@@ -34,7 +34,7 @@ class AnswerFinance < ApplicationRecord
     end
     puts @total
 
-    case self.answer_finance_4 
+    case self.answer_finance_4
       when 1..2
         @total = @total + 1
       else
@@ -58,7 +58,7 @@ class AnswerFinance < ApplicationRecord
 
     @category = CategoryFinance.find(self.category_finance_id)
     @category.update(total_notation_finance:@total, max_notation_finance:@total_max, total_100_finance:@total_100.floor)
-  
+
   end
 
 end
