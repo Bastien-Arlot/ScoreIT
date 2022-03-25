@@ -85,7 +85,6 @@ ActiveRecord::Schema.define(version: 2022_03_24_124403) do
     t.integer "answer_strategy_9"
     t.integer "answer_strategy_10"
     t.integer "answer_strategy_11"
-    t.integer "answer_strategy_12"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_strategy_id"
