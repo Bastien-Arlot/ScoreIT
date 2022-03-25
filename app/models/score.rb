@@ -21,6 +21,8 @@ class Score < ApplicationRecord
 
   after_create :create_category_market
   after_create :create_category_team
+  after_create :create_category_strategy
+
 
 
   def create_category_market
@@ -35,6 +37,13 @@ class Score < ApplicationRecord
       'score_id' => self.id
     )
     @category_team.save
+  end
+
+  def create_category_strategy
+    @category_strategy = CategoryStrategy.new(
+      'score_id' => self.id
+    )
+    @category_strategy.save
   end
 
 end
