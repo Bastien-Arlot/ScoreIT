@@ -66,3 +66,8 @@ gem 'stripe'
 gem 'letter_opener'
 gem 'rubocop'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
