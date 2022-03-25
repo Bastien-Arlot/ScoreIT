@@ -68,7 +68,7 @@
 
     <br>
     <small style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
-      <%= submit_tag "Valider mes réponses", class:"btn btn-primary mb-5" %>
+      <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn btn-primary mb-5 " %>
   <% end %>
 
 </div>
@@ -77,10 +77,14 @@
 
 <script>
 let i = document.getElementById("answer_market_4");
-let y = document.getElementById("answer_market_3")
+let y = document.getElementById("answer_market_3");
+
+window.addEventListener("load", function() {
+    y.value = "50";
+    i.value = "50";
+  });
 
 y.addEventListener("change", function() {
-  console.log(typeof y.value)
   if (y.value == "100"){
       document.getElementById("sizemarket").textContent = "+ 100";
   }else{

@@ -6,7 +6,6 @@ class CreateAnswerFinances < ActiveRecord::Migration[5.2]
       t.integer :answer_finance_3
       t.integer :answer_finance_4
       t.integer :answer_finance_5
-      t.integer :answer_finance_6
 
       t.timestamps
     end

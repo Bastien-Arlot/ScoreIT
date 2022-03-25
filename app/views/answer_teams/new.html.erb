@@ -14,7 +14,7 @@
 <%= radio_button_tag :answer_team_1, 1%>
 
 <%= label_tag :answer_team_1, "5" %>
-<%= radio_button_tag :answer_team_1, 1, :checked => true %>
+<%= radio_button_tag :answer_team_1, 1%>
 
 <%= label_tag :answer_team_1, "6" %>
 <%= radio_button_tag :answer_team_1, 2 %>
@@ -46,7 +46,7 @@
 <%= radio_button_tag :answer_team_2, 1%>
 
 <%= label_tag :answer_team_2, "5" %>
-<%= radio_button_tag :answer_team_2, 1, :checked => true %>
+<%= radio_button_tag :answer_team_2, 1%>
 
 <%= label_tag :answer_team_2, "6" %>
 <%= radio_button_tag :answer_team_2, 2 %>
@@ -77,7 +77,7 @@
 <%= radio_button_tag :answer_team_3, 1%>
 
 <%= label_tag :answer_team_3, "5" %>
-<%= radio_button_tag :answer_team_3, 1, :checked => true %>
+<%= radio_button_tag :answer_team_3, 1%>
 
 <%= label_tag :answer_team_3, "6" %>
 <%= radio_button_tag :answer_team_3, 2 %>
@@ -108,7 +108,7 @@
 <%= radio_button_tag :answer_team_4, 1%>
 
 <%= label_tag :answer_team_4, "5" %>
-<%= radio_button_tag :answer_team_4, 1, :checked => true %>
+<%= radio_button_tag :answer_team_4, 1%>
 
 <%= label_tag :answer_team_4, "6" %>
 <%= radio_button_tag :answer_team_4, 2 %>
@@ -127,14 +127,14 @@
 
 <p>La startup possède plus de 2 dirigeants avec une complémentarité de compétence. </p>
 <%= label_tag :answer_team_5, "Oui" %>
-<%= radio_button_tag :answer_team_5, 1, :checked => true %>
+<%= radio_button_tag :answer_team_5, 1%>
 
 <%= label_tag :answer_team_5, "Non" %>
 <%= radio_button_tag :answer_team_5, 2 %>
 
 <p>Combien de salariés employez-vous (Équivalent Temps Plein) actuellement? </p>
 <%= label_tag :answer_team_6, "0" %>
-<%= radio_button_tag :answer_team_6, 1, :checked => true %>
+<%= radio_button_tag :answer_team_6, 1%>
 
 <%= label_tag :answer_team_6, "1" %>
 <%= radio_button_tag :answer_team_6, 2 %>
@@ -144,7 +144,7 @@
 
 <p>Avec combien de freelances collaborez-vous actuellement? </p>
 <%= label_tag :answer_team_7, "0" %>
-<%= radio_button_tag :answer_team_7, 1, :checked => true %>
+<%= radio_button_tag :answer_team_7, 1%>
 
 <%= label_tag :answer_team_7, "1" %>
 <%= radio_button_tag :answer_team_7, 2 %>
@@ -154,7 +154,7 @@
 
 <p>Combien d'apprenants (stagiaires, apprentis, etc) employez-vous actuellement? </p>
 <%= label_tag :answer_team_8, "0" %>
-<%= radio_button_tag :answer_team_8, 1, :checked => true %>
+<%= radio_button_tag :answer_team_8, 1%>
 
 <%= label_tag :answer_team_8, "1" %>
 <%= radio_button_tag :answer_team_8, 1 %>
@@ -164,14 +164,14 @@
 
 <p>Y’a-t-il eu des abandons de fondateur(s) depuis la naissance du projet? </p>
 <%= label_tag :answer_team_9, "Oui" %>
-<%= radio_button_tag :answer_team_9, 1, :checked => true %>
+<%= radio_button_tag :answer_team_9, 1%>
 
 <%= label_tag :answer_team_9, "Non" %>
 <%= radio_button_tag :answer_team_9, 2 %>
 
 <p>Combien de personnes ont quitté le projet depuis son lancement?</p>
 <%= label_tag :answer_team_10, "0" %>
-<%= radio_button_tag :answer_team_10, 1, :checked => true %>
+<%= radio_button_tag :answer_team_10, 1%>
 
 <%= label_tag :answer_team_10, "1" %>
 <%= radio_button_tag :answer_team_10, 2 %>
@@ -185,7 +185,9 @@
 <%= label_tag :answer_team_10, "4+" %>
 <%= radio_button_tag :answer_team_10, 2 %>
 
-  <%= submit_tag "Soumettre" %>
+  <br>
+    <small style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+      <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn btn-primary mb-5 " %>
 <% end %>
 
 <p><%= link_to root_path, class:"btn btn-primary m-3 rounded-pill mt-4" %> 👈 Revenir au menu</p>

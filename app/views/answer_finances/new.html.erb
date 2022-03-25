@@ -1,0 +1,78 @@
+<div class="container">
+
+<% @answer_finance.errors.full_messages%>
+
+
+  <h1>Strategy</h1>
+
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+    <!--QUESTION 1-->
+    <p class="mt-3">Quel était le montant du capital social à la création de votre startup ?<span style="color:red">*</span> <i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="Arrondi à la centaine"></i></p>
+      <%= range_field_tag :answer_finance_1, min: 0...100, step: 1, class:"d-inline"%>
+      <p class="mx-3 d-inline align-top"><span id='sizefinance' >50</span><span id='p1'>00€</span></p>
+
+    <!--QUESTION 2-->
+    <p class="mt-3">Par rapport à la date de création de votre startup, votre capital social a-t-il augmenté ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_finance_2, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_2, 1%><br>
+      <%= label_tag :answer_finance_2, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_2, 2%>
+
+    <!--QUESTION 3-->
+    <p class="mt-3">Avez-vous reçu des subventions non-remboursables depuis la création de votre startup ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_finance_3, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_3, 1%><br>
+      <%= label_tag :answer_finance_3, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_3, 2%>
+
+    <!--QUESTION 4-->
+    <p class="mt-3">Quel est le statut juridique adopté pour votre projet ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_finance_4, "SA", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_4, 1%><br>
+      <%= label_tag :answer_finance_4, "SAS", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_4, 2%><br>
+      <%= label_tag :answer_finance_4, "SARL", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_4, 3%><br>
+      <%= label_tag :answer_finance_4, "Autre", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_4, 4%>
+
+
+    <!--QUESTION 5-->
+    <p class="mt-3">Avez-vous été labellisé par un réseau d'entrepreneurs ou d'experts ?<span style="color:red">*</span></p>
+      <%= label_tag :answer_finance_5, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_5, 1%><br>
+      <%= label_tag :answer_finance_5, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_finance_5, 2%>
+
+    <br>
+    <small  style="color:red"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+      <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn btn-primary mb-5 ", id:"button" %>
+  <% end %>
+
+</div>
+
+
+<script src="https://kit.fontawesome.com/4923ee3a4a.js" crossorigin="anonymous"></script>
+
+<script>
+  let y = document.getElementById("answer_finance_1")
+
+  window.addEventListener("load", function() {
+    y.value = "50";
+  });
+
+  y.addEventListener("change", function() {
+    if (y.value == "100"){
+      document.getElementById("sizefinance").textContent = "+ 10 0";
+      document.getElementById("p1").textContent = "00€";
+    }else if (y.value == "0"){
+      document.getElementById("sizefinance").textContent = "";
+      document.getElementById("p1").textContent = "Capital social inférieur à 100€";
+    }else{
+      document.getElementById("sizefinance").textContent = y.value;
+      document.getElementById("p1").textContent = "00€";
+    }
+  }, false);
+
+</script>
