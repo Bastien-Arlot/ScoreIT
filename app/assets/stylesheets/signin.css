@@ -12,28 +12,42 @@
     padding-bottom: 10px;
     height: 50px;
     font-family: Ubuntu;
-    color: var(--prim);
+    color: black;
 }
 
 .signin-box{
     
     height: 70%;
     width: 70%;
-    background: linear-gradient(180deg, rgba(128,101,230,1) 0%, rgba(133,200,255,1) 100%);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 11px );
-    -webkit-backdrop-filter: blur( 11px );
-    border-radius: 17px;
+    background: rgba( 247, 247, 247, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     
 }
 
+
+
 .signin-form-group{
+    
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
+
+.form-control{
+    border: solid!important;
+    border-color: var(--prim)!important;
+}
+
+#jumbutton {
+    margin-left: -0.1px !important;
+}
+
 
 .signin-form-check{
     margin-left: 15px;
