@@ -2,6 +2,8 @@ class CategoryInnovation < ApplicationRecord
   belongs_to :score
   has_one :answer_market, dependent: :destroy
 
+  after_update :scoring_total
+
   def scoring_total
     @innovation = CategoryInnovation.find_by(score_id:self.score_id)
     @market = CategoryMarket.find_by(score_id:self.score_id)
