@@ -2,7 +2,7 @@ class AnswerTeam < ApplicationRecord
   belongs_to :category_team
 
   validates :category_team_id, uniqueness: true, presence: true
-  
+
   validates :answer_team_1, presence:true
   validates :answer_team_2, presence:true
   validates :answer_team_3, presence:true
@@ -62,9 +62,9 @@ class AnswerTeam < ApplicationRecord
     case self.answer_team_5
 
     when 1
-      @total = @total + 0
+      @total = @total + 2
     when 2
-      @total = @total +2
+      @total = @total +0
     end
 
     case self.answer_team_6

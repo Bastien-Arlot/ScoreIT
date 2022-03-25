@@ -27,7 +27,7 @@ class AnswerInnovation < ApplicationRecord
     end
     puts @total
 
-    if self.answer_innovation_3.to_i > 20000
+    if self.answer_innovation_3.to_i > 20
       @total = @total + 1
     end
     puts @total
