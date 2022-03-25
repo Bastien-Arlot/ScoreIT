@@ -56,36 +56,36 @@ Enjoy !
 
 [Trello Online](https://trello.com/b/dFv9jOOq/scoreit)
 
-![](../../Desktop/Screenshot 2022-03-25 at 18.15.58.jpg)
+![Screenshot 2022-03-25 at 18 15 58](https://user-images.githubusercontent.com/86610960/160171269-7821ad6e-195f-43c5-85ad-d03f4f3a26d6.jpg)
+
 ## Database
 
 [Database online](https://miro.com/app/board/uXjVOF7rKAM=/?invite_link_id=525554574798)
 
-![](../../Desktop/Screenshot 2022-03-25 at 18.12.16.jpg)
+![Screenshot 2022-03-25 at 18 12 16](https://user-images.githubusercontent.com/86610960/160171226-075cd642-21a0-4312-b139-fa6b084f5a35.jpg)
+
 
 
 ## User Flow
 
 [User Flow Online](https://miro.com/app/board/uXjVOCMmneg=/)
-![](../../Desktop/Screenshot 2022-03-25 at 16.17.57.jpg)
+
+![Screenshot 2022-03-25 at 16 17 57](https://user-images.githubusercontent.com/86610960/160171188-6c6bef81-59f8-46cb-84d1-e28249638c1e.jpg)
+
+
 ## Executive Summary
 
 
 [Executive Summary Online](https://docs.google.com/presentation/d/1KSS7ghJgcDp-6US5gNvaofoyitLnBXfw/edit#slide=id.p1)
 
-![](../../Desktop/Screenshot 2022-03-25 at 18.08.56.jpg)
-
+![Screenshot 2022-03-25 at 18 08 56](https://user-images.githubusercontent.com/86610960/160171131-bdac1169-aee6-4972-a4e8-ee298fff78c1.jpg)
 
 
 ## Technologies utilisées ⚙️
 <p align="left">Pour ce programme les technologies suivantes ont été utilisé : <br>
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
-
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-<img src="http://3con14.biz/code/_data/js/intro/js-logo.png" width="35"
-<!--
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
--->
+<img src="http://3con14.biz/code/_data/js/intro/js-logo.png" width="35">
 <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
 <a href="https://rubyonrails.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="40" height="40"/> </a>
 <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="40" height="40"/> </a>
