@@ -12,6 +12,7 @@ class StartupsController < ApplicationController
       'description' => params[:description],
       'user_id' => current_user.id
     )
+    
     if @startup.save
       redirect_to root_path
     else
@@ -22,5 +23,5 @@ class StartupsController < ApplicationController
 
   def update
   end
-
+  
 end

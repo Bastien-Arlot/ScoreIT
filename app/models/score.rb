@@ -27,5 +27,5 @@ class Score < ApplicationRecord
     )
     @category_market.save
   end
-
+  
 end
