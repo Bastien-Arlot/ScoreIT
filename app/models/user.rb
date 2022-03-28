@@ -10,6 +10,14 @@ class User < ApplicationRecord
   has_one :startup, dependent: :destroy
   after_create :welcome_send
 
+  def self.from_google(auth)
+    where(google_id: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.username = auth.info.name
+      user.password = Devise.friendly_token[0, 20]
+    end
+  end
+
   def self.from_facebook(auth)
     where(facebook_id: auth.uid).first_or_create do |user|
       user.email = auth.info.email
