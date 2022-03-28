@@ -25,7 +25,7 @@ class Score < ApplicationRecord
   after_create :create_category_strategy
   after_create :create_category_finance
   after_create :create_category_offer
-
+  after_update :send_score
 
 
   def create_category_market
@@ -62,12 +62,16 @@ class Score < ApplicationRecord
     )
     @category_finance.save
   end
-  
+
   def create_category_offer
     @category_offer = CategoryOffer.new(
       'score_id' => self.id
     )
     @category_offer.save
+  end
+
+  def send_score
+    UserMailer.score_email(self).deliver_now
   end
 
 end

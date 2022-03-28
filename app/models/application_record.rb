@@ -17,9 +17,9 @@ class ApplicationRecord < ActiveRecord::Base
 
       @total_100 = (@total.to_i*100)/@total_max.to_i
 
-      @score.update(total:@total, total_max:@total_max, total_100:@total_100.floor,name:DateTime.current.to_date)
+      @score.update(total:@total, total_max:@total_max, total_100:@total_100.floor, name:DateTime.current.to_date)
 
     end
   end
-  
+
 end
