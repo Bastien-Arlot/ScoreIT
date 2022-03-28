@@ -1,4 +1,4 @@
-.title-container{
+.title-container {
     /* border: solid;
     border-color: green ; */
     margin-top: 20px;
@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-.title-container h3{
+.title-container h3 {
     margin-top: 50px;
     color: black;
     margin-left: 5px;
@@ -17,32 +17,22 @@
     font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.form-container{
-    /* border: solid;
-    border-color: green ; */
+.form-container {
     margin-top: 10px;
     margin-bottom: 100px;
     display: flex;
     height: 80vh;
-   justify-content: center;
-}
-.col-lg-6 {
-    width: 49%!important;
-    max-height: 65%!important;
-    align-items: center!important;
-
+    justify-content: center;
 }
 
-.banner-startupform{
-    background: rgb(158,69,209)!important;
-background: linear-gradient(121deg, rgba(158,69,209,1) 0%, rgba(158,69,209,1) 50%, rgba(197,145,227,1) 100%)!important;
+.banner-startupform {
+    background: rgb(158, 69, 209)!important;
+    background: linear-gradient(121deg, rgba(158, 69, 209, 1) 0%, rgba(158, 69, 209, 1) 50%, rgba(197, 145, 227, 1) 100%)!important;
     text-align: center!important;
     align-items: center!important;
-
 }
 
-
-.banner-startupform .startupform-h3{
+.banner-startupform .startupform-h3 {
     width: 70%!important;
     justify-self: center!important;
     margin-top: 30px!important;
@@ -51,71 +41,67 @@ background: linear-gradient(121deg, rgba(158,69,209,1) 0%, rgba(158,69,209,1) 50
     font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
 }
 
-.img-banner-startup{
+.img-banner-startup {
     margin-top: 5%!important;
     width: 200px!important;
     height: 200px!important;
-    
 }
 
-.formside{
+.formside {
     font-family: Ubuntu!important;
 }
 
-.form-control{
-    
+.form-control {
     margin-top: 6px!important;
 }
 
-form {
-    margin-top: 30px!important;
-    margin-left: 50px!important;
-    width: 100%!important;
+.form-group {
+    margin-top: 20px;
 }
 
-#StartupDescription{
+#StartupDescription {
     width: 80%!important;
 }
+
 @media (max-width: 800px) {
     .banner-startupform {
-      display: none!important;
+        display: none!important;
     }
     form {
         width: 100%!important;
     }
-    #StartupDescription{
+    #StartupDescription {
         width: 80%!important;
     }
-  }
+}
 
 @media (max-width: 800px) {
     .formside {
-      min-width: 100%!important;
+        min-width: 100%!important;
     }
     form {
         width: 100%!important;
     }
-  }
+}
 
-  @media (max-width: 576px) {
+@media (max-width: 576px) {
     .formside {
-      max-width: 100%!important;
+        max-width: 100%!important;
     }
     form {
         width: 100%!important;
     }
-  }
+}
 
-  .startupform-button-submit{
+.startupform-button-submit {
     margin-top: 15px;
     margin-left: 130px;
     background-color: #66ced6;
     color: #fff;
-    font-weight:300;
-  }
+    font-weight: 300;
+}
 
-  .startupform-button-submit:hover {
+.startupform-button-submit:hover {
     color: #66ced6;
     background-color: #fff;
-    
 }

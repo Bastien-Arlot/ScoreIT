@@ -1,8 +1,5 @@
-.signin-container{
-
-    
-   
-    display:grid;
+.signin-container {
+    display: grid;
     justify-items: center;
     align-items: center;
 }
@@ -15,24 +12,21 @@
     color: black;
 }
 
-.signin-box{
-    
+.signin-box {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 60vh;
     height: auto;
-    background: rgba( 247, 247, 247, 0.35 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 6px );
--webkit-backdrop-filter: blur( 6px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-    
+    background: rgba( 247, 247, 247, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 6px);
+    -webkit-backdrop-filter: blur( 6px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
-
-
-.signin-form-group{
-    
+.signin-form-group {
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -40,7 +34,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-right: 15px;
 }
 
-.form-control{
+.form-control {
     border: solid!important;
     border-color: var(--prim)!important;
 }
@@ -49,22 +43,22 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-left: -0.1px !important;
 }
 
-
-.signin-form-check{
+.signin-form-check {
     margin-left: 15px;
 }
 
 .signin-submit {
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-right: 40px;
-    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
-.btn-home{
+
+.btn-home {
     margin-top: 10px;
     justify-self: right;
 }
-.btn-signinform{
+
+.btn-signinform {
     margin-top: 10px!important;
     background-color: none!important;
     height: 90px!important;
@@ -77,22 +71,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-size: 20px!important;
 }
 
-.btn-signinform:hover{
+.btn-signinform:hover {
     background-color: var(--prim)!important;
     color: var(--light)!important;
     border-color: none!important;
 }
 
-.links-submit-form{
+.links-submit-form {
     margin-top: 5px;
-    
-    
-    
 }
 
-.links-devise-rs{
+.links-devise-rs {
     text-decoration: none;
-    color: var(--prim);
+    color: green;
 }
 
 .btn-login {
