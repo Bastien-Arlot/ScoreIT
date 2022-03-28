@@ -1,0 +1,14 @@
+.omniauth-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.omniauth-facebook {
+    margin-right: 20px;
+}
+
+.omniauth-github {
+    margin-right: 20px;
+}
