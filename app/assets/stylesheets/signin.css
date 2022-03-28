@@ -1,8 +1,8 @@
 .signin-container{
 
-    height: 99vh;
-    width: 98vw;
-    display: grid;
+    
+   
+    display:grid;
     justify-items: center;
     align-items: center;
 }
@@ -10,15 +10,16 @@
 .signin-title {
     margin-top: 40px;
     padding-bottom: 10px;
-    height: 50px;
+    text-align: center;
     font-family: Ubuntu;
     color: black;
 }
 
 .signin-box{
     
-    height: 70%;
-    width: 70%;
+    display: flex;
+    width: 60vh;
+    height: auto;
     background: rgba( 247, 247, 247, 0.35 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 6px );
@@ -54,7 +55,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .signin-submit {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 40px;
     text-align: center;
 }
 .btn-home{
@@ -82,11 +85,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .links-submit-form{
     margin-top: 5px;
-    margin-left: 10px;
+    
     
     
 }
 
 .links-devise-rs{
     text-decoration: none;
+    color: var(--prim);
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--prim);
 }
