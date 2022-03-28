@@ -8,6 +8,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers:[:github, :facebook, :google_oauth2]
 
   has_one :startup, dependent: :destroy
+  after_create :welcome_send
 
   def self.from_facebook(auth)
     where(facebook_id: auth.uid).first_or_create do |user|
@@ -23,6 +24,10 @@ class User < ApplicationRecord
       user.username = auth.info.name
       user.password = Devise.friendly_token[0, 20]
     end
+  end
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
   end
 
 end
