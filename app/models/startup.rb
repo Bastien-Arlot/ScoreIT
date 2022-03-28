@@ -12,5 +12,9 @@ class Startup < ApplicationRecord
     )
     @score.save
   end
-  
+
+  def startup_registration_mail
+    UserMailer.new_startup_mail(self).deliver_now
+  end
+
 end
