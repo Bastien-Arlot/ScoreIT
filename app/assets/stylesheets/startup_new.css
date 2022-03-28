@@ -56,11 +56,7 @@
 }
 
 .form-group {
-    border: solid;
-    border-color: red;
     margin-left: 30px!important;
-    width: 100%!important;
-    margin-top: 20px;
 }
 
 #StartupDescription {
