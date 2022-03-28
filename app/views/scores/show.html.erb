@@ -26,7 +26,7 @@
                     <% end%>
                     <% if !@score.category_offer.total_100_offer.nil? %>
                       <p>Offre : <%= @score.category_offer.total_100_offer%>
-                        <p>
+                        <p> 
                         <% else %>
                           <%= link_to "Offre", new_startup_score_category_offer_answer_offer_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_innovation.id) , class:"btn btn-lg rounded-pill", id:"jumbutton"%>
                         <% end%>
