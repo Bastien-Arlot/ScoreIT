@@ -27,6 +27,14 @@ def show
 
   @startup = Startup.find(current_user.id) 
   @scores = Score.all
+  @score_last = @startup.scores.last
+  select_score()
+
+  respond_to do |format|
+    format.html { }
+    format.js { }
+  end
+
 end
 
 
@@ -41,6 +49,29 @@ def authenticate_user
     flash[:danger] = "Please log in."
     redirect_to new_user_session_path
   end
+end
+
+
+def select_score
+
+  @score_completed = []
+    @scores.each do |element|
+      if element.startup_id == @startup.id && !element.name.nil?
+        @score_completed << element 
+      end
+    end
+
+  if params[:select].nil?
+    if @score_completed.nil?
+      params[:select] = @score_completed.last.id
+    end
+    @score = @score_completed.last
+  else
+    @score = Score.find(params[:select])
+  end
+
+  
+
 end
 
 end
