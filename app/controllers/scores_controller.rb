@@ -13,7 +13,7 @@ class ScoresController < ApplicationController
       'startup_id' => current_user.startup.id
     )
     if @score.save
-      redirect_to root_path
+      redirect_to startup_path(current_user.startup.id)
     else
       flash[:score_delay] = "Error, not enough delay. The delay should be 90 days."
       render 'new'
