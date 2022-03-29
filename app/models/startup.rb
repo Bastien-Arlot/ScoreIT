@@ -5,6 +5,7 @@ class Startup < ApplicationRecord
   validates :user_id, uniqueness: true
 
   after_create :do_score
+  after_create :startup_registration_mail
 
   def do_score
     @score = Score.new(
@@ -14,7 +15,7 @@ class Startup < ApplicationRecord
   end
 
   def startup_registration_mail
-    UserMailer.new_startup_mail(self).deliver_now
+    UserMailer.new_startup_email(self).deliver_now
   end
 
 end

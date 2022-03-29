@@ -17,7 +17,15 @@
           </li>
           <% if user_signed_in? && !current_user.startup.nil? %>
             <li class="nav-item">
+              <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
+            <li class="nav-item">
               <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? %>
+            <li class="nav-item">
+              <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
             </li>
           <% end %>
           <%  if user_signed_in? %>
