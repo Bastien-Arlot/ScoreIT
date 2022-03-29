@@ -4,6 +4,12 @@
     background: linear-gradient(90deg, rgba(245,240,250,1) 5%, rgba(158,69,209,1) 22%, rgba(158,69,209,1) 56%, rgba(245,240,250,1) 93%)!important;
     }
 
+.dropdown-btn {
+    color:var(--prim);
+    text-decoration: none;
+    
+    
+}
 
 
 .btn-nav{
@@ -15,6 +21,7 @@ border-right: none!important;
 border-radius: 0!important;
 color: var(--prim)!important;
 font-size: 17px!important;
+
 }
 
 .btn-nav:hover{
