@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     omniauth_callbacks:  'users/omniauth_callbacks'
   }
 
+  resources :certificates, only: [:index]
+
+
   resources :startups, only: [:index, :new, :create, :update, :show] do
 
     resources :scores, only: [:index, :new, :create, :update, :show] do
