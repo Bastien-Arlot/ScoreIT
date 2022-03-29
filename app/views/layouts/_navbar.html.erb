@@ -1,39 +1,53 @@
-<section class="header">
-  <header class="p-3 bg-nav ">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+  <div class="bs-component">
+    <nav class="navbar  navbar-expand-lg navbar-ligth ">
+      <div class="container-fluid">
         <a href="<%=root_path%>" >
           <%= image_tag "logo.png", :size => "60x60" %>
         </a>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li></li>
-        </ul>
-        <div class="text-end">
-          <a href="#" class="btn btn-nav">Equipe</a>
-          <a href="#" class="btn btn-nav">Nous contacter</a>
-          <span></span>
-
-          <% if user_signed_in? && current_user.startup.nil?%>
-            <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
-          <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
-            <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
-          <% elsif user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
-            <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>          
-          <% elsif user_signed_in? && !current_user.startup.nil? %>
-            <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
-          <%end%>
-
-          <%  if user_signed_in? %>
-            <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
-          <% else %>
-            <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
-            <span></span>
-            <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signin"%>
-            <span></span>
-          </div>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul id="burger-ul" class="navbar-nav ">
+            <li class="nav-item ">
+              <%= link_to "Equipe", home_team_path , class:"btn btn-nav"%>
+            </li>
+            <li class="nav-item">
+              <a  href="#" class="btn btn-nav ">Nous contacter</a>
+            </li>
+            <% if user_signed_in? && !current_user.startup.nil? %>
+              <li class="nav-item">
+                <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+              </li>
+            <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
+              <li class="nav-item">
+                <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+              </li>
+            <% elsif user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
+              <li class="nav-item">
+                <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+              </li>
+            <% elsif user_signed_in? && !current_user.startup.nil? %>
+              <li class="nav-item">
+                <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
+              </li>
+            <% end %>
+            <%  if user_signed_in? %>
+              <li class="nav-item ">
+                <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
+              </li>
+            <% else %>
+              <li class="nav-item ">
+                <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
+              </li>
+              <li class="nav-item  ">
+                <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signup"%>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
-    <% end %>
-  </header>
-  <div class="string"></div>
-</section>
+    </nav>
+    <div class="string"></div>
+  </div>

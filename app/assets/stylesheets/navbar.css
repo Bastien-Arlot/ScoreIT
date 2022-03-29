@@ -1,25 +1,8 @@
-.logo {
-    padding-left: 5px!important;
-}
-
-.header {
-    width: 100%!important;
-    top: 0px!important;
-    display: block!important;
-    margin: 0!important;
-    padding: 0!important;
-    font-size: 100%!important;
-    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    
-    align-items: center !important;
-
-}
-
 .string{
     height: 2px!important;
     background: rgb(245,240,250)!important;
     background: linear-gradient(90deg, rgba(245,240,250,1) 5%, rgba(158,69,209,1) 22%, rgba(158,69,209,1) 56%, rgba(245,240,250,1) 93%)!important;
-}
+    }
 
 
 
@@ -44,17 +27,19 @@ font-size: 17px!important;
 .btn-signup{
     margin-left: 10px!important;
     margin-right: 10px!important;
-    color: var(--light)!important;
+    color: var(--prim)!important;
     font-size: 17px!important;
-    border: none!important;
- background-color: var(--prim)!important;
+    border-color: var(--second)!important;
+
+ 
 }
 
 .btn-signup:hover{
-    color: var(--prim)!important;
+    color: var(--light)!important;
     font-size: 17px!important;
-    background-color: var(--light)!important;
+    background-color: var(--second)!important;
     border-width: 1px!important;
+    border-color: var(--prim);
 }
 
 
@@ -76,4 +61,19 @@ font-size: 17px!important;
     font-size: 17px;
     background: var(--light)!important;
     border-color: var(--light)!important;
+}
+
+.navbar-toggler {
+    border-color:var(--prim)!important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(2, 0, 3, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+#burger-ul {
+  
+   
+    align-items: center;
 }
