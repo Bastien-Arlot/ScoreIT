@@ -12,7 +12,17 @@
           <a href="#" class="btn btn-nav">Equipe</a>
           <a href="#" class="btn btn-nav">Nous contacter</a>
           <span></span>
+          <%#  admin  %>
+          <%  if user_signed_in? %>
+        
 
+        <%  if current_user.is_admin? %>
+
+        <%= link_to "Gestion des scores", [:admin, User], class:"btn btn-nav"%>
+
+        <% end %>
+        <% end %>
+        <%#  fin admin  %>
           <% if user_signed_in? && current_user.startup.nil?%>
             <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
           <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
