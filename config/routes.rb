@@ -9,11 +9,9 @@ Rails.application.routes.draw do
   }
   
   scope 'admin', module: 'admin', as: 'admin' do
-    
   resources :users
-
   end
-    
+
 
   resources :user, only: [:show, :edit, :update]
 
