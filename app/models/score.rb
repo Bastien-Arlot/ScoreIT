@@ -27,9 +27,6 @@ class Score < ApplicationRecord
   after_create :create_category_offer
   after_update :send_score
 
-  validates :certificatenumber, uniqueness: true
-
-
   def create_category_market
     @category_market = CategoryMarket.new(
       'score_id' => self.id

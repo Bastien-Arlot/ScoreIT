@@ -1,3 +1,4 @@
+
 #ftr {
     background-color:#dddde0;
 }
@@ -15,9 +16,6 @@
 .footerlink:hover {
     color: var(--second);
 }
-
-
-@charset "UTF-8";
 
 .svg-inline--fa {
   vertical-align: -0.200em;
