@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   end
 
+
   resources :user, only: [:show, :edit, :update]
 
   resources :orders, only: [:create]
