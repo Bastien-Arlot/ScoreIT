@@ -14,7 +14,7 @@
           <div id="div-s-profile" class="px-4 mt-1">
           <% if  !@user.startup.nil?  && !@user.startup.scores.last.name.nil? %>
             <%= link_to startup_path(current_user.startup.id) do %>
-               <%= image_tag "dashboard.png", :size => "40x40",  %>
+               <%= image_tag "dashboard.png", :size => "40x40"  %>
             <% end %>
             <% end %>
             <% if !@user.startup.nil? %>
