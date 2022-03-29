@@ -1,63 +1,52 @@
-  <div class="bs-component">
-    <nav class="navbar  navbar-expand-lg navbar-ligth ">
-      <div class="container-fluid">
-        <a href="<%=root_path%>" >
-          <%= image_tag "logo.png", :size => "60x60" %>
-        </a>
-
-
-         
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor02">
-          <ul id="burger-ul" class="navbar-nav ">
+  
+<div class="bs-component">
+  <nav class="navbar  navbar-expand-lg navbar-ligth ">
+    <div class="container-fluid">
+      <a href="<%=root_path%>" >
+        <%= image_tag "logo.png", :size => "60x60" %>
+      </a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul id="burger-ul" class="navbar-nav ">
+          <li class="nav-item ">
+            <%= link_to "Equipe", home_team_path , class:"btn btn-nav"%>
+          </li>
+          <%  if user_signed_in? && current_user.is_admin? %>
+            <li class="nav-item">
+              <%= link_to "Gestion des scores", [:admin, User], class:"btn btn-nav"%>
+            </li>
+          <% end %>
+          <% if user_signed_in? && current_user.startup.nil? %>
+            <li class="nav-item">
+              <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
+            <li class="nav-item">
+              <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? %>
+            <li class="nav-item">
+              <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
+            </li>
+          <% end %>
+          <%  if user_signed_in? %>
             <li class="nav-item ">
-              <%= link_to "Equipe", home_team_path , class:"btn btn-nav"%>
+              <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
             </li>
-       
-            
-
-        <%  if user_signed_in? && current_user.is_admin? %>
-              <li class="nav-item">
-
-        <%= link_to "Gestion des scores", [:admin, User], class:"btn btn-nav"%>
+          <% else %>
+            <li class="nav-item ">
+              <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
             </li>
-
-        <% end %>
-
-            
-            
-            
-            <% if user_signed_in? && current_user.startup.nil? %>
-              <li class="nav-item">
-                <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+            <li class="nav-item  ">
+              <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signup"%>
             </li>
-            <% elsif user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
-              <li class="nav-item">
-                <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
-              </li>
-            <% elsif user_signed_in? && !current_user.startup.nil? %>
-              <li class="nav-item">
-                <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
-              </li>
-            <% end %>
-            <%  if user_signed_in? %>
-              <li class="nav-item ">
-                <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
-              </li>
-            <% else %>
-              <li class="nav-item ">
-                <%= link_to "S'inscrire", new_user_registration_path , class:"btn btn-signup"%>
-              </li>
-              <li class="nav-item  ">
-                <%= link_to "Se connecter", new_user_session_path , class:"btn btn-signup"%>
-              </li>
-            <% end %>
-          </ul>
-        </div>
+          <% end %>
+        </ul>
       </div>
     </div>
-  </nav>
-  <div class="string"></div>
+  </div>
+</nav>
+<div class="string"></div>
 </div>
