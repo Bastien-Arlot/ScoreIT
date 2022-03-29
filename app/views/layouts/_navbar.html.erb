@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 1810aa1b47dd8d04bb45f00f06ac74857c71b312
   <div class="bs-component">
     <nav class="navbar  navbar-expand-lg navbar-ligth ">
       <div class="container-fluid">
@@ -24,6 +21,10 @@
                 <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
               </li>
             <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
+              <li class="nav-item">
+                <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+              </li>
+            <% elsif user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
               <li class="nav-item">
                 <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
               </li>
