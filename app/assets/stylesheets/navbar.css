@@ -1,4 +1,8 @@
-
+.string{
+    height: 2px!important;
+    background: rgb(245,240,250)!important;
+    background: linear-gradient(90deg, rgba(245,240,250,1) 5%, rgba(158,69,209,1) 22%, rgba(158,69,209,1) 56%, rgba(245,240,250,1) 93%)!important;
+    }
 
 
 
