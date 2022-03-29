@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'home#index'
   get 'home/private'
   get 'home/team'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   }
   resources :user, only: [:show, :edit, :update]
 
+  resources :orders, only: [:new, :create]
   resources :startups, only: [:index, :new, :create, :update, :show] do
 
     resources :scores, only: [:index, :new, :create, :update, :show] do
@@ -31,7 +33,7 @@ Rails.application.routes.draw do
       resources :category_finances, except: [:index, :new, :create, :show, :update] do
         resources :answer_finances, only: [:new, :create]
       end
-      
+
       resources :category_offers, except: [:index, :new, :create, :update, :destroy, :show] do
         resources :answer_offers, only: [:new, :create]
       end

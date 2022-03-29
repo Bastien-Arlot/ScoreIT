@@ -34,9 +34,14 @@ def show
   respond_to do |format|
     format.html { }
     format.js { }
+    #ici
+    format.pdf do
+      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb", layout: "pdf", orientation: "Landscape" # Excluding ".pdf" extension.
+    end
   end
 
 end
+
 
 
 
@@ -67,12 +72,11 @@ def select_score
     if @score_completed.nil?
       params[:select] = @score_completed.last.id
     end
+    params[:select] = @score_completed.last.id
     @score = @score_completed.last
   else
     @score = Score.find(params[:select])
-  end
-
-  
+  end 
 
 end
 
