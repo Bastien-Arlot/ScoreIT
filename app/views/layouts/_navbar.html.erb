@@ -1,3 +1,4 @@
+
 <div class="bs-component">
   <nav class="navbar  navbar-expand-lg navbar-ligth bg-ligth">
     <div class="container-fluid">
@@ -15,11 +16,20 @@
           <li class="nav-item">
             <a  href="#" class="btn btn-nav ">Nous contacter</a>
           </li>
-          <% if user_signed_in? && !current_user.startup.nil? %>
-            <li class="nav-item">
-              <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
-            </li>
-          <% end %>
+          <% if user_signed_in? && current_user.startup.nil?%>
+           <li class="nav-item">
+             <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+          </li>
+          <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
+          <li class="nav-item">
+          <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+          </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? %>
+          <li class="nav-item">
+          <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
+          </li>
+          
+      
           <%  if user_signed_in? %>
             <li class="nav-item ">
               <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"btn btn-signup"%>
