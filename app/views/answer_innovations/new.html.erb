@@ -88,3 +88,25 @@
 
 
 </script>
+
+
+<script>
+
+let error_innovation = '<%= @answer_innovation.errors.full_messages %>';
+let answer_innovation = [];
+
+if (error_innovation !== []){
+  answer_innovation = error_innovation.split(',');
+  answer_innovation.forEach(element => {
+    for (let i = 1; i < 8; i++){
+      if (element.includes(`innovation ${i}`)){
+            notyf.error({
+                message: `Merci de répondre à la question n°${i}`,
+                dismissible: true
+                });
+          };
+    };
+  });
+};
+
+</script>
