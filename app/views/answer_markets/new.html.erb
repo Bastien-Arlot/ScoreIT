@@ -97,3 +97,25 @@ i.addEventListener("change", function() {
 }, false);
 
 </script>
+
+
+<script>
+
+let error_market = '<%= @answer_market.errors.full_messages %>';
+let answer_market = [];
+
+if (error_market !== []){
+  answer_market = error_market.split(',');
+  answer_market.forEach(element => {
+    for (let i = 1; i < 9; i++){
+      if (element.includes(`market ${i}`)){
+            notyf.error({
+                message: `Merci de répondre à la question n°${i}`,
+                dismissible: true
+                });
+          };
+    };
+  });
+};
+
+</script>

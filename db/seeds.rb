@@ -22,7 +22,7 @@ Score.destroy_all
 Startup.destroy_all
 User.destroy_all
 
-3.times do |r|
+1.times do |r|
   user = User.create!(
     email: "a#{r}@yopmail.com",
     password: 'aaaaaa',

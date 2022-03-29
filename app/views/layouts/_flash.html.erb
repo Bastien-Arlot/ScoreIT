@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+<script>
+  // Create an instance of Notyf
+  const notyf = new Notyf({
+    duration: 0,
+    position: {
+      x: 'right',
+      y: 'top',
+    }
+  });
+
+
+  if ('<%= notice %>' !== ""){// Display an error notification
+  notyf.success({
+    message: '<%= notice %>',
+    duration: 3000,
+    dismissible: true
+    });
+  };
+
+  if ('<%= alert %>' !== ""){// Display an error notification
+  notyf.error({
+    message: '<%= alert %>',
+    dismissible: true
+    });
+  };
+
+</script>
