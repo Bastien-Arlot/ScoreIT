@@ -71,3 +71,5 @@ gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'

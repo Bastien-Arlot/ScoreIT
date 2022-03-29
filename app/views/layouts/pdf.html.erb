@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+        <!--------- Bootstrap ------------>
+    <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
+    <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
+  </head>
+  <body onload='number_pages'>
+    <div>
+      <%= yield %>
+    </div>
+  </body>
+</html>
