@@ -17,7 +17,13 @@ class ApplicationRecord < ActiveRecord::Base
 
       @total_100 = (@total.to_i*100)/@total_max.to_i
 
-      @score.update(total:@total, total_max:@total_max, total_100:@total_100.floor, name:DateTime.current.to_date)
+      @certificatenumber = rand(10000000000)
+
+      while !Score.find_by(certificatenumber: @certificatenumber).nil?
+        @certificatenumber = rand(10000000000)
+      end
+
+      @score.update(total:@total, total_max:@total_max, total_100:@total_100.floor, name:DateTime.current.to_date, certificatenumber: @certificatenumber)
 
     end
   end

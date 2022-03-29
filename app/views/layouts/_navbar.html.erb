@@ -16,7 +16,7 @@
             <li class="nav-item">
               <a  href="#" class="btn btn-nav ">Nous contacter</a>
             </li>
-            <% if user_signed_in? && !current_user.startup.nil? %>
+            <% if user_signed_in? && current_user.startup.nil? %>
               <li class="nav-item">
                 <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
               </li>
