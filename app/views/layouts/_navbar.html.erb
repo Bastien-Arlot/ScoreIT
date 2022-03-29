@@ -4,6 +4,9 @@
         <a href="<%=root_path%>" >
           <%= image_tag "logo.png", :size => "60x60" %>
         </a>
+
+
+         
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,6 +15,20 @@
             <li class="nav-item ">
               <%= link_to "Equipe", home_team_path , class:"btn btn-nav"%>
             </li>
+       
+            
+
+        <%  if user_signed_in? && current_user.is_admin? %>
+              <li class="nav-item">
+
+        <%= link_to "Gestion des scores", [:admin, User], class:"btn btn-nav"%>
+            </li>
+
+        <% end %>
+
+            
+            
+            
             <% if user_signed_in? && current_user.startup.nil? %>
               <li class="nav-item">
                 <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
