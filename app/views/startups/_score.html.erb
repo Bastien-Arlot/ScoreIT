@@ -31,7 +31,7 @@
 
 
 
-<% if startup.scores.length > 1%>
+<% if !startup.scores.last.name.nil? || startup.scores.length > 1 %>
   <div class="row g-3">
     <div class="col-12 card_startup">
           <h2 style="font-size:5rem;">Total : <span id="result" class="text-color"><%= score.total_100 %></span>/100</h2>
