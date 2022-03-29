@@ -1,0 +1,58 @@
+<div class="container admin-title">
+<h1> Vue d'ensemble </h1>
+</div>
+
+<div class="container">
+        <table class="table table-admin">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Nom de l'utilisateur</th>
+                <th scope="col">Nom de la startup</th>
+                <th scope="col">Nombre de notations terminées</th>
+                <th scope="col">Dernière notation finie ?</th>
+                <th scope="col">Eligible à une nouvelle notation ?</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <%@users.each do |user| %>
+            <% if user.is_admin == false %>
+              <tr>
+                <td><%= link_to "Ouvrir", admin_user_path(user.id) , class:"btn btn-signup"%></td>
+                <td><%= user.username %></td>
+                <% if !user.startup.nil? %>
+                  <td><%= user.startup.name %></td>
+                  <% if !user.startup.scores.nil? %>
+                    <td> <%= user.startup.scores.length %></td>
+                    <td> <% if user.startup.scores.last.name = nil %>
+                            Non
+                            <% else %>
+                            Oui
+                            <% end %>
+                    </td>
+                    <td> <!-- <%= user.startup.scores.last.name %> -->
+                    <% if user.startup.scores.last.name != nil && (user.startup.scores.last.name.to_date + 30 ) >= DateTime.now %>
+                            Oui 
+                        <% else %>
+                            Non, pas avant le : <%= @users.find(3).startup.scores.last.name.to_date + 30%> (aaaa/mm/jj)
+                    <% end %>
+                    </td>
+                    
+                  <% end %>
+                  
+                <% end %>
+                <td> <%= user.startup.scores.last.name%></td>
+            </tr>
+            <% end %>
+            
+            <%end%>
+            </tbody>
+            
+        </table>
+        
+</div>
+
+
+
+

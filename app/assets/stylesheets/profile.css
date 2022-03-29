@@ -1,0 +1,24 @@
+
+
+#title-s-profile {
+    color: var(--prim);
+    
+}
+
+#title-email {
+    color: var(--prim);
+}
+
+#username-title {
+    font-size: 50px;
+    
+}
+
+
+#div-s-profile {
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(192, 188, 188);
+    border-radius: 5px;
+}
+
