@@ -3,7 +3,7 @@
 <% @answer_finance.errors.full_messages%>
 
 
-  <h1>Strategy</h1>
+  <h1>Finance</h1>
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
@@ -74,5 +74,27 @@
       document.getElementById("p1").textContent = "00€";
     }
   }, false);
+
+</script>
+
+
+<script>
+
+let error_finance = '<%= @answer_finance.errors.full_messages %>';
+let answer_finance = [];
+
+if (error_finance !== []){
+  answer_finance = error_finance.split(',');
+  answer_finance.forEach(element => {
+    for (let i = 1; i < 6; i++){
+      if (element.includes(`finance ${i}`)){
+            notyf.error({
+                message: `Merci de répondre à la question n°${i}`,
+                dismissible: true
+                });
+          };
+    };
+  });
+};
 
 </script>

@@ -101,3 +101,26 @@
 
 </div>
 
+
+<script>
+
+let error_strategy = '<%= @answer_strategy.errors.full_messages %>';
+let answer_strategy = [];
+
+if (error_strategy !== []){
+  answer_strategy = error_strategy.split(',');
+  answer_strategy.forEach(element => {
+    console.log(element)
+    for (let i = 1; i < 12; i++){
+      if (element.includes(`Answer strategy ${i} can&#39`)){
+            notyf.error({
+                message: `Merci de répondre à la question n°${i}`,
+                dismissible: true
+                });
+          };
+    };
+  });
+};
+
+</script>
+

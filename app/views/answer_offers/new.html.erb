@@ -106,3 +106,25 @@
   }, false);
 
 </script>
+
+
+<script>
+
+let error_offer = '<%= @answer_offer.errors.full_messages %>';
+let answer_offer = [];
+
+if (error_offer !== []){
+  answer_offer = error_offer.split(',');
+  answer_offer.forEach(element => {
+    for (let i = 1; i < 9; i++){
+      if (element.includes(`offer ${i}`)){
+            notyf.error({
+                message: `Merci de répondre à la question n°${i}`,
+                dismissible: true
+                });
+          };
+    };
+  });
+};
+
+</script>

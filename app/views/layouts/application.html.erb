@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
      <!-------- Font-awesome --------->
       <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
@@ -15,13 +18,15 @@
     <!--------- Bootstrap ------------>
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
+
+    
+
   </head>
 
   <body>
     
     <%= render 'layouts/navbar'  %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/flash'  %>
     <%= yield %>
      <%= render 'layouts/footer' %>
   </body>
