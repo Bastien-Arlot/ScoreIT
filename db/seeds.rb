@@ -112,11 +112,5 @@ User.destroy_all
                                 answer_finance_5:1,
                                 category_finance_id: Score.last.id
                                 );
-
-                                #score = Score.last.update!(
-                              #    name: "2022 - 28 - 03",
-                              #    total: 63,
-                                #  total_max: 63,
-                                #  total_100: 100,
-                                #  );
+                                
                               end
