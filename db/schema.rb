@@ -187,6 +187,15 @@ ActiveRecord::Schema.define(version: 2022_03_30_104303) do
     t.index ["score_id"], name: "index_category_teams_on_score_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "email"
+    t.string "username"
+    t.string "startup_id"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "scores", force: :cascade do |t|
     t.string "name"
     t.integer "total"

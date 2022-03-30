@@ -77,3 +77,4 @@ gem "wkhtmltopdf-heroku", group: :production
 gem 'rails-i18n'
 gem 'devise-i18n'
 gem "image_processing", ">= 1.2"
+gem 'aws-sdk-s3', require: false
