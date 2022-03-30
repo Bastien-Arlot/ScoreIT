@@ -2,7 +2,7 @@
 
 
 <br><br>
-<div id="dashboard">
+<div id="dashboard ">
   <%= render "user_admin", startup:@startup, score:@score%>
 </div>
 
@@ -18,7 +18,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading<%=index%>">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%=index%>" aria-expanded="true" aria-controls="collapse<%=index%>">
-                Notation du <%=score.name%>, résultat : <span class="text-color"><%= score.total_100 %></span>/100 
+                <h6> Notation du<span class="text-color"> <%=score.name%></span>, résultat : <span class="text-color"><%= score.total_100 %></span>/100 </h6>
                 </button>
                 </h2>
                 <div id="collapse<%=index%>" class="accordion-collapse collapse" aria-labelledby="heading<%=index%>" data-bs-parent="#accordionExample">
@@ -32,5 +32,5 @@
         <% end %>
     </div>
 </div>
-<%# <!-- --> %>
+
     
