@@ -3,8 +3,6 @@ document.getElementById("dashboard").innerHTML = "";
 
 document.getElementById("dashboard").insertAdjacentHTML("afterbegin","<%= j render "score", startup:@startup, score_completed:@score_completed, score:@score%>")
 
-src="https://cdn.jsdelivr.net/npm/chart.js"
-
 var marksCanvas = document.getElementById("marksChart");
 
 var marksData = {
