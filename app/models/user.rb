@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers:[:github, :facebook, :google_oauth2]
-
+  has_one_attached :avatar
   has_one :startup, dependent: :destroy
   after_create :welcome_send
 

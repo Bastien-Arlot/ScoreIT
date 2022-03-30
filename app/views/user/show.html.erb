@@ -4,6 +4,9 @@
       <div class="card p-3 py-4">
         <div  class="text-center"> <img src="#" width="100" class="rounded-circle"> </div>
         <div  class="text-center mt-1">
+          <% if @user.avatar.attached? %>
+            <%= image_tag @user.avatar.variant(resize: "200x200") %>
+          <% end %>
           <% if !@user.username.nil? %>
             <h1 id="username-title" class="mt-2 mb-0"><%=@user.username%></h1>
           <% end %>
