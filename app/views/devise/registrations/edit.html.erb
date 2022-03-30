@@ -20,12 +20,12 @@
             <% end %>
 
             <div class="form-group edit-form-group">
-              <%= f.label :password %> <i> <br>
-              Ne mettez rien ici si vous ne souhaitez rien modifier</i><br />
+              <%= f.label :password %> <small class="text-secondary"> <br>
+              Ne mettez rien ici si vous ne souhaitez rien modifier</small><br />
               <%= f.password_field :password, autocomplete: "new-password",class:"form-edit-control", id:"InputPassword" %>
               <% if @minimum_password_length %>
                 <br />
-                <em>(minimum <%= @minimum_password_length %> caractères)</em>
+                <small class="text-secondary">(minimum <%= @minimum_password_length %> caractères)</small>
               <% end %>
             </div>
 
@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-group edit-form-group">
-              <%= f.label :current_password %> <i> <br> (Nous avons besoin de votre mot de passe actuel pour valider la modification)</i><br />
+              <%= f.label :current_password %> <small class="text-secondary"> <br> (Nous avons besoin de votre mot de passe actuel pour valider la modification)</small><br />
               <%= f.password_field :current_password, autocomplete: "current-password",class:"form-edit-control", id:"InputPassword" %>
             </div>
             </div>
