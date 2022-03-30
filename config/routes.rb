@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:create]
 
+  resources :certificates, only: [:index]
+
+
   resources :startups, only: [:index, :new, :create, :update, :show] do
 
     resources :scores, only: [:index, :new, :create, :update, :show] do

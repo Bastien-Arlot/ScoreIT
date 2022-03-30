@@ -30,4 +30,26 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject:'Ton score!')
   end
 
+  def certificate_email(score)
+    @finance = CategoryFinance.find_by(score_id:score.id).total_100_finance
+    @innovation = CategoryInnovation.find_by(score_id:score.id).total_100_innovation
+    @market = CategoryMarket.find_by(score_id:score.id).total_100_market
+    @offer = CategoryOffer.find_by(score_id:score.id).total_100_offer
+    @strategy = CategoryStrategy.find_by(score_id:score.id).total_100_strategy
+    @team = CategoryTeam.find_by(score_id:score.id).total_100_team
+    @startup = Startup.find(score.startup_id)
+    @score = score
+    @user = User.find_by(id: @startup.user_id)
+    @url = 'https://scoreit-thp.herokuapp.com/users/sign_in'
+
+    pdf = WickedPdf.new.pdf_from_string(
+      render_to_string('startups/certificate.html.erb', layout: 'pdf.html.erb')
+    )
+
+    attachments["Certificat notation pour #{@startup.name} du #{@score.name} "] = pdf
+
+
+    mail(to: @user.email, subject:'Ton score!')
+  end
+
 end

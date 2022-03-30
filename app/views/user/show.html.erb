@@ -1,7 +1,8 @@
-<div  class="container mt-5">
-  <div class="row d-flex justify-content-center">
+<div class="container mt-5 text-center">
+  <h1>Mon profil   <span><i class="fa fa-user"></i></span></h1>
+  <div class="row d-flex justify-content-center mt-5">
     <div class="col-md-8">
-      <div class="card p-3 py-4">
+      <div id="profile-card" class="card p-3 py-4">
         <div  class="text-center"> <img src="#" width="100" class="rounded-circle"> </div>
         <div  class="text-center mt-1">
           <% if !@user.username.nil? %>
@@ -12,10 +13,10 @@
           <h5><%= @user.email%></h5>
           <br/>
           <div id="div-s-profile" class="px-4 mt-1">
-          <% if  !@user.startup.nil?  && !@user.startup.scores.last.name.nil? %>
-            <%= link_to startup_path(current_user.startup.id) do %>
-               <%= image_tag "dashboard.png", :size => "40x40",  %>
-            <% end %>
+            <% if  !@user.startup.nil?  && !@user.startup.scores.last.name.nil? %>
+              <%= link_to startup_path(current_user.startup.id) do %>
+                <%= image_tag "dashboard.png", :size => "40x40"  %>
+              <% end %>
             <% end %>
             <% if !@user.startup.nil? %>
               <h4 id="title-s-profile">Ma startup :</h4>
