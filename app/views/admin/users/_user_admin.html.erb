@@ -3,9 +3,9 @@
         <div class="row g-3">
             <div class="col-12 card_startup">
                 <h2 class="text-center" style="font-size:2rem;">Informations de l'utilisateur <%= @user.username %></h2>
-                <p>Nom de l'utilisateur : <%= @user.username %> </p>
-                <p>ID de l'utilisateur : <%= @user.id %> </p>
-                <p>Email de l'utilisateur : <%= @user.email %> </p>
+                <p class="show-admin">Nom de l'utilisateur : <span class="text-color"> <%= @user.username %></span> </p>
+                <p class="show-admin">ID de l'utilisateur : <span class="text-color"><%= @user.id %> </span></p>
+                <p class="show-admin">Email de l'utilisateur : <span class="text-color"><%= @user.id %> </span> </p>
             </div>
         </div>
 
