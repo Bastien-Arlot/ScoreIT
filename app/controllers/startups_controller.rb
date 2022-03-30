@@ -36,7 +36,8 @@ def show
     format.js { }
     #ici
     format.pdf do
-      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb", layout: "pdf", orientation: "Landscape" # Excluding ".pdf" extension.
+      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"
+      
     end
   end
 
