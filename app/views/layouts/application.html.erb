@@ -19,6 +19,8 @@
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
 
+    <!--------- Favicon ------------>
+    <%= favicon_link_tag asset_path('logo.ico') %>
     
 
   </head>
@@ -27,7 +29,9 @@
     
     <%= render 'layouts/navbar'  %>
     <%= render 'layouts/flash'  %>
+    <div class="main">
     <%= yield %>
+    </div>
      <%= render 'layouts/footer' %>
   </body>
    <!--------- Font awesome js ------->

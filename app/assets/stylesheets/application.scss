@@ -15,31 +15,31 @@
  */
 
  :root {
-
-    --prim :#9e45d1  !important;
-    --second : #66ced6!important;
-    --dark :#020003 !important;
-    --medium-ligth :#777578 !important;
-    --light : #f5f0fa!important;
-
-    --danger : rgb(255, 44, 44)!important;
-    --success : rgb(50, 163, 5)!important;
- 
-  }
-
-
+    --prim: #9e45d1 !important;
+    --second: #66ced6!important;
+    --dark: #020003 !important;
+    --medium-ligth: #777578 !important;
+    --light: #f5f0fa!important;
+    --danger: rgb(255, 44, 44)!important;
+    --success: rgb(50, 163, 5)!important;
+}
 
 body {
     background-color: #f5f0fa!important;
     margin: auto;
-    
 }
 
-
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: 'Ubuntu';
 }
 
-p, h4 {
+p,
+h4 {
     font-family: 'Maven Pro';
+}
+
+.main {
+    min-height: 80vh;
 }
