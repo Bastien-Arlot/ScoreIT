@@ -1,4 +1,9 @@
 
+#profile-card {
+    border-style: solid;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    border-radius: 10px;
+}
 
 #title-s-profile {
     color: var(--prim);
@@ -10,7 +15,7 @@
 }
 
 #username-title {
-    font-size: 50px;
+    font-size: 40px;
     
 }
 

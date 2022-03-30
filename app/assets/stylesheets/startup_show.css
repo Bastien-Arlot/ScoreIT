@@ -50,3 +50,7 @@ form{
 .text-color{
   color:rgb(158, 69, 209);
 }
+
+#score_name, #score_category_team, #score_category_finance, #score_category_innovation, #score_category_market, #score_category_offer, #score_category_strategy{
+  display: none;
+}

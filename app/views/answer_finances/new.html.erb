@@ -1,9 +1,10 @@
+
 <div class="container">
 
-<% @answer_finance.errors.full_messages%>
+<span id="error_message_finance"><%= @answer_finance.errors.full_messages%></span>
 
 
-  <h1>Finance</h1>
+  <h1 class="mt-4">Finance</h1>
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
@@ -53,48 +54,4 @@
 </div>
 
 
-<script src="https://kit.fontawesome.com/4923ee3a4a.js" crossorigin="anonymous"></script>
 
-<script>
-  let y = document.getElementById("answer_finance_1")
-
-  window.addEventListener("load", function() {
-    y.value = "50";
-  });
-
-  y.addEventListener("change", function() {
-    if (y.value == "100"){
-      document.getElementById("sizefinance").textContent = "+ 10 0";
-      document.getElementById("p1").textContent = "00€";
-    }else if (y.value == "0"){
-      document.getElementById("sizefinance").textContent = "";
-      document.getElementById("p1").textContent = "Capital social inférieur à 100€";
-    }else{
-      document.getElementById("sizefinance").textContent = y.value;
-      document.getElementById("p1").textContent = "00€";
-    }
-  }, false);
-
-</script>
-
-
-<script>
-
-let error_finance = '<%= @answer_finance.errors.full_messages %>';
-let answer_finance = [];
-
-if (error_finance !== []){
-  answer_finance = error_finance.split(',');
-  answer_finance.forEach(element => {
-    for (let i = 1; i < 6; i++){
-      if (element.includes(`finance ${i}`)){
-            notyf.error({
-                message: `Merci de répondre à la question n°${i}`,
-                dismissible: true
-                });
-          };
-    };
-  });
-};
-
-</script>
