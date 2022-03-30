@@ -24,7 +24,7 @@ class StartupsController < ApplicationController
   end
 
 
-def show 
+def show
 
   @startup = Startup.find_by(user_id:current_user.id)
   @scores = Score.all
@@ -34,10 +34,10 @@ def show
   respond_to do |format|
     format.html { }
     format.js { }
-    #ici
+
     format.pdf do
-      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb", layout: "pdf", orientation: "Landscape" # Excluding ".pdf" extension.
-    end
+
+       render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"    end
   end
 
 end
@@ -64,7 +64,7 @@ def select_score
   @score_completed = []
     @scores.each do |element|
       if element.startup_id == @startup.id && !element.name.nil?
-        @score_completed << element 
+        @score_completed << element
       end
     end
 
@@ -76,7 +76,7 @@ def select_score
     @score = @score_completed.last
   else
     @score = Score.find(params[:select])
-  end 
+  end
 
 end
 

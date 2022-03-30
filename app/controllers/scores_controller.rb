@@ -20,11 +20,11 @@ class ScoresController < ApplicationController
     end
   end
 
-def show
-  
-  @score = Score.find (params[:id])
-@startup = @score.startup
-end
+  def show
+
+    @score = Score.find (params[:id])
+    @startup = @score.startup
+  end
 
   def update
   end

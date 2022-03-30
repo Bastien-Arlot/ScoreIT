@@ -1,11 +1,8 @@
   <div class="container text-center" id="content">
 
-  
+
   <h1>Tableau de bord</h1>
-  <br/>       
-  
-  <!--PDF LIEN-->
-  <%= link_to 'PDF', startup_path(params[:id], format: :pdf)%>
+  <br/>
 
 
   <p>Notation du :</p>
@@ -43,7 +40,7 @@
       <h5 class="text-color"><%=  @score.category_innovation.total_100_innovation %>/100</h5>
     </div>
   </div>
-    
+
 
   <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="card_startup">
@@ -78,14 +75,14 @@
       <h3>Equipe :</h3>
       <h5 class="text-color"><%=  @score.category_team.total_100_team %>/100</h5>
     </div>
-  </div>                         
-  
+  </div>
+
   <div class="col-lg-5 col-md-12 col-sm-12 card-startup">
-    <canvas id="marksChart" width="600" height="400"></canvas>    
+    <canvas id="marksChart" width="600" height="400"></canvas>
   </div>
 
   <div class="col-lg-7 col-md-12 col-sm-12 card-startup">
-    <canvas id="barChart" width="600" height="425"></canvas>    
+    <canvas id="barChart" width="600" height="425"></canvas>
   </div>
 
 
@@ -95,5 +92,3 @@
   <br>
   <br>
 </div>
-
-
