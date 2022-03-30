@@ -19,6 +19,8 @@
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
 
+    <!--------- Favicon ------------>
+    <%= favicon_link_tag asset_path('logo.ico') %>
     
 
   </head>
@@ -27,7 +29,9 @@
     
     <%= render 'layouts/navbar'  %>
     <%= render 'layouts/flash'  %>
+    <div class="main">
     <%= yield %>
+    </div>
      <%= render 'layouts/footer' %>
   </body>
    <!--------- Font awesome js ------->
@@ -35,6 +39,7 @@
       src="https://kit.fontawesome.com/5179dfb87c.js"
       crossorigin="anonymous"
     ></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <!--------- Bootsrap js ------------>
   <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

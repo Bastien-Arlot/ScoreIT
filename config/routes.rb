@@ -7,9 +7,19 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     omniauth_callbacks:  'users/omniauth_callbacks'
   }
+  
+  scope 'admin', module: 'admin', as: 'admin' do
+  resources :users
+  end
+
+
   resources :user, only: [:show, :edit, :update]
 
   resources :orders, only: [:create]
+
+  resources :certificates, only: [:index]
+
+
   resources :startups, only: [:index, :new, :create, :update, :show] do
 
     resources :scores, only: [:index, :new, :create, :update, :show] do

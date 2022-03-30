@@ -1,6 +1,9 @@
 <div class="container">
 
-  <h1>Offre</h1>
+<span id="error_message_offer"><%= @answer_offer.errors.full_messages%></span>
+
+
+  <h1 class="mt-4">Offre</h1>
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
@@ -62,69 +65,3 @@
 
 </div>
 
-<script src="https://kit.fontawesome.com/4923ee3a4a.js" crossorigin="anonymous"></script>
-
-<script>
-  let y = document.getElementById("answer_offer_2")
-  let i = document.getElementById("answer_offer_3")
-  let j = document.getElementById("answer_offer_4")
-  let k = document.getElementById("answer_offer_5")
-  let l = document.getElementById("answer_offer_6")
-  let m = document.getElementById("answer_offer_7")
-
-  window.addEventListener("load", function() {
-    y.value = "50";
-    i.value = "50";
-    j.value = "50";
-    k.value = "50";
-    l.value = "50";
-    m.value = "50";
-  });
-
-  y.addEventListener("change", function() {
-    document.getElementById("fidelisation").textContent = y.value;
-  }, false);
-
-  i.addEventListener("change", function() {
-    document.getElementById("simplicity").textContent = `${Math.floor(Number(i.value)/10)}`;
-  }, false);
-
-  j.addEventListener("change", function() {
-    document.getElementById("technology").textContent = `${Math.floor(Number(j.value)/10)}`;
-  }, false);
-
-  k.addEventListener("change", function() {
-    document.getElementById("economy").textContent = `${Math.floor(Number(k.value)/10)}`;
-  }, false);
-
-  l.addEventListener("change", function() {
-    document.getElementById("innovation").textContent = `${Math.floor(Number(l.value)/10)}`;
-  }, false);
-
-  m.addEventListener("change", function() {
-    document.getElementById("product").textContent = `${Math.floor(Number(m.value)/10)}`;
-  }, false);
-
-</script>
-
-
-<script>
-
-let error_offer = '<%= @answer_offer.errors.full_messages %>';
-let answer_offer = [];
-
-if (error_offer !== []){
-  answer_offer = error_offer.split(',');
-  answer_offer.forEach(element => {
-    for (let i = 1; i < 9; i++){
-      if (element.includes(`offer ${i}`)){
-            notyf.error({
-                message: `Merci de répondre à la question n°${i}`,
-                dismissible: true
-                });
-          };
-    };
-  });
-};
-
-</script>

@@ -22,7 +22,16 @@ Score.destroy_all
 Startup.destroy_all
 User.destroy_all
 
-1.times do |r|
+
+user = User.create!(
+  
+  username: "Administrator",
+  password: "administrator",
+  email: "admin@yopmail.com",
+  is_admin: true,
+);
+
+3.times do |r|
   user = User.create!(
     email: "a#{r}@yopmail.com",
     password: 'aaaaaa',

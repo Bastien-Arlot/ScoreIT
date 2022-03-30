@@ -13,3 +13,18 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile = ["manifest.js"]
 
+Rails.application.config.assets.precompile += %w( answer_finances.js )
+Rails.application.config.assets.precompile += %w( answer_innovations.js )
+Rails.application.config.assets.precompile += %w( answer_markets.js )
+Rails.application.config.assets.precompile += %w( answer_offers.js )
+Rails.application.config.assets.precompile += %w( answer_strategies.js )
+Rails.application.config.assets.precompile += %w( answer_teams.js )
+Rails.application.config.assets.precompile += %w( flash.js )
+Rails.application.config.assets.precompile += %w( startups.js )
+Rails.application.config.assets.precompile += %w( startups_show.js )
+
+
+
+
+
+

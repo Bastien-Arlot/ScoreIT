@@ -1,6 +1,7 @@
 class ScoresController < ApplicationController
 
   def index
+    @scores = Score.all
   end
 
   def new
@@ -13,7 +14,7 @@ class ScoresController < ApplicationController
       'startup_id' => current_user.startup.id
     )
     if @score.save
-      redirect_to startup_path(current_user.startup.id)
+      redirect_to startup_score_path(current_user.startup.id, @score.id)
     else
       flash[:score_delay] = "Error, not enough delay. The delay should be 90 days."
       render 'new'
@@ -25,6 +26,7 @@ class ScoresController < ApplicationController
     @score = Score.find (params[:id])
     @startup = @score.startup
   end
+
 
   def update
   end

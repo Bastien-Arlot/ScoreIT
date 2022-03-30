@@ -1,5 +1,6 @@
 class StartupsController < ApplicationController
   before_action :authenticate_user
+  before_action :have_startup, only: [:new, :create]
 
   def index
   end
@@ -18,7 +19,6 @@ class StartupsController < ApplicationController
     if @startup.save
       redirect_to root_path
     else
-      flash[:notice] = "Error, fail to save."
       render 'new'
     end
   end
@@ -37,7 +37,10 @@ def show
 
     format.pdf do
 
-       render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"    end
+      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb" 
+      
+    end
+    
   end
 
 end
@@ -53,11 +56,17 @@ end
 
   def authenticate_user
     unless current_user
-      flash[:danger] = "Please log in."
+      flash[:alert] = "Merci de vous connecter"
       redirect_to new_user_session_path
     end
   end
 
+  def have_startup
+    unless current_user.startup.nil?
+      flash[:alert] = "Vous ne pouvez pas créer une seconde startup sur votre compte"
+      redirect_to root_path
+    end
+  end
 
 def select_score
 
