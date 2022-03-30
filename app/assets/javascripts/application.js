@@ -14,4 +14,3 @@
 //= require activestorage
 //= require_tree .
 
-import Chart from 'chart.js/auto';
