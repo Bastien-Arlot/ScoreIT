@@ -14,5 +14,3 @@
 //= require activestorage
 //= require_tree .
 //= require_self
-//= require_tree ../../../vendor/assets/javascripts/.
-//= require_tree ../../../vendor/assets/stylesheets/.
