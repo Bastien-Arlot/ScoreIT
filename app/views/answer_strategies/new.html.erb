@@ -1,6 +1,9 @@
 <div class="container">
 
-  <h1>Strategy</h1>
+<span id="error_message_strategy"><%= @answer_strategy.errors.full_messages%></span>
+
+
+  <h1 class="mt-4">Strategy</h1>
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
@@ -102,25 +105,4 @@
 </div>
 
 
-<script>
-
-let error_strategy = '<%= @answer_strategy.errors.full_messages %>';
-let answer_strategy = [];
-
-if (error_strategy !== []){
-  answer_strategy = error_strategy.split(',');
-  answer_strategy.forEach(element => {
-    console.log(element)
-    for (let i = 1; i < 12; i++){
-      if (element.includes(`Answer strategy ${i} can&#39`)){
-            notyf.error({
-                message: `Merci de répondre à la question n°${i}`,
-                dismissible: true
-                });
-          };
-    };
-  });
-};
-
-</script>
 

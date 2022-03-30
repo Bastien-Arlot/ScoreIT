@@ -1,6 +1,9 @@
 <div class="container">
 
-  <h1>Market</h1>
+<span id="error_message_market"><%= @answer_market.errors.full_messages%></span>
+
+
+  <h1 class="mt-4">Market</h1>
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
@@ -73,49 +76,4 @@
 
 </div>
 
-<script src="https://kit.fontawesome.com/4923ee3a4a.js" crossorigin="anonymous"></script>
 
-<script>
-let i = document.getElementById("answer_market_4");
-let y = document.getElementById("answer_market_3");
-
-window.addEventListener("load", function() {
-    y.value = "50";
-    i.value = "50";
-  });
-
-y.addEventListener("change", function() {
-  if (y.value == "100"){
-      document.getElementById("sizemarket").textContent = "+ 100";
-  }else{
-      document.getElementById("sizemarket").textContent = y.value;
-  }
-}, false);
-
-i.addEventListener("change", function() {
-    document.getElementById("target").textContent = i.value;
-}, false);
-
-</script>
-
-
-<script>
-
-let error_market = '<%= @answer_market.errors.full_messages %>';
-let answer_market = [];
-
-if (error_market !== []){
-  answer_market = error_market.split(',');
-  answer_market.forEach(element => {
-    for (let i = 1; i < 9; i++){
-      if (element.includes(`market ${i}`)){
-            notyf.error({
-                message: `Merci de répondre à la question n°${i}`,
-                dismissible: true
-                });
-          };
-    };
-  });
-};
-
-</script>

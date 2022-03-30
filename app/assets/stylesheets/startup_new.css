@@ -105,3 +105,7 @@
     color: #66ced6;
     background-color: #fff;
 }
+
+#error_message_startup{
+    /*display: none;*/
+}
