@@ -21,41 +21,41 @@ class AnswerTeam < ApplicationRecord
 
     case self.answer_team_1
 
-    when 1
+    when 0..4
       @total = @total + 0
-    when 2
+    when 5..7
       @total = @total +1
-    when 3
+    when 8..10
       @total = @total +2
     end
 
     case self.answer_team_2
 
-    when 1
+    when 0..4
       @total = @total + 0
-    when 2
+    when 5..7
       @total = @total +1
-    when 3
+    when 8..10
       @total = @total +2
     end
 
     case self.answer_team_3
 
-    when 1
+    when 0..4
       @total = @total + 0
-    when 2
+    when 5..7
       @total = @total +1
-    when 3
+    when 8..10
       @total = @total +2
     end
 
     case self.answer_team_4
 
-    when 1
+    when 0..4
       @total = @total + 0
-    when 2
+    when 5..7
       @total = @total +1
-    when 3
+    when 8..10
       @total = @total +2
     end
 

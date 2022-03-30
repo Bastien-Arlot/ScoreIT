@@ -8,130 +8,22 @@
 
   <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-  <p>Sur une échelle de 1 à 10 évaluez votre expérience et vos compétences managériales: </p>
-  <%= label_tag :answer_team_1, "1" %>
-  <%= radio_button_tag :answer_team_1, 1 %>
+  <p>Sur une échelle de 10 évaluez votre expérience et vos compétences managériales: </p>
+  <%= range_field_tag :answer_team_1, in: 1..100, step: 10, class:"d-inline"%>
+  <p class="mx-3 d-inline align-top"><span id='manager' >5</span></p>
 
-  <%= label_tag :answer_team_1, "2" %>
-  <%= radio_button_tag :answer_team_1, 1 %>
+  <p>Sur une échelle de 10 évaluez votre expérience et vos compétences commerciales: </p>
+  <%= range_field_tag :answer_team_2, in: 1..100, step: 10, class:"d-inline"%>
+  <p class="mx-3 d-inline align-top"><span id="commercial">5</span></p>
 
-  <%= label_tag :answer_team_1, "3" %>
-  <%= radio_button_tag :answer_team_1, 1 %>
+  <p>Sur une échelle de 10 évaluez votre expérience et vos compétences financière: </p>
+  <%= range_field_tag :answer_team_3, in: 1..100, step: 10, class:"d-inline"%>
+  <p class="mx-3 d-inline align-top"><span id='finance' >5</span></p>
 
-  <%= label_tag :answer_team_1, "4" %>
-  <%= radio_button_tag :answer_team_1, 1%>
+  <p>Sur une échelle de 10 évaluez votre expérience et vos compétences entrepreneuriales: </p>
+  <%= range_field_tag :answer_team_4, in: 1..100, step: 10, class:"d-inline"%>
+  <p class="mx-3 d-inline align-top"><span id='entreprenership' >5</span></p>
 
-  <%= label_tag :answer_team_1, "5" %>
-  <%= radio_button_tag :answer_team_1, 1%>
-
-  <%= label_tag :answer_team_1, "6" %>
-  <%= radio_button_tag :answer_team_1, 2 %>
-
-  <%= label_tag :answer_team_1, "7" %>
-  <%= radio_button_tag :answer_team_1, 2 %>
-
-  <%= label_tag :answer_team_1, "8" %>
-  <%= radio_button_tag :answer_team_1, 2 %>
-
-  <%= label_tag :answer_team_1, "9" %>
-  <%= radio_button_tag :answer_team_1, 3 %>
-
-  <%= label_tag :answer_team_1, "10" %>
-  <%= radio_button_tag :answer_team_1, 3 %>
-
-
-  <p>Sur une échelle de 1 à 10 évaluez votre expérience et vos compétences commerciales: </p>
-  <%= label_tag :answer_team_2, "1" %>
-  <%= radio_button_tag :answer_team_2, 1 %>
-
-  <%= label_tag :answer_team_2, "2" %>
-  <%= radio_button_tag :answer_team_2, 1 %>
-
-  <%= label_tag :answer_team_2, "3" %>
-  <%= radio_button_tag :answer_team_2, 1 %>
-
-  <%= label_tag :answer_team_2, "4" %>
-  <%= radio_button_tag :answer_team_2, 1%>
-
-  <%= label_tag :answer_team_2, "5" %>
-  <%= radio_button_tag :answer_team_2, 1%>
-
-  <%= label_tag :answer_team_2, "6" %>
-  <%= radio_button_tag :answer_team_2, 2 %>
-
-  <%= label_tag :answer_team_2, "7" %>
-  <%= radio_button_tag :answer_team_2, 2 %>
-
-  <%= label_tag :answer_team_2, "8" %>
-  <%= radio_button_tag :answer_team_2, 2 %>
-
-  <%= label_tag :answer_team_2, "9" %>
-  <%= radio_button_tag :answer_team_2, 3 %>
-
-  <%= label_tag :answer_team_2, "10" %>
-  <%= radio_button_tag :answer_team_2, 3 %>
-
-  <p>Sur une échelle de 1 à 10 évaluez votre expérience et vos compétences financière: </p>
-  <%= label_tag :answer_team_3, "1" %>
-  <%= radio_button_tag :answer_team_3, 1 %>
-
-  <%= label_tag :answer_team_3, "2" %>
-  <%= radio_button_tag :answer_team_3, 1 %>
-
-  <%= label_tag :answer_team_3, "3" %>
-  <%= radio_button_tag :answer_team_3, 1 %>
-
-  <%= label_tag :answer_team_3, "4" %>
-  <%= radio_button_tag :answer_team_3, 1%>
-
-  <%= label_tag :answer_team_3, "5" %>
-  <%= radio_button_tag :answer_team_3, 1%>
-
-  <%= label_tag :answer_team_3, "6" %>
-  <%= radio_button_tag :answer_team_3, 2 %>
-
-  <%= label_tag :answer_team_3, "7" %>
-  <%= radio_button_tag :answer_team_3, 2 %>
-
-  <%= label_tag :answer_team_3, "8" %>
-  <%= radio_button_tag :answer_team_3, 2 %>
-
-  <%= label_tag :answer_team_3, "9" %>
-  <%= radio_button_tag :answer_team_3, 3 %>
-
-  <%= label_tag :answer_team_3, "10" %>
-  <%= radio_button_tag :answer_team_3, 3 %>
-
-  <p>Sur une échelle de 1 à 10 évaluez votre expérience et vos compétences entrepreneuriales: </p>
-  <%= label_tag :answer_team_4, "1" %>
-  <%= radio_button_tag :answer_team_4, 1 %>
-
-  <%= label_tag :answer_team_4, "2" %>
-  <%= radio_button_tag :answer_team_4, 1 %>
-
-  <%= label_tag :answer_team_4, "3" %>
-  <%= radio_button_tag :answer_team_4, 1 %>
-
-  <%= label_tag :answer_team_4, "4" %>
-  <%= radio_button_tag :answer_team_4, 1%>
-
-  <%= label_tag :answer_team_4, "5" %>
-  <%= radio_button_tag :answer_team_4, 1%>
-
-  <%= label_tag :answer_team_4, "6" %>
-  <%= radio_button_tag :answer_team_4, 2 %>
-
-  <%= label_tag :answer_team_4, "7" %>
-  <%= radio_button_tag :answer_team_4, 2 %>
-
-  <%= label_tag :answer_team_4, "8" %>
-  <%= radio_button_tag :answer_team_4, 2 %>
-
-  <%= label_tag :answer_team_4, "9" %>
-  <%= radio_button_tag :answer_team_4, 3 %>
-
-  <%= label_tag :answer_team_4, "10" %>
-  <%= radio_button_tag :answer_team_4, 3 %>
 
   <p>La startup possède plus de 2 dirigeants avec une complémentarité de compétence. </p>
   <%= label_tag :answer_team_5, "Oui" %>
@@ -199,4 +91,3 @@
   <% end %>
 
 </div>
-
