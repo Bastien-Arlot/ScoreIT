@@ -24,7 +24,7 @@ User.destroy_all
 
 
 user = User.create!(
-  
+
   username: "Administrator",
   password: "administrator",
   email: "admin@yopmail.com",
@@ -50,10 +50,10 @@ user = User.create!(
 
 
                     answer_team = AnswerTeam.create!(
-                      answer_team_1: 3,
-                      answer_team_2:3,
-                      answer_team_3:3,
-                      answer_team_4:3,
+                      answer_team_1:10,
+                      answer_team_2:10,
+                      answer_team_3:10,
+                      answer_team_4:10,
                       answer_team_5:1,
                       answer_team_6:2,
                       answer_team_7:3,
@@ -121,5 +121,5 @@ user = User.create!(
                                 answer_finance_5:1,
                                 category_finance_id: Score.last.id
                                 );
-                                
+
                               end

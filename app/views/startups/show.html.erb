@@ -35,7 +35,9 @@
 <span id="score_category_strategy"><%=@score.category_strategy.total_100_strategy%></span>
 
 
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <%= link_to "Retirer la startup", startup_path(@startup.id), method: :delete ,  class:"btn btn-danger m-5" ,data: {confirm: "Êtes vous sûre? Chaque certificat ne sera plus accessible ou vérifiable.", disable_with: "Suppression..."} %>
 
-
-
-
+  </div>
+</div>

@@ -8,10 +8,10 @@ window.addEventListener("load", function(){
     }
   });
 
-  let answer_team_1 = document.getElementById("answer_team_1")
-  let answer_team_2 = document.getElementById("answer_team_2")
-  let answer_team_3 = document.getElementById("answer_team_3")
-  let answer_team_4 = document.getElementById("answer_team_4")
+  let answer_team_1 = document.getElementById("answer_team_1");
+  let answer_team_2 = document.getElementById("answer_team_2");
+  let answer_team_3 = document.getElementById("answer_team_3");
+  let answer_team_4 = document.getElementById("answer_team_4");
 
   answer_team_1.value = "50";
   answer_team_2.value = "50";

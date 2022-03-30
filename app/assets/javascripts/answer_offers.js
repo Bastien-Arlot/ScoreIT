@@ -8,12 +8,12 @@ window.addEventListener("load", function(){
     }
   });
 
-  let answer_offer_2 = document.getElementById("answer_offer_2")
-  let answer_offer_3 = document.getElementById("answer_offer_3")
-  let answer_offer_4 = document.getElementById("answer_offer_4")
-  let answer_offer_5 = document.getElementById("answer_offer_5")
-  let answer_offer_6 = document.getElementById("answer_offer_6")
-  let answer_offer_7 = document.getElementById("answer_offer_7")
+  let answer_offer_2 = document.getElementById("answer_offer_2");
+  let answer_offer_3 = document.getElementById("answer_offer_3");
+  let answer_offer_4 = document.getElementById("answer_offer_4");
+  let answer_offer_5 = document.getElementById("answer_offer_5");
+  let answer_offer_6 = document.getElementById("answer_offer_6");
+  let answer_offer_7 = document.getElementById("answer_offer_7");
 
   answer_offer_2.value = "50";
   answer_offer_3.value = "50";
