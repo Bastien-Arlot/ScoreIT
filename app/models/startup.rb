@@ -3,6 +3,11 @@ class Startup < ApplicationRecord
   has_many :scores, dependent: :destroy
 
   validates :user_id, uniqueness: true
+  validates :name, 
+    presence: true,
+    length: { in: 1..20 }
+
+  validates :description, presence: true
 
   after_create :do_score
   after_create :startup_registration_mail

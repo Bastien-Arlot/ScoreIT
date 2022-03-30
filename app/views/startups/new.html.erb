@@ -1,8 +1,6 @@
-<% if @startup.errors.any? %>
-<% @startup.errors.full_messages.each do |message| %>
-<%= message %>
-<%end%>
-<%end%>    
+
+<span id="error_message_startup"><%= @startup.errors.full_messages%></span>
+
     <div class="title-container">
         <h3>Bienvenue sur le formulaire de votre Start Up</h3>
     </div>
