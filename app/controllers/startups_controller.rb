@@ -24,32 +24,31 @@ class StartupsController < ApplicationController
   end
 
 
-def show
+  def show
 
-  @startup = Startup.find_by(user_id:current_user.id)
-  @scores = Score.all
-  @score_last = @startup.scores.last
-  select_score()
+    @startup = Startup.find_by(user_id:current_user.id)
+    @scores = Score.all
+    @score_last = @startup.scores.last
+    select_score()
 
-  respond_to do |format|
-    format.html { }
-    format.js { }
+    respond_to do |format|
+      format.html { }
+      format.js { }
 
-    format.pdf do
+      format.pdf do
 
-      render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb" 
-      
+        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"
+
+      end
     end
-    
   end
 
-end
-
-
-
-
-
   def update
+  end
+
+  def destroy
+    @startup = Startup.find_by(user_id:current_user.id).destroy()
+    redirect_to root_path
   end
 
   private
@@ -68,25 +67,25 @@ end
     end
   end
 
-def select_score
+  def select_score
 
-  @score_completed = []
+    @score_completed = []
     @scores.each do |element|
       if element.startup_id == @startup.id && !element.name.nil?
         @score_completed << element
       end
     end
 
-  if params[:select].nil?
-    if @score_completed.nil?
+    if params[:select].nil?
+      if @score_completed.nil?
+        params[:select] = @score_completed.last.id
+      end
       params[:select] = @score_completed.last.id
+      @score = @score_completed.last
+    else
+      @score = Score.find(params[:select])
     end
-    params[:select] = @score_completed.last.id
-    @score = @score_completed.last
-  else
-    @score = Score.find(params[:select])
-  end
 
-end
+  end
 
 end
