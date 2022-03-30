@@ -1,7 +1,7 @@
-window.addEventListener("load", function(){ 
+window.addEventListener("load", function(){
 
   const notyf = new Notyf({
-    duration: 0,
+    duration: 6000,
     position: {
       x: 'right',
       y: 'top',
