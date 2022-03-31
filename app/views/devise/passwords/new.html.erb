@@ -1,5 +1,5 @@
 <div id="block" class="container signin-container">
-  <div id="pwd-title" class="text-center mt-5">
+  <div class="text-center mt-5">
     <h1>Mot de passe oublié ? <i class="fa fa-lock"></i></h1>
     <p>Vous pouvez réinitialiser votre mot de passe ici.</p>
   </div>
@@ -16,7 +16,7 @@
      
     <% end %>
   </div>
-  <a id="s-signup" href="#" alt="">S'inscrire</a>
+  <%= link_to "S'inscrire", new_registration_path(resource_name), class:"btn-login" %>
   
 </div>
 

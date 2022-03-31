@@ -21,9 +21,9 @@
   </div>
 
     <% if @score_last.name.nil?%>
-      <%= link_to "Continuer ma notation", startup_score_path(@startup.id, @score_last.id) , class:"btn btn-lg rounded-pill score_button", id:"jumbutton"%>
+      <%= link_to "Continuer ma notation", startup_score_path(@startup.id, @score_last.id) , class:"btn btn-lg rounded-pill score_button", id:"continue-btn"%>
   <% else %>
-      <%= link_to "Nouvelle notation", startup_scores_path(@startup.id) , method: "post", class:"btn btn-lg rounded-pill score_button", id:"jumbutton"%>
+      <%= link_to "Nouvelle notation", startup_scores_path(@startup.id) , method: "post", class:"btn btn-lg rounded-pill score_button", id:"new-btn"%>
   <%end%>
 
 
