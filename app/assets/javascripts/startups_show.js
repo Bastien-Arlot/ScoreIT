@@ -30,12 +30,13 @@ window.addEventListener("load", function(){
     type: 'radar',
     data: marksData,
     options: {
-      scales: {
-        r: {
-          suggestedMin: 0,
-          suggestedMax: 100
+      scale: {
+        ticks: {
+          beginAtZero: true,
+          max: 100,
+          min: 0,
         }
-      }
+    }
     }
   });
 
@@ -48,9 +49,19 @@ window.addEventListener("load", function(){
       data: [Number(score_category_team), Number(score_category_finance), Number(score_category_innovation), Number(score_category_market), Number(score_category_offer), Number(score_category_strategy)],
       backgroundColor: [
       'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)'
       ],
       borderColor: [
       'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)'
       ],
       borderWidth: 2
     }]
