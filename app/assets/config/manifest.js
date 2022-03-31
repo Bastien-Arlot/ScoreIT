@@ -8,6 +8,7 @@
 //= link fontawesome.css
 //= link notyf.min.css
 //= link notyf.min.js
+//= link chart.min.css
 //= link chart.min.js
-
+  
 
