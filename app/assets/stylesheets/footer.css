@@ -9,8 +9,26 @@
 
 .footerlink {
     color:var(--prim);
-    text-decoration: none
+    text-decoration: none;
+    margin-left: 10px;
     
+}
+
+.titl-footer {
+  margin-left: 10px;
+}
+
+#contact {
+  margin-left: 10px;
+}
+
+#envelope {
+  margin-top: 5px;
+}
+
+#mail-adress {
+  display: flex;
+  flex-direction: row;
 }
 
 .footerlink:hover {
