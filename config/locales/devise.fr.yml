@@ -28,8 +28,10 @@ fr:
       password_change:
         subject: "Votre mot de passe a été modifié avec succès"
     omniauth_callbacks:
-      failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
-      success: "Authentifié avec succès via %{kind}."
+      failure: "Nous n'avons pas pu vous authentifier... 😭"
+      #failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
+      success: "Authentifié avec succès!"
+      #success: "Authentifié avec succès via %{kind}."
     passwords:
       no_token: "Vous ne pouvez accéder à cette page sans passer par un e-mail de réinitialisation de mot de passe. Si vous êtes passé par un e-mail de ce type, assurez-vous d'utiliser l'URL complète."
       send_instructions: "Vous allez recevoir les instructions de réinitialisation du mot de passe dans quelques instants."
