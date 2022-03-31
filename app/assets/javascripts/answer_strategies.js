@@ -14,7 +14,6 @@ window.addEventListener("load", function(){
   if (error_strategy.textContent !== []){
     answer_strategy = error_strategy.textContent.split(',');
     answer_strategy.forEach(element => {
-      console.log(element)
       for (let i = 1; i < 12; i++){
         if (element.includes(`Answer strategy ${i} doit être rempli(e)`)){
               notyf.error({

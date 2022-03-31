@@ -21,41 +21,41 @@ class AnswerTeam < ApplicationRecord
 
     case self.answer_team_1
 
-    when 0..4
+    when 0..40
       @total = @total + 0
-    when 5..7
+    when 41..70
       @total = @total +1
-    when 8..10
+    when 71..100
       @total = @total +2
     end
 
     case self.answer_team_2
 
-    when 0..4
+    when 0..40
       @total = @total + 0
-    when 5..7
+    when 41..70
       @total = @total +1
-    when 8..10
+    when 71..100
       @total = @total +2
     end
 
     case self.answer_team_3
 
-    when 0..4
+    when 0..40
       @total = @total + 0
-    when 5..7
+    when 41..70
       @total = @total +1
-    when 8..10
+    when 71..100
       @total = @total +2
     end
 
     case self.answer_team_4
 
-    when 0..4
+    when 0..40
       @total = @total + 0
-    when 5..7
+    when 41..70
       @total = @total +1
-    when 8..10
+    when 71..100
       @total = @total +2
     end
 
@@ -89,9 +89,9 @@ class AnswerTeam < ApplicationRecord
 
     case self.answer_team_8
 
-    when 1
+    when 1..2
       @total = @total + 0
-    when 2
+    when 3
       @total = @total - 1
     end
 
@@ -107,7 +107,7 @@ class AnswerTeam < ApplicationRecord
 
     when 1
       @total = @total + 0
-    when 2
+    when 2..5
       @total = @total - 1
     end
 

@@ -19,7 +19,7 @@ class AnswerOffer < ApplicationRecord
 
     @total = 0
 
-    if self.answer_offer_1 == 2
+    if self.answer_offer_1 == 3 || self.answer_offer_1 == 4
       @total = @total + 1
     end
     puts @total
