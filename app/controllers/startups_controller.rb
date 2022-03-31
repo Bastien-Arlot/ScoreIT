@@ -17,7 +17,7 @@ class StartupsController < ApplicationController
     )
 
     if @startup.save
-      redirect_to root_path
+      startup_score_path(current_user.startup.id, @score.id)
     else
       render 'new'
     end

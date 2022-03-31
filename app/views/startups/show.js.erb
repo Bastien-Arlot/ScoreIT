@@ -24,12 +24,13 @@ var radarChart = new Chart(marksCanvas, {
   type: 'radar',
   data: marksData,
   options: {
-        scales: {
-            r: {
-                suggestedMin: 0,
-                suggestedMax: 100
-            }
+        scale: {
+        ticks: {
+          beginAtZero: true,
+          max: 100,
+          min: 0,
         }
+    }
     }
 });
 
@@ -43,11 +44,21 @@ var barData = {
     data: [Number("<%=@score.category_team.total_100_team%>"), Number("<%=@score.category_finance.total_100_finance%>"), Number("<%=@score.category_innovation.total_100_innovation%>"), Number("<%=@score.category_market.total_100_market%>"), Number("<%=@score.category_offer.total_100_offer%>"), Number("<%=@score.category_strategy.total_100_strategy%>")],
     backgroundColor: [
       'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)',
+      'rgba(158, 69, 209, 0.2)'
     ],
     borderColor: [
       'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)',
+      'rgb(158, 69, 209)'
     ],
-    borderWidth: 1
+    borderWidth: 2
   }]
 };
 

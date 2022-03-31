@@ -8,9 +8,25 @@ window.addEventListener("load", function(){
       }
     });
 
-    let answer_finance_1 = document.getElementById("answer_finance_1")
+    let answer_finance_1 = document.getElementById("answer_finance_1");
+    let params_answer_finance_1 = document.getElementById("params_answer_finance_1").textContent;
 
-    answer_finance_1.value = "50";
+    if (params_answer_finance_1 == []){
+        answer_finance_1.value = "50";
+        document.getElementById("sizefinance").textContent = answer_finance_1.value;
+    }else{
+      answer_finance_1.value = params_answer_finance_1;
+      if (answer_finance_1.value == "100"){
+        document.getElementById("sizefinance").textContent = "+ 10 0";
+        document.getElementById("p1").textContent = "00€";
+      }else if (answer_finance_1.value == "0"){
+        document.getElementById("sizefinance").textContent = "";
+        document.getElementById("p1").textContent = "Capital social inférieur à 100€";
+      }else{
+        document.getElementById("sizefinance").textContent = answer_finance_1.value;
+        document.getElementById("p1").textContent = "00€";
+      }
+    }
 
     answer_finance_1.addEventListener("change", function() {
       if (answer_finance_1.value == "100"){
