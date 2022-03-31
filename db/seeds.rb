@@ -50,10 +50,10 @@ user = User.create!(
 
 
                     answer_team = AnswerTeam.create!(
-                      answer_team_1:10,
-                      answer_team_2:10,
-                      answer_team_3:10,
-                      answer_team_4:10,
+                      answer_team_1:100,
+                      answer_team_2:100,
+                      answer_team_3:100,
+                      answer_team_4:100,
                       answer_team_5:1,
                       answer_team_6:2,
                       answer_team_7:3,
@@ -79,7 +79,7 @@ user = User.create!(
                         );
 
                         answer_offer = AnswerOffer.create!(
-                          answer_offer_1:2,
+                          answer_offer_1:3,
                           answer_offer_2:25,
                           answer_offer_3:80,
                           answer_offer_4:80,
@@ -104,7 +104,7 @@ user = User.create!(
 
                             answer_innovation = AnswerInnovation.create!(
                               answer_innovation_1:1,
-                              answer_innovation_2:2,
+                              answer_innovation_2:4,
                               answer_innovation_3:82,
                               answer_innovation_4:1,
                               answer_innovation_5:3,
