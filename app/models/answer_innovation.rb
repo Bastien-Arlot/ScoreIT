@@ -22,7 +22,7 @@ class AnswerInnovation < ApplicationRecord
     end
     puts @total
 
-    if self.answer_innovation_2 == 2
+    if self.answer_innovation_2 == 4
       @total = @total + 1
     end
     puts @total
