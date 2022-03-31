@@ -113,6 +113,8 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.1)
     ffi (1.15.5)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -318,6 +320,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   faker
+  friendly_id (~> 5.4.0)
   image_processing (>= 1.2)
   jbuilder (~> 2.5)
   letter_opener
