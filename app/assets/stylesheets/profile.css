@@ -1,5 +1,6 @@
 
 #profile-card {
+    align-items: center;
     border-style: solid;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
     border-radius: 10px;
@@ -27,17 +28,18 @@
     border-radius: 5px;
 }
 
-#btn-change {
+.btn-change {
     margin-top: 20px;
     border-color:var(--prim)!important;
     background-color:var(--second);
-    color:var(--light)!important;
+    color:var(--prim)!important;
     font-weight:400;
 }
 
-#btn-change:hover {
+.btn-change:hover {
     border-color:var(--second)!important;
     background-color: var(--prim)!important;
     color:var(--light)!important;
     font-weight:400;
 }
+
