@@ -1,28 +1,5 @@
-<% if !current_user.startup.scores.last.name.nil? || current_user.startup.scores.length >1 %>
-<%= form_tag orders_path do %>
-  <% if flash[:error].present? %>
-  <div id="error_explanation">
-    <p><%= flash[:error] %></p>
-  </div>
-  <% end %>
-  <div class="container text-center ">
-    <%= submit_tag("Achat de certificat") %>
-  </div>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-description="Achat d'un produit"
-      data-amount="3500"
-      data-locale="auto">
-    </script>
-    <script>
-      // Hide default stripe button, be careful there if you
-      // have more than 1 button of that class
-      document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
-    </script>
-    <% end %>
-<% end %>
 
-<div id="dashboard">
+<div id="dashboard" >
   <%= render "score", startup:@startup, score:@score%>
 </div>
 
@@ -33,11 +10,3 @@
 <span id="score_category_market"><%=@score.category_market.total_100_market%></span>
 <span id="score_category_offer"><%=@score.category_offer.total_100_offer%></span>
 <span id="score_category_strategy"><%=@score.category_strategy.total_100_strategy%></span>
-
-
-<div class="container">
-  <div class="d-grid justify-content-center">
-    <h3 class="text-danger ">--- Danger Zone ---</h3>
-    <%= link_to "Supprimer la startup", startup_path(@startup.id), method: :delete , class:"btn btn-danger rounded-pill" , data: {confirm: "Êtes vous sûre? Chaque certificat ne sera plus accessible ou vérifiable.", disable_with: "Suppression..."} %>
-  </div>
-</div>
