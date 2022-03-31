@@ -50,18 +50,26 @@
                                       Oui
                                       <% end %>
                               </td>
-                              <td class="admin-index-td"> <!-- <%= user.startup.scores.last.name %> -->
+                              <td class="admin-index-td">
                               <% if user.startup.scores.last.name != nil && (user.startup.scores.last.name.to_date + 30 ) >= DateTime.now %>
                                       Oui 
                                   <% else %>
-                                      Non, pas avant le : <%= @users.find(3).startup.scores.last.name.to_date + 30%> (aaaa/mm/jj)
+                                  <% if user.startup.scores[0].name == nil%>
+                                    le nom est nil bg
+                                    <% else %>
+                                      Non, pas avant le : <%= user.startup.scores[0].name.to_date + 30%> (aaaa/mm/jj)
+                                  <% end %>
+                                      
                               <% end %>
                               </td>
                               
                             <% end %>
-                            
+                            <% else %>
+                            <td class="admin-index-td">Pas de Startup</td>
+                            <td class="admin-index-td"></td>
+                            <td class="admin-index-td"></td>
+                            <td class="admin-index-td"></td>
                           <% end %>
-                          <td class="admin-index-td"> <%= user.startup.scores.last.name%></td>
                       </tr>
                       <% end %>
                       
