@@ -4,6 +4,9 @@ class User < ApplicationRecord
 
   validates :username, presence:true, uniqueness: {case_sensitive: false}, format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
 
+  extend FriendlyId
+  friendly_id :username, use: :slugged
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers:[:github, :facebook, :google_oauth2]
   has_one_attached :avatar

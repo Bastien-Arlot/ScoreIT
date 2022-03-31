@@ -29,8 +29,8 @@
           </div>
           <br/>
           <div class="buttons">
-            <%= link_to "Paramètres", edit_user_registration_path , class:"btn btn-signup px-4 ms-3"%>
-            <%= link_to "Editer profil", edit_user_path(@user.id) , class:"btn btn-signup px-4 ms-3"%>
+            <%= link_to "Paramètres", edit_user_registration_path(@user.username) , class:"btn btn-signup px-4 ms-3"%>
+            <%= link_to "Editer profil", edit_user_path(@user.username) , class:"btn btn-signup px-4 ms-3"%>
           </div>
         </div>
       </div>
