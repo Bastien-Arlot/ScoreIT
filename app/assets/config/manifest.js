@@ -11,5 +11,7 @@
 //= link chart.min.css
 //= link chart.min.js
 //= link randomColor.min.js
+//= link slim.min.js
+//= link popper.min.js
   
 
