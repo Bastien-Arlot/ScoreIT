@@ -40,8 +40,21 @@
     border-color: var(--prim)!important;
 }
 
-#jumbutton {
+#letsgo {
     margin-left: -0.1px !important;
+    margin-top: 15px;
+    margin-left: 130px;
+    background-color: #66ced6;
+    color: #fff;
+    font-weight:300;
+}
+
+#register {
+    margin-top: 15px;
+   
+    background-color: #66ced6;
+    color: #fff;
+    font-weight:300;
 }
 
 .signin-form-check {

@@ -54,3 +54,12 @@ form{
 #score_name, #score_category_team, #score_category_finance, #score_category_innovation, #score_category_market, #score_category_offer, #score_category_strategy{
   display: none;
 }
+
+#continue-btn, #new-btn {
+  margin-top: 15px;
+  margin-left: 130px;
+  background-color: #66ced6;
+  color: #fff;
+  font-weight:300;
+}
+
