@@ -24,11 +24,15 @@
             <li class="nav-item mt-2">
               <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
             </li>
-          <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.last.category_team.nil? && current_user.startup.scores.last.category_finance.nil? && current_user.startup.scores.last.category_innovation.nil? && current_user.startup.scores.last.category_market.nil? && current_user.startup.scores.last.category_strategy.nil? && current_user.startup.scores.last.category_offer.nil?%>
+          <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.length == 1 && current_user.startup.scores.last.category_team.nil? && current_user.startup.scores.last.category_finance.nil? && current_user.startup.scores.last.category_innovation.nil? && current_user.startup.scores.last.category_market.nil? && current_user.startup.scores.last.category_strategy.nil? && current_user.startup.scores.last.category_offer.nil?%>
             <li class="nav-item mt-2">
               <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
             </li>
-          <% elsif user_signed_in? && !current_user.startup.nil?%>
+          <% elsif user_signed_in? && !current_user.startup.nil? && !current_user.startup.scores.last.name.nil? %>
+            <li class="nav-item mt-2">
+              <%= link_to "Démarrer ma notation", startup_scores_path(current_user.startup.id), method:"post" , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.last.name.nil?%>
             <li class="nav-item mt-2">
               <%= link_to "Continuer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
             </li>
