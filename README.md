@@ -8,6 +8,13 @@ ScoreIt <br>
 </h1>
 <h4 align="center">Êtes vous à la hauteur?</h4>
 <br>
+## Objectif
+
+L’objectif de ScoreIT est de proposer un outil de crédibilisation des projets de startups dont l’optique serait de lever des fonds auprès d’investisseurs ou d’établissements financiers. Nous proposons une plateforme entièrement en ligne permettant aux fondateurs de startups de pouvoir obtenir une notation sur leur projet permettant ainsi de donner un score de crédibilité à ce dernier dans le but de rassurer les futurs potentiels investisseurs.
+
+## Méthode de calcul
+
+Afin d'obtenir une notation la plus juste possible nous évalons la startup au travers d'une série de question répartie en 6 catégories : Equipe, Finance, Innovation, Marché, Offre, Stratégie
 
 ## WEB version 🌐
 <!--mettre le site final entre parenthèse-->
