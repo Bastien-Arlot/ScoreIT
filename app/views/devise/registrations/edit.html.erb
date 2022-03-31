@@ -42,9 +42,9 @@
     <div class="container">
       <div class="d-flex justify-content-center">
         <div class="submit edit-submit ">
-          <%= f.submit "C'est tout bon!", id:"jumbutton", class:"btn btn-lg rounded-pill"%>
+          <%= f.submit "C'est tout bon!", id:"btn-go", class:"btn btn-lg rounded-pill"%>
             <% end %>
-          <%= link_to 'Page profil', edit_user_registration_path(@user.username), class:"btn btn-lg rounded-pill btn-secondary mt-3"%>
+          <%= link_to 'Page profil', user_path(current_user.username), class:"btn btn-lg rounded-pill mt-3", id:"back-profile-btn"%>
           <%= link_to root_path, class:"btn btn-home" do %>
                   <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
                   <lord-icon

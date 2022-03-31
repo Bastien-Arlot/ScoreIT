@@ -30,16 +30,26 @@
 
 .btn-change {
     margin-top: 20px;
-    border-color:var(--prim)!important;
-    background-color:var(--second);
-    color:var(--prim)!important;
+    
+    background-color:var(--second)!important;
+    color:#fff!important;
     font-weight:400;
 }
 
 .btn-change:hover {
     border-color:var(--second)!important;
-    background-color: var(--prim)!important;
-    color:var(--light)!important;
+    background-color:#fff!important;
+    color:var(--second)!important;
     font-weight:400;
 }
 
+#btn-search {
+    border-color: var(--prim)!important;
+    background-color: #fff!important;
+    border-width: 3px!important;
+    color: black!important;
+}
+
+#btn-search:hover {
+    color: black!important;
+}
