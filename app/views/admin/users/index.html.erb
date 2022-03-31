@@ -22,7 +22,7 @@
                           <th scope="col" class="admin-col"></th>
                           <th scope="col" class="admin-col">Nom de l'utilisateur</th>
                           <th scope="col" class="admin-col">Nom de la startup</th>
-                          <th scope="col" class="admin-col">Nombre de notations terminées</th>
+                          <th scope="col" class="admin-col">Nombre de notations</th>
                           <th scope="col" class="admin-col">Dernière notation finie ?</th>
                           <th scope="col" class="admin-col">Eligible à une nouvelle notation ?</th>
                       </tr>
@@ -51,11 +51,16 @@
                                       <% end %>
                               </td>
                               <td class="admin-index-td">
+                              <% if !user.startup.scores.last.name.nil? %>
                                 <% if (user.startup.scores.last.name.to_date + 30) < DateTime.now %>
                                       Oui 
                                   <% else %>
                                       Non, pas avant le : <%= user.startup.scores.last.name.to_date + 30%> (aaaa/mm/jj)
+                                <% end %>
+                                <% else %>
+                                -
                               <% end %>
+                                
                               </td>
                               
                             <% end %>
