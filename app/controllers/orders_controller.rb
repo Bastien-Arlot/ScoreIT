@@ -21,14 +21,15 @@ class OrdersController < ApplicationController
         )
 
         if @order.save
+          flash[:notice] = "Paiement validé"
           render 'success'
         else
           flash[:notice] = "Error, fail to save."
-          redirect_to startups_path
+          redirect_to startup_path(current_user.startup.id)
         end
       rescue Stripe::CardError => e
         flash[:error] = e.message
-        redirect_to startups_path
+        redirect_to startup_path(current_user.startup.id)
       end#
     end
 
