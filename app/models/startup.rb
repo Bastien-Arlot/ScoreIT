@@ -3,7 +3,7 @@ class Startup < ApplicationRecord
   has_many :scores, dependent: :destroy
 
   validates :user_id, uniqueness: true
-  validates :name, 
+  validates :name,
     presence: true,
     length: { in: 1..20 }
 
@@ -20,7 +20,7 @@ class Startup < ApplicationRecord
   end
 
   def startup_registration_mail
-    UserMailer.new_startup_email(self).deliver_now
+  #  UserMailer.new_startup_email(self).deliver_now
   end
 
 end

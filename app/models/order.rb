@@ -6,7 +6,7 @@ class Order < ApplicationRecord
     score_completed(self)
     @score = Score.find_by(id: @score_completed.last.id)
     score = @score
-   UserMailer.score_email(score).deliver_now
+  # UserMailer.score_email(score).deliver_now
   end
 
   def score_completed(score)
