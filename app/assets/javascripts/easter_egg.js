@@ -44,7 +44,7 @@ window.addEventListener("load", function(){
       }, 3000);
 
       setTimeout(function(){
-        waiting.textContent = "God Mod is not for kid ! sorry";
+        waiting.textContent = "God Mod is not for kids ! sorry";
       }, 4000);
 
       setTimeout(function(){
