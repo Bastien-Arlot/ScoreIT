@@ -51,7 +51,9 @@ class AnswerFinance < ApplicationRecord
     @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryFinance.find(self.category_finance_id)
-    @category.update(total_notation_finance: @total, max_notation_finance: @total_max, total_100_finance: @total_100.floor)
+
+    @category.update(total_rate_finance:@total, max_rate_finance:@total_max, total_100_finance:@total_100.floor)
+
 
   end
 

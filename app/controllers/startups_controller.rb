@@ -28,7 +28,7 @@ class StartupsController < ApplicationController
     @startup = Startup.find_by(user_id: current_user.id)
     @scores = Score.all
     @score_last = @startup.scores.last
-    @all_my_notation = @scores.where(startup_id: current_user.startup.id)
+    @all_my_rate = @scores.where(startup_id: current_user.startup.id)
     select_score()
 
     @myscore = @scores.where(startup_id: current_user.startup.id, isbuy: true)

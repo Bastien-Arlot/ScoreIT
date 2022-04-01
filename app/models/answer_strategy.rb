@@ -95,7 +95,9 @@ class AnswerStrategy < ApplicationRecord
     @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryStrategy.find(self.category_strategy_id)
-    @category.update(total_notation_strategy: @total, max_notation_strategy: @total_max, total_100_strategy: @total_100.floor)
+
+    @category.update(total_rate_strategy:@total, max_rate_strategy:@total_max, total_100_strategy:@total_100.floor)
+
   end
 
 end

@@ -1,21 +1,22 @@
 class Order < ApplicationRecord
+belongs_to :startup
 
   after_create :send_score
 
   def send_score
     score_completed(self)
-    @score = Score.find_by(id: @score_completed.last.id)
-    score = @score
-    UserMailer.score_email(score).deliver_now
+    @score = @score_completed.last
+   UserMailer.score_email(@score).deliver_now
+
   end
 
   def score_completed(score)
     @scores = Score.all
     @score_completed = []
-    @scores.each do |element|
-      if element.startup_id.to_s == score.startup_id && !element.name.nil?
-        puts element.name
-        @score_completed << element
+      @scores.each do |element|
+        if element.startup_id == score.startup_id && !element.name.nil?
+          @score_completed << element
+        end
       end
     end
   end

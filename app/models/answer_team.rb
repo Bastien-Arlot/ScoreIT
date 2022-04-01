@@ -120,7 +120,9 @@ class AnswerTeam < ApplicationRecord
     @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryTeam.find(self.category_team_id)
-    @category.update(total_notation_team: @total, max_notation_team: @total_max, total_100_team: @total_100.floor)
+
+    @category.update(total_rate_team:@total, max_rate_team:@total_max, total_100_team:@total_100.floor)
+
 
   end
 end
