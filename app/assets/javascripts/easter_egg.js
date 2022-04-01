@@ -53,11 +53,6 @@ window.addEventListener("load", function(){
       }, 7000);
 
       setTimeout(function(){
-        waiting.innerHTML = "";
-        waiting.innerHTML = "<img src=\"https://www.lizakeen.com/wp-content/uploads/2018/03/troll.png\" class=\"object\" width=\"240\" height=\"200\">";
-      }, 7000);
-
-      setTimeout(function(){
         let escape = document.querySelector("a#easterhome");
         escape.click();
       }, 8500);
