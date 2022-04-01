@@ -21,7 +21,8 @@ class OrdersController < ApplicationController
         )
 
         if @order.save
-          flash[:notice] = "Paiement validé"
+          select_score()
+          @score.update(isbuy: true)
           render 'success'
         else
           flash[:notice] = "Error, fail to save."
@@ -31,6 +32,23 @@ class OrdersController < ApplicationController
         flash[:error] = e.message
         redirect_to startup_path(current_user.startup.id)
       end#
+    end
+
+    private 
+
+    def select_score
+
+      @score_completed = []
+      @scores = Score.all
+      @scores.each do |element|
+        if element.startup_id == current_user.startup.id && !element.name.nil?
+          @score_completed << element
+        end
+      end
+      
+      @score = @score_completed.last
+    
+  
     end
 
 
