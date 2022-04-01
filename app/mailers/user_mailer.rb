@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'reygner0224@gmail.com'
+  default from: 'reygnerxbox@gmail.com'
 
 
   def welcome_email(user)
@@ -34,7 +34,7 @@ class UserMailer < ApplicationMailer
    );
 
     attachments["Certificat notation pour #{@startup.name} du #{@score.name} "] = pdf
-    
+
     mail(to: @user.email, subject:'Ton score!')
   end
 
