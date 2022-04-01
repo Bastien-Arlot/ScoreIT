@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_01_083449) do
+ActiveRecord::Schema.define(version: 2022_04_01_132957) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -190,19 +191,22 @@ ActiveRecord::Schema.define(version: 2022_04_01_083449) do
   create_table "order_timers", force: :cascade do |t|
     t.string "email"
     t.string "username"
-    t.string "startup_id"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "startup_id"
+    t.index ["startup_id"], name: "index_order_timers_on_startup_id"
+
   end
 
   create_table "orders", force: :cascade do |t|
     t.string "email"
     t.string "username"
-    t.string "startup_id"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "startup_id"
+    t.index ["startup_id"], name: "index_orders_on_startup_id"
   end
 
   create_table "scores", force: :cascade do |t|
@@ -260,6 +264,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_083449) do
   add_foreign_key "category_offers", "scores"
   add_foreign_key "category_strategies", "scores"
   add_foreign_key "category_teams", "scores"
+  add_foreign_key "order_timers", "startups"
+  add_foreign_key "orders", "startups"
   add_foreign_key "scores", "startups"
   add_foreign_key "startups", "users"
 end
