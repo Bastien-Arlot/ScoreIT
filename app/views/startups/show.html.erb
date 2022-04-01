@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <h1 class="pt-3">Tableau de bord</h1>
+  <h1 class="pt-3 text-color"><strong>Tableau de bord</strong></h1>
   <%if @score_completed.last.isbuy == false%>
     <% if !current_user.startup.scores.last.name.nil? || current_user.startup.scores.length >1 %>
       <%= form_tag orders_path do %>
@@ -9,13 +9,14 @@
           </div>
         <% end %>
         <div class="container text-center align-items pt-3">
-          <%= submit_tag("Commander son dernier certificat du #{@score.name}", class:"btn btn-primary btn-lg") %>
+          <%= submit_tag("Commander son dernier certificat du #{@score.name}", class:"btn btn-primary btn-lg rounded-pill") %>
         </div>
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
         data-description="Acheter votre certificat"
         data-amount="3500"
-        data-locale="auto"></script>
+        data-locale="auto"
+        data-currency="eur"></script>
         <script>
           document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
           document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
@@ -31,13 +32,14 @@
         </div>
       <% end %>
       <div class="container text-center align-items pt-3">
-        <%= submit_tag("Acheter un pass notation pour vous refaire noter", class:"btn btn-primary btn-lg") %>
+        <%= submit_tag("Acheter un pass notation pour vous refaire noter", class:"btn btn-outline-primary btn-lg rounded-pill") %>
       </div>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
         data-description="Achat une nouvelle notation"
         data-amount="15000"
-        data-locale="auto"></script>
+        data-locale="auto"
+        data-currency="eur"></script>
       <script>
         document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
         document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';

@@ -1,12 +1,12 @@
 <div class="container mt-5 text-center">
   <h1>Mon profil   <span><i class="fa fa-user"></i></span></h1>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-md-8">
-      <div id="profile-card" class="card p-3 py-4">
+  <div class="row d-flex justify-content-center mt-5" >
+    <div class="col-md-8" id="profile-card" >
+      <div  class="card p-3 py-4">
         <div  class="text-center mt-1">
           <% if !@user.username.nil? %>
             <% if @user.avatar.attached? %>
-              <%= image_tag @user.avatar.variant(resize: "200x200") %>
+              <%= image_tag @user.avatar.variant(resize: "200x200"), class:"bd-placeholder-img rounded-circle" %>
             <% end %>
             <h1 id="username-title" class="mt-2 mb-0"><%=@user.username%></h1>
           <% end %>
