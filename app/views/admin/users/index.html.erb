@@ -33,13 +33,7 @@
             <% if user.is_admin == false %>
               <tr>
                 <td class="admin-index-td"><a href="<%= admin_user_path(user.id) %>">
-                  <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                  <lord-icon
-                    src="https://cdn.lordicon.com/tyounuzx.json"
-                    trigger="hover"
-                    colors="primary:#9e45d1,secondary:#66ced6"
-                    style="width:40px;height:40px">
-                  </lord-icon>
+                  <%= image_tag "eye.gif", :size => "40x40"%>
                 </a>
                 <td class="admin-index-td"><%= user.username %></td>
                 <% if !user.startup.nil? %>

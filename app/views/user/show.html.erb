@@ -41,15 +41,6 @@
     </div>
   </div>
   <div class="text-end">
-    <a href="<%=root_path%>" class="btn btn-home">
-      <button type="submit" class="btn btn-home"><script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-        <lord-icon
-               src="https://cdn.lordicon.com/hwixfird.json"
-                trigger="loop-on-hover"
-                colors="primary:#85C8FF"
-                state="hover-1"
-                style="width:60px;height:60px">
-        </lord-icon></button>
-    </a>
+    <%= link_to image_tag("home.gif", :size => "60x60"), root_path, class:"btn btn-home" %>
   </div>
 </div>
