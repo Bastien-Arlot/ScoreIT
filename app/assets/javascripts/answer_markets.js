@@ -13,10 +13,9 @@ window.addEventListener("load", function(){
   let params_answer_market_3 = document.getElementById("params_answer_market_3").textContent;
   let params_answer_market_4 = document.getElementById("params_answer_market_4").textContent;
 
-
   if (params_answer_market_3 == []){
-      answer_market_3.value = "50";
-      document.getElementById("sizemarket").textContent = answer_market_3.value;
+    answer_market_3.value = "50";
+    document.getElementById("sizemarket").textContent = answer_market_3.value;
   }else{
     answer_market_3.value = params_answer_market_3;
     if (answer_market_3.value == "100"){
@@ -28,34 +27,33 @@ window.addEventListener("load", function(){
     }else{
       document.getElementById("sizemarket").textContent = answer_market_3.value;
       document.getElementById("millions").textContent = " Millions d'euros";
-    }
+    };
   };
 
   if (params_answer_market_4 == []){
-      answer_market_4.value = "50";
-      document.getElementById("target").textContent = answer_market_4.value;
+    answer_market_4.value = "50";
+    document.getElementById("target").textContent = answer_market_4.value;
   }else{
     answer_market_4.value = params_answer_market_4;
     document.getElementById("target").textContent = answer_market_4.value;
   };
 
 
-    answer_market_3.addEventListener("change", function() {
+  answer_market_3.addEventListener("change", function() {
     if (answer_market_3.value == "100"){
-        document.getElementById("sizemarket").textContent = "+ 100";
-        document.getElementById("millions").textContent = " Millions d'euros";
+      document.getElementById("sizemarket").textContent = "+ 100";
+      document.getElementById("millions").textContent = " Millions d'euros";
     }else if (answer_market_3.value == "0"){
       document.getElementById("sizemarket").textContent = "";
       document.getElementById("millions").textContent = "Dimension du marché inconnu";
     }else{
-        document.getElementById("sizemarket").textContent = answer_market_3.value;
-        document.getElementById("millions").textContent = " Millions d'euros";
-
-    }
+      document.getElementById("sizemarket").textContent = answer_market_3.value;
+      document.getElementById("millions").textContent = " Millions d'euros";
+    };
   }, false);
 
   answer_market_4.addEventListener("change", function() {
-      document.getElementById("target").textContent = answer_market_4.value;
+    document.getElementById("target").textContent = answer_market_4.value;
   }, false);
 
 
@@ -67,11 +65,11 @@ window.addEventListener("load", function(){
     answer_market.forEach(element => {
       for (let i = 1; i < 9; i++){
         if (element.includes(`market ${i}`)){
-              notyf.error({
-                  message: `Merci de répondre à la question n°${i}`,
-                  dismissible: true
-                  });
-            };
+          notyf.error({
+            message: `Merci de répondre à la question n°${i}`,
+            dismissible: true
+          });
+        };
       };
     });
   };
