@@ -1,10 +1,10 @@
 .admin-index-title {
-    font-family: Ubuntu, Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
     color: var(--prim);
 }
 
 .admin-col {
-    font-family: Ubuntu, Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
     color: var(--prim)!important;
     margin-bottom: 10px!important;
     font-size: 1rem;
@@ -17,12 +17,12 @@
 
 .admin-index-td {
     font-size: 1.2rem;
-    font-family: 'Maven Pro', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
 }
 
 .show-admin {
     padding: 3px 3px;
-    font-family: 'Maven Pro', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
     font-size: 1rem;
     font-weight: 600;
 }
