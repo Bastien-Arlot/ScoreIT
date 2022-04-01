@@ -6,6 +6,7 @@ class ScoresController < ApplicationController
 
   def new
     @score = Score.new
+    
   end
 
   def create
@@ -25,6 +26,14 @@ class ScoresController < ApplicationController
 
     @score = Score.find (params[:id])
     @startup = @score.startup
+    respond_to do |format|
+      format.html
+      format.pdf do
+
+        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"
+
+      end
+    end
   end
 
 

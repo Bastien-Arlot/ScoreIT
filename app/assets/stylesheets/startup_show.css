@@ -71,6 +71,11 @@ form{
   font-weight:300;
 }
 
+
+form.button_to{
+  margin: 0 !important;
+}
+
 #continue-btn:hover {
   background-color: #fff;
   color: var(--second);

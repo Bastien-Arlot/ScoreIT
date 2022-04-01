@@ -1,3 +1,31 @@
+<div class="container text-center">
+  <h1 class="pt-3">Tableau de bord</h1>
+
+<%if @score_completed.last.isbuy == false%>
+  <% if !current_user.startup.scores.last.name.nil? || current_user.startup.scores.length >1 %>
+    <%= form_tag orders_path do %>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+      <% end %>
+      <div class="container text-center align-items pt-3">
+        <%= submit_tag("Commander son dernier certificat du #{@score.name}", class:"btn btn-primary btn-lg") %>
+      </div>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Achat d'un produit"
+        data-amount="3500"
+        data-locale="auto">
+      </script>
+      <script>
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+      </script>
+    <% end %>
+  <% end %>
+<%end%>
+
+</div>
 
 <div id="dashboard" >
   <%= render "score", startup:@startup, score:@score%>
