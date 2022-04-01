@@ -7,6 +7,7 @@ belongs_to :startup
     score_completed(self)
     @score = @score_completed.last
    UserMailer.score_email(@score).deliver_now
+
   end
 
   def score_completed(score)
@@ -17,6 +18,7 @@ belongs_to :startup
           @score_completed << element
         end
       end
+    end
   end
 
 end

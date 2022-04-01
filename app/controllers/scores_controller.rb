@@ -6,7 +6,7 @@ class ScoresController < ApplicationController
 
   def new
     @score = Score.new
-    
+
   end
 
   def create
@@ -35,16 +35,14 @@ class ScoresController < ApplicationController
       format.html
       format.pdf do
 
-        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"
+        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ", template: "startups/certificate.html.erb"
 
       end
     end
   end
 
-
   def update
   end
-
 
   private
 
