@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
- 
+
 <img src="app/assets/images/logo.png" alt="logo" width="200">
   <br>
 ScoreIt <br>
@@ -17,7 +17,6 @@ L’objectif de ScoreIT est de proposer un outil de crédibilisation des projets
 Afin d'obtenir une notation la plus juste possible nous évalons la startup au travers d'une série de question répartie en 6 catégories : Equipe, Finance, Innovation, Marché, Offre, Stratégie
 
 ## WEB version 🌐
-<!--mettre le site final entre parenthèse-->
 
 Le site est en live ici 👉 [ScoreIt](https://scoreit-thp.herokuapp.com/)
 
@@ -37,7 +36,7 @@ $ rails db:seed
 Il ne vous reste plus qu'à tester l'ensemble des fonctionnalités de l'application passer commande, voir les orders, etc.. !
 
 ```ruby
-$ rails server 
+$ rails server
 ```
 
 Vous pourrez vous enregistrer avec votre username, votre mail et votre mot de passe en local et en production.
@@ -51,7 +50,7 @@ Enjoy !
 Relance la base de données pour de nouveaux items !
 
 ```ruby
-$ rake db:migrate VERSION=0 
+$ rake db:migrate VERSION=0
 $ rails db:migrate
 $ rails db:seed
 ```
@@ -90,7 +89,7 @@ Enjoy !
 
 ## Technologies utilisées ⚙️
 <p align="left">Pour ce programme les technologies suivantes ont été utilisé : <br>
-<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
 <img src="http://3con14.biz/code/_data/js/intro/js-logo.png" width="35">
 <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
