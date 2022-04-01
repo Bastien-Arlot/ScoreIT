@@ -78,7 +78,7 @@ class AnswerOffer < ApplicationRecord
 
 
     @category = CategoryOffer.find(self.category_offer_id)
-    @category.update(total_notation_offer:@total, max_notation_offer:@total_max, total_100_offer:@total_100.floor)
+    @category.update(total_rate_offer:@total, max_rate_offer:@total_max, total_100_offer:@total_100.floor)
   end
 
 end

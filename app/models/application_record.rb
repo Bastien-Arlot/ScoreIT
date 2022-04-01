@@ -11,9 +11,9 @@ class ApplicationRecord < ActiveRecord::Base
 
     @score = Score.find(self.score_id)
 
-    if !@market.total_notation_market.nil? && !@team.total_notation_team.nil? && !@innovation.total_notation_innovation.nil? && !@finance.total_notation_finance.nil? && !@offer.total_notation_offer.nil? && !@strategy.total_notation_strategy.nil?
-      @total = @market.total_notation_market + @team.total_notation_team + @innovation.total_notation_innovation + @finance.total_notation_finance + @offer.total_notation_offer + @strategy.total_notation_strategy
-      @total_max = @market.max_notation_market + @team.max_notation_team + @innovation.max_notation_innovation + @finance.max_notation_finance + @offer.max_notation_offer + @strategy.max_notation_strategy
+    if !@market.total_rate_market.nil? && !@team.total_rate_team.nil? && !@innovation.total_rate_innovation.nil? && !@finance.total_rate_finance.nil? && !@offer.total_rate_offer.nil? && !@strategy.total_rate_strategy.nil?
+      @total = @market.total_rate_market + @team.total_rate_team + @innovation.total_rate_innovation + @finance.total_rate_finance + @offer.total_rate_offer + @strategy.total_rate_strategy
+      @total_max = @market.max_rate_market + @team.max_rate_team + @innovation.max_rate_innovation + @finance.max_rate_finance + @offer.max_rate_offer + @strategy.max_rate_strategy
 
       @total_100 = (@total.to_i*100)/@total_max.to_i
 

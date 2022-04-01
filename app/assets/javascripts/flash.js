@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){ 
+window.addEventListener("load", function(){
 
   const notyf = new Notyf({
     duration: 0,
@@ -10,8 +10,6 @@ window.addEventListener("load", function(){
 
   let notice = document.getElementById("notice");
   let alert = document.getElementById("alert");
-
-  console.log(notice.textContent)
 
   if (notice.textContent !== ""){
   notyf.success({

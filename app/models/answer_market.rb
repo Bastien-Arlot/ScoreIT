@@ -84,7 +84,7 @@ class AnswerMarket < ApplicationRecord
 
 
     @category = CategoryMarket.find(self.category_market_id)
-    @category.update(total_notation_market:@total, max_notation_market:@total_max, total_100_market:@total_100.floor)
+    @category.update(total_rate_market:@total, max_rate_market:@total_max, total_100_market:@total_100.floor)
   end
 
 end

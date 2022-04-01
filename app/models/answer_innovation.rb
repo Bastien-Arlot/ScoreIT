@@ -65,7 +65,7 @@ class AnswerInnovation < ApplicationRecord
 
 
     @category = CategoryInnovation.find(self.category_innovation_id)
-    @category.update(total_notation_innovation:@total, max_notation_innovation:@total_max, total_100_innovation:@total_100.floor)
+    @category.update(total_rate_innovation:@total, max_rate_innovation:@total_max, total_100_innovation:@total_100.floor)
   end
 
 end
