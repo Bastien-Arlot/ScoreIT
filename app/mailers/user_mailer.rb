@@ -33,7 +33,7 @@ class UserMailer < ApplicationMailer
       render_to_string('/orders/certificate.html.erb', layout: 'pdf')
    );
 
-    attachments["Certificat notation pour #{@startup.name} du #{@score.name} "] = pdf
+    attachments["Certificat notation pour #{@startup.name} du #{@score.name}.pdf"] = pdf
 
     mail(to: @user.email, subject:'Ton score!')
   end
