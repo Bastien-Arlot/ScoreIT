@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){ 
+window.addEventListener("load", function(){
 
   let error_startup = document.getElementById("error_message_startup");
   let answer_startup = [];
@@ -21,7 +21,6 @@ window.addEventListener("load", function(){
                   });
             };
         if (element.includes("Name est trop long")){
-          console.log("bonjour")
               notyf.error({
                   message: `Merci d'écrire un nom d'entreprise de moins de 20 caractères`,
                   dismissible: true

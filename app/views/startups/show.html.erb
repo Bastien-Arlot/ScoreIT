@@ -25,7 +25,7 @@
   <% end %>
 <%end%>
 
-<%if !@all_my_notation.last.name.nil? && @all_my_notation.last.name.to_date + 90 > Date.today && current_user.startup.havecredit == false%>
+<%if !@all_my_rate.last.name.nil? && @all_my_rate.last.name.to_date + 90 > Date.today && current_user.startup.havecredit == false%>
     <%= form_tag order_timers_path do %>
       <% if flash[:error].present? %>
         <div id="error_explanation">

@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_04_01_132957) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -128,8 +129,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_finances", force: :cascade do |t|
-    t.integer "total_notation_finance"
-    t.integer "max_notation_finance"
+    t.integer "total_rate_finance"
+    t.integer "max_rate_finance"
     t.integer "total_100_finance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -138,8 +139,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_innovations", force: :cascade do |t|
-    t.integer "total_notation_innovation"
-    t.integer "max_notation_innovation"
+    t.integer "total_rate_innovation"
+    t.integer "max_rate_innovation"
     t.integer "total_100_innovation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -148,8 +149,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_markets", force: :cascade do |t|
-    t.integer "total_notation_market"
-    t.integer "max_notation_market"
+    t.integer "total_rate_market"
+    t.integer "max_rate_market"
     t.integer "total_100_market"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -158,8 +159,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_offers", force: :cascade do |t|
-    t.integer "total_notation_offer"
-    t.integer "max_notation_offer"
+    t.integer "total_rate_offer"
+    t.integer "max_rate_offer"
     t.integer "total_100_offer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -168,8 +169,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_strategies", force: :cascade do |t|
-    t.integer "total_notation_strategy"
-    t.integer "max_notation_strategy"
+    t.integer "total_rate_strategy"
+    t.integer "max_rate_strategy"
     t.integer "total_100_strategy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -178,8 +179,8 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
   end
 
   create_table "category_teams", force: :cascade do |t|
-    t.integer "total_notation_team"
-    t.integer "max_notation_team"
+    t.integer "total_rate_team"
+    t.integer "max_rate_team"
     t.integer "total_100_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -195,6 +196,7 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
     t.datetime "updated_at", null: false
     t.bigint "startup_id"
     t.index ["startup_id"], name: "index_order_timers_on_startup_id"
+
   end
 
   create_table "orders", force: :cascade do |t|
