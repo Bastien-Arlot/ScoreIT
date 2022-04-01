@@ -7,7 +7,38 @@
 .dropdown-btn {
     color:var(--prim);
     text-decoration: none;
+   
 }
+
+#navbarColor02 {
+    flex-grow: 0;
+      
+}
+
+
+@media (min-width: 1000px) {
+    #navbarColor02 {
+padding-right: 20px;
+    }
+    #logonavbar {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #navbarColor02 {
+padding-right: 30px;
+    }
+    #logonavbar {
+        padding-left: 80px;
+    }
+    #btn-burger {
+        margin-right: 80px;
+    }
+}
+
+
+
 
 .dropdown-btn:hover {
     color:black;
@@ -18,9 +49,8 @@
     font-size: 17px!important;
     background-color: var(--second)!important;
     border-width: 1px!important;
-    
-
 }
+
 
 #drop-profile:hover {
     background-color: #f5f0fa!important;
@@ -29,6 +59,19 @@
     border-color: var(--second)!important;
 }
 
+#drop-signup {
+    color: var(--light)!important;
+    font-size: 17px!important;
+    background-color: var(--second)!important;
+    border-width: 1px!important;
+}
+
+#drop-signup:hover {
+    background-color: #f5f0fa!important;
+    color: var(--prim)!important;
+    font-size: 17px!important;
+    border-color: var(--second)!important;
+}
 
 .btn-nav{
     margin-left: 10px!important;
@@ -55,7 +98,7 @@ font-size: 17px!important;
     color: var(--prim)!important;
     font-size: 17px!important;
     border-color: var(--second)!important;
-
+    
  
 }
 
@@ -90,6 +133,7 @@ font-size: 17px!important;
 .navbar-toggler {
     border-color:var(--prim)!important;
 }
+
 
 .custom-toggler .navbar-toggler-icon {
     background-image: url(

@@ -4,7 +4,7 @@
       <a id="logonavbar" href="<%=root_path%>" >
         <%= image_tag "logo.png", :size => "60x60"%>
       </a>
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler custom-toggler" id="btn-burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor02">
@@ -37,31 +37,28 @@
               <%= link_to "Continuer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
             </li>
           <% end %>
-
           <% if user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
             <li class="nav-item mt-2">
               <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
-          </li>
+            </li>
           <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
             <li class="nav-item mt-2">
               <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
-          </li>
+            </li>
           <%end%>
-
-
           <%  if user_signed_in? %>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn btn-signup mt-2" id="drop-profile" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
-              <div class="dropdown-menu">
-                <%= link_to "Mon profil", user_path(current_user.username) , class:"dropdown-btn m-4"%>
+              <a class="nav-link dropdown-toggle  btn btn-signup mt-2" id="drop-profile" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;Mon profil  </a>
+              <div class="dropdown-menu dropdown-menu-right ">
+                <%= link_to "Mon profil", user_path(current_user.username) , class:"dropdown-btn  m-4"%>
                 <hr>
-                <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class:"dropdown-btn m-4"%>
+                <%= link_to "Déconnexion", destroy_user_session_path , method: :delete, class:"dropdown-btn m-4"%>
               </div>
             </li>
           <% else %>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn btn-signup mt-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rejoins-nous!</a>
-              <div class="dropdown-menu">
+              <a class="nav-link dropdown-toggle btn btn-signup mt-2" id="drop-signup" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rejoins-nous!</a>
+              <div class="dropdown-menu ">
                 <%= link_to "S'inscrire", new_user_registration_path , class:"dropdown-btn m-4"%>
                 <hr>
                 <%= link_to "Se connecter", new_user_session_path , class:"dropdown-btn m-4"%>
