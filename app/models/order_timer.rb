@@ -1,0 +1,2 @@
+class OrderTimer < ApplicationRecord
+end

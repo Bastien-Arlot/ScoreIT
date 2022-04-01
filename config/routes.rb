@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   resources :user, only: [:show, :edit, :update]
 
   resources :orders, only: [:create]
+  resources :order_timers, only: [:create]
+
 
   resources :certificates, only: [:index]
 

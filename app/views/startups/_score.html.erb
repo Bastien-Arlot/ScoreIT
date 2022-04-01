@@ -1,12 +1,11 @@
 <div class="container text-center" id="content">
-
 <br>
 
 <p>Notation du :</p>
 <div class="row justify-content-center">
   <%@scores.reverse.each do |score|%>
   <% if score.startup_id == params[:id].to_i && !score.name.nil?%>
-  <div class="col-auto">
+  <div class="col-auto my-2">
     <%if params[:select].to_i == score.id%>
       <%= button_to score.name, startup_path(params[:id]), params: {select: score.id}, method: :get, remote: true, class: "card-btn"%>
     <%else%>
