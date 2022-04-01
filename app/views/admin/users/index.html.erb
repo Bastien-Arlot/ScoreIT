@@ -52,10 +52,10 @@
                               </td>
                               <td class="admin-index-td">
                               <% if !user.startup.scores.last.name.nil? %>
-                                <% if (user.startup.scores.last.name.to_date + 30) < DateTime.now %>
+                                <% if (user.startup.scores.last.name.to_date + 90) < DateTime.now %>
                                       Oui 
                                   <% else %>
-                                      Non, pas avant le : <%= user.startup.scores.last.name.to_date + 30%> (aaaa/mm/jj)
+                                      Non, pas avant le : <%= user.startup.scores.last.name.to_date + 90%> (aaaa/mm/jj)
                                 <% end %>
                                 <% else %>
                                 -
