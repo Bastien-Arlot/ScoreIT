@@ -14,7 +14,8 @@
  *= require_self
  */
 
- :root {
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@100;200&family=Roboto:wght@100;300&family=Ubuntu:wght@300&display=swap');
+:root {
     --prim: #9e45d1 !important;
     --second: #66ced6!important;
     --dark: #020003 !important;
@@ -32,15 +33,14 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
 }
 
 p,
 h4 {
-    font-family: 'Maven Pro';
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
 }
 
 .main {
     min-height: 80vh;
 }
-

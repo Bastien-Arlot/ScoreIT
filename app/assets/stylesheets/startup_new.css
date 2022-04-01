@@ -14,7 +14,7 @@
     color: black;
     margin-left: 5px;
     margin-right: 5px;
-    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
 }
 
 .startup-form-container {
@@ -38,7 +38,7 @@
 .banner-startupform .startupform-h3 {
     width: 70%!important;
     color: var(--light)!important;
-    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
 }
 
 .img-banner-startup {
@@ -47,7 +47,7 @@
 }
 
 .formside {
-    font-family: Ubuntu!important;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
     display: grid!important;
     padding-top: 4%;
     padding-left: 5%;
