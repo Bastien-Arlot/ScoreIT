@@ -15,10 +15,15 @@ class ScoresController < ApplicationController
       'startup_id' => current_user.startup.id
     )
     if @score.save
+      @startup = current_user.startup
+      @startup.update(havecredit: false)
       redirect_to startup_score_path(current_user.startup.id, @score.id)
     else
-      flash[:score_delay] = "Error, not enough delay. The delay should be 90 days."
-      render 'new'
+      select_score()
+      flash[:notice] = "Acheter un pass notation depuis votre dashboard pour vous faire noter"
+
+      flash[:alert] = "Vous devez attendre #{(@score_completed.last.name.to_date + 90 - Date.today).to_i} jours avant de vous faire noter à nouveau"
+      redirect_to startup_path(current_user.startup.id)
     end
   end
 
@@ -38,6 +43,21 @@ class ScoresController < ApplicationController
 
 
   def update
+  end
+
+
+  private
+
+  def select_score
+
+    @score_completed = []
+    @scores = Score.all
+    @scores.each do |element|
+      if element.startup_id == current_user.startup.id && !element.name.nil?
+        @score_completed << element
+      end
+    end
+
   end
 
 end

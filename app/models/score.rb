@@ -68,5 +68,57 @@ class Score < ApplicationRecord
     @category_offer.save
   end
 
+  validate :score_exist?, on: :create
+  validate :delay_score, on: :create
+
+
+  def score_exist?
+
+    @score_exist = Score.where(startup_id: self.startup_id).last
+
+    if !@score_exist.nil? && @score_exist.name.nil?
+      errors.add(:score_exist?, "Vous ne pouvez pas créer une nouvelle notation sans avoir fini la précédente")
+      return false
+    end
+
+  end
+
+  def delay_score
+
+    @score = Score.where(startup_id: self.startup_id)
+
+    if !@score.last.nil? && !@score.last.name.nil?
+
+      @last_score = @score.last
+
+      @now_90 =  @last_score.name.to_date + 90
+      puts @now_90
+      if @now_90 < Date.today || @last_score.startup.havecredit == true
+        puts "$"*850
+        return true
+      else
+      puts "€"*850
+      puts  errors.add(:score_delay, "Error, not enough delay. The delay should be 90 days.")
+      return false
+      end
+    else
+      return true
+    end
+  end
+
+  def create_category_human
+    @category_human = CategoryHuman.new(
+      'score_id' => self.id
+    )
+    @category_human.save
+  end
+
+  def create_category_finance
+    @category_finance = CategoryFinance.new(
+      'score_id' => self.id
+    )
+    @category_finance.save
+  end
+
 
 end
