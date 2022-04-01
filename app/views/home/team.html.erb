@@ -1,64 +1,50 @@
 <div class="team">
-    <div class="team-title">
-        <h1>Notre équipe de fou</h1>
+  <div class="team-title">
+    <h1>Notre équipe de fou</h1>
+  </div>
+  <div class="container marketing">
+    <div class="row teamdiv">
+      <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
+        <%= image_tag "https://www.paulbert-serpette.com/sites/default/files/pictures/2016/01/detail-1-portrait-jeune-homme-XVIII-ferra.jpg", class:"bd-placeholder-img rounded-circle", id:"img1", :size => "140x140"  %>
+        <h2 class="name">Alex <br>
+          Garnier</h2>
+        <a class="personnal-link" href="https://github.com/alegarn"><%=image_tag "github.png", class:"github"%></a>
+        <a class="personnal-link" href="https://www.linkedin.com/in/alex-garnier-59517a12a"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
+        <p>Il est notre moine shaolin chevelu, doté d’une pugnacité inégalé il est le co-maître d’un backend d’une solidité redoutable. </p>
+      </div>
+      <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
+        <%= image_tag "arnaud_pic.jpg", class:"bd-placeholder-img rounded-circle", id:"img2", :size => "140x140"  %>
+        <h2 class="name">Arnaud <br>
+          Lucciarini</h2>
+        <a class="personnal-link" href="https://github.com/Non0-13"><%=image_tag "github.png", class:"github"%></a>
+        <a class="personnal-link" href="https://www.linkedin.com/in/arnaud-lucciarini-9808a0221"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
+        <p>Il s'investit sans relaches côté front s’aidant de son soucis du détail et de sa “South Touch” sortie tout droit de Marseille.</p>
+      </div>
+      <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
+        <%= image_tag "https://avatars.githubusercontent.com/u/86610960?v=4", class:"bd-placeholder-img rounded-circle", id:"img3", :size => "140x140"  %>
+        <h2 class="name">Bastien <br>
+          Arlot</h2>
+        <a class="personnal-link" href="https://github.com/Bastien-Arlot"><%=image_tag "github.png", class:"github"%></a>
+        <a class="personnal-link" href="https://www.linkedin.com/in/bastien-arlot"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
+        <p> Bastien s’occupe de la gestion du projet (il s’est trompé de formation) et assistera la team backend avec des fonctionnalités pas piqués des hannetons.</p>
+      </div>
+      <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
+        <%= image_tag "https://avatars.githubusercontent.com/u/74305277?v=4", class:"bd-placeholder-img rounded-circle", id:"img4", :size => "140x140"  %>
+        <h2 class="name">Guillaume <br>
+          Reygner</h2>
+        <a class="personnal-link" href="https://github.com/guillaume-rygn"><%=image_tag "github.png", class:"github"%></a>
+        <a class="personnal-link" href="https://www.linkedin.com/in/guillaume-reygner"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
+        <p>Il est notre gourou technique, véritable couteau suisse de la programmation, il est la réponse à tout nos problèmes (et plus encore).Le backend sera la première de ses milles et une tâche.
+        </p>
+      </div>
+      <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6 ">
+        <%= image_tag "https://avatars.githubusercontent.com/u/97439623?v=4", class:"bd-placeholder-img rounded-circle", id:"img5", :size => "140x140"  %>
+        <h2 class="name">Pierre <br>
+          Sarazin</h2>
+        <a class="personnal-link" href="https://github.com/PierreSARAZIN1"><%=image_tag "github.png", class:"github"%></a>
+        <a class="personnal-link" href="https://www.linkedin.com/in/pierresarazin1"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
+        <p>Il met son sens du design, son ingéniosité et son flair artistique au service de notre front (et pas du sien).</p>
+      </div>
     </div>
-
-    <div class="container marketing">
-        <div class="row teamdiv">
-          <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
-            
-            <%= image_tag "https://www.paulbert-serpette.com/sites/default/files/pictures/2016/01/detail-1-portrait-jeune-homme-XVIII-ferra.jpg", class:"bd-placeholder-img rounded-circle", id:"img1", :size => "140x140"  %>
-           
-            <h2 class="name">Alex <br> Garnier</h2>
-            <a class="personnal-link" href="https://github.com/alegarn"><%=image_tag "github.png", class:"github"%></a>
-            <a class="personnal-link" href="https://www.linkedin.com/in/alex-garnier-59517a12a"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
-            <p>Il est notre moine shaolin chevelu, doté d’une pugnacité inégalé il est le co-maître d’un backend d’une solidité redoutable. </p>
-            
-             
-          </div>
-          <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
-          <%= image_tag "arnaud_pic.jpg", class:"bd-placeholder-img rounded-circle", id:"img2", :size => "140x140"  %>
-            
-    
-            <h2 class="name">Arnaud <br> Lucciarini</h2>
-            <a class="personnal-link" href="https://github.com/Non0-13"><%=image_tag "github.png", class:"github"%></a>
-            <a class="personnal-link" href="https://www.linkedin.com/in/arnaud-lucciarini-9808a0221"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
-            <p>Il s'investit sans relaches côté front s’aidant de son soucis du détail et de sa “South Touch” sortie tout droit de Marseille.</p>
-             
-          </div>
-          <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
-
-            <%= image_tag "https://avatars.githubusercontent.com/u/86610960?v=4", class:"bd-placeholder-img rounded-circle", id:"img3", :size => "140x140"  %>
-    
-            <h2 class="name">Bastien <br> Arlot</h2>
-            <a class="personnal-link" href="https://github.com/Bastien-Arlot"><%=image_tag "github.png", class:"github"%></a>
-            <a class="personnal-link" href="https://www.linkedin.com/in/bastien-arlot"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
-            <p> Bastien s’occupe de la gestion du projet (il s’est trompé de formation) et assistera la team backend avec des fonctionnalités pas piqués des hannetons.</p>
-             
-          </div>
-          <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6">
-
-            <%= image_tag "https://avatars.githubusercontent.com/u/74305277?v=4", class:"bd-placeholder-img rounded-circle", id:"img4", :size => "140x140"  %>
-    
-            <h2 class="name">Guillaume <br> Reygner</h2>
-            <a class="personnal-link" href="https://github.com/guillaume-rygn"><%=image_tag "github.png", class:"github"%></a>
-            <a class="personnal-link" href="https://www.linkedin.com/in/guillaume-reygner"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
-            <p>Il est notre gourou technique, véritable couteau suisse de la programmation, il est la réponse à tout nos problèmes (et plus encore).Le backend sera la première de ses milles et une tâche.
-            </p>
-             
-          </div>
-          <div id="teamcard" class="col-lg-3 col-md-4 col-sm-6 ">
-
-            <%= image_tag "https://avatars.githubusercontent.com/u/97439623?v=4", class:"bd-placeholder-img rounded-circle", id:"img5", :size => "140x140"  %>
-    
-            <h2 class="name">Pierre <br> Sarazin</h2>
-            <a class="personnal-link" href="https://github.com/PierreSARAZIN1"><%=image_tag "github.png", class:"github"%></a>
-            <a class="personnal-link" href="https://www.linkedin.com/in/pierresarazin1"><%=image_tag "logo-linkedin.png", class:"linkedin-team"%></a>
-            <p>Il met son sens du design, son ingéniosité et son flair artistique au service de notre front (et pas du sien).</p>
-             
-          </div>
-        </div>
-    </div>
+  </div>
 </div>
-
-
