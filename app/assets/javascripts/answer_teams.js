@@ -20,8 +20,8 @@ window.addEventListener("load", function(){
 
   if (params_answer_team_1 == []){
     answer_team_1.value = "50";
-      document.getElementById("manager").textContent = `${Math.floor(Number(answer_team_1.value)/10)}`;
-      document.getElementById("manager").style.display="inline-block";
+    document.getElementById("manager").textContent = `${Math.floor(Number(answer_team_1.value)/10)}`;
+    document.getElementById("manager").style.display="inline-block";
 
   }else{
     answer_team_1.value = params_answer_team_1;
@@ -32,8 +32,8 @@ window.addEventListener("load", function(){
 
   if (params_answer_team_2 == []){
     answer_team_2.value = "50";
-      document.getElementById("commercial").textContent = `${Math.floor(Number(answer_team_2.value)/10)}`;
-      document.getElementById("commercial").style.display="inline-block";
+    document.getElementById("commercial").textContent = `${Math.floor(Number(answer_team_2.value)/10)}`;
+    document.getElementById("commercial").style.display="inline-block";
 
   }else{
     answer_team_2.value = params_answer_team_2;
@@ -44,8 +44,8 @@ window.addEventListener("load", function(){
 
   if (params_answer_team_3 == []){
     answer_team_3.value = "50";
-      document.getElementById("finance").textContent = `${Math.floor(Number(answer_team_3.value)/10)}`;
-      document.getElementById("finance").style.display="inline-block";
+    document.getElementById("finance").textContent = `${Math.floor(Number(answer_team_3.value)/10)}`;
+    document.getElementById("finance").style.display="inline-block";
 
   }else{
     answer_team_3.value = params_answer_team_3;
@@ -56,8 +56,8 @@ window.addEventListener("load", function(){
 
   if (params_answer_team_4 == []){
     answer_team_4.value = "50";
-      document.getElementById("entreprenership").textContent = `${Math.floor(Number(answer_team_4.value)/10)}`;
-      document.getElementById("entreprenership").style.display="inline-block";
+    document.getElementById("entreprenership").textContent = `${Math.floor(Number(answer_team_4.value)/10)}`;
+    document.getElementById("entreprenership").style.display="inline-block";
 
   }else{
     answer_team_4.value = params_answer_team_4;

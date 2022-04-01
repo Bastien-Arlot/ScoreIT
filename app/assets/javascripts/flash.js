@@ -12,18 +12,18 @@ window.addEventListener("load", function(){
   let alert = document.getElementById("alert");
 
   if (notice.textContent !== ""){
-  notyf.success({
-    message: notice.textContent,
-    duration: 3000,
-    dismissible: true
+    notyf.success({
+      message: notice.textContent,
+      duration: 3000,
+      dismissible: true
     });
   };
 
   if (alert.textContent !== ""){
-  notyf.error({
-    message: alert.textContent,
-    duration: 6000,
-    dismissible: true
+    notyf.error({
+      message: alert.textContent,
+      duration: 6000,
+      dismissible: true
     });
   };
 
