@@ -1,9 +1,9 @@
 <div class="wrap">
-  <div class="logo">
-    <p>C'est inacceptable!</p>
-    <%= image_tag "erreur422.jpg" %>
-    <div class="sub">
-      <p><%= link_to "Retour", root_path %></p>
+  <div class="logo-errors">
+    <h2>C'est inacceptable!</h2>
+    <%= image_tag "erreur422.jpg", class: "img-errors"%>
+    <div class="sub sub-errors">
+      <p><%= link_to "Retour", root_path, class: "btn-form mb-5", id: "btn-errors"%></p>
     </div>
   </div>
 </div>
