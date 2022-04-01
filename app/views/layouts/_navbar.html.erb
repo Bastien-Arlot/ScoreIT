@@ -51,7 +51,7 @@
 
           <%  if user_signed_in? %>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn btn-signup mt-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
+              <a class="nav-link dropdown-toggle btn btn-signup mt-2" id="drop-profile" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon profil</a>
               <div class="dropdown-menu">
                 <%= link_to "Mon profil", user_path(current_user.username) , class:"dropdown-btn m-4"%>
                 <hr>

@@ -84,3 +84,27 @@
     background-color: var(--danger);
     color: #fff;
 }
+
+#back-profile-btn {
+    color:#fff;
+    background-color: var(--medium-ligth);
+}
+
+#back-profile-btn:hover {
+    border-color: var(--second);
+   color: var(--second);
+    background-color:#fff;
+}
+
+#btn-go {
+    margin-top: 15px;
+    background-color: #66ced6;
+    color: #fff;
+    font-weight:300;
+}
+
+#btn-go:hover {
+    background-color: #fff;
+    color: var(--second);
+    border-color: var(--second);
+}

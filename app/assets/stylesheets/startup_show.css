@@ -71,7 +71,29 @@ form{
   font-weight:300;
 }
 
+
 form.button_to{
   margin: 0 !important;
 }
 
+#continue-btn:hover {
+  background-color: #fff;
+  color: var(--second);
+  border-color: var(--second);
+}
+
+#new-btn:hover {
+  background-color: #fff;
+  color: var(--second);
+  border-color: var(--second);
+}
+
+#delete-startup {
+  color: var(--danger);
+  background-color: #fff;
+}
+
+#delete-startup:hover {
+  background-color: var(--danger);
+    color: #fff;
+}

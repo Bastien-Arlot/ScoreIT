@@ -125,7 +125,7 @@
 <div class="container pt-5">
   <div class="d-grid justify-content-center">
     <h3 class="text-danger ">--- Danger Zone ---</h3>
-    <%= link_to "Supprimer la startup", startup_path(@startup.id), method: :delete , class:"btn btn-danger rounded-pill" , data: {confirm: "Êtes vous sûre? Chaque certificat ne sera plus accessible ou vérifiable.", disable_with: "Suppression..."} %>
+    <%= link_to "Supprimer la startup", startup_path(@startup.id), method: :delete , class:"btn btn-md rounded-pill", id:"delete-startup" , data: {confirm: "Êtes vous sûre? Chaque certificat ne sera plus accessible ou vérifiable.", disable_with: "Suppression..."} %>
   </div>
 </div>
 
