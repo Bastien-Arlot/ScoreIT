@@ -14,25 +14,25 @@ window.addEventListener("load", function(){
   if (error_startup.textContent !== []){
     answer_startup = error_startup.textContent.split(',');
     answer_startup.forEach(element => {
-        if (element.includes("Name doit être rempli(e)")){
-              notyf.error({
-                  message: `Merci de compléter le nom de votre entreprise`,
-                  dismissible: true
-                  });
-            };
-        if (element.includes("Name est trop long")){
-              notyf.error({
-                  message: `Merci d'écrire un nom d'entreprise de moins de 20 caractères`,
-                  dismissible: true
-                  });
-            };
+      if (element.includes("Name doit être rempli(e)")){
+        notyf.error({
+          message: `Merci de compléter le nom de votre entreprise`,
+          dismissible: true
+        });
+      };
+      if (element.includes("Name est trop long")){
+        notyf.error({
+          message: `Merci d'écrire un nom d'entreprise de moins de 20 caractères`,
+          dismissible: true
+        });
+      };
 
-        if (element.includes("Description doit être rempli(e)")){
-              notyf.error({
-                  message: `Merci de compléter la description de votre entreprise`,
-                  dismissible: true
-                  });
-            };
+      if (element.includes("Description doit être rempli(e)")){
+        notyf.error({
+          message: `Merci de compléter la description de votre entreprise`,
+          dismissible: true
+        });
+      };
 
     });
   };

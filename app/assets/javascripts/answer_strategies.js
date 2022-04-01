@@ -16,11 +16,11 @@ window.addEventListener("load", function(){
     answer_strategy.forEach(element => {
       for (let i = 1; i < 12; i++){
         if (element.includes(`Answer strategy ${i} doit être rempli(e)`)){
-              notyf.error({
-                  message: `Merci de répondre à la question n°${i}`,
-                  dismissible: true
-                  });
-            };
+          notyf.error({
+            message: `Merci de répondre à la question n°${i}`,
+            dismissible: true
+          });
+        };
       };
     });
   };

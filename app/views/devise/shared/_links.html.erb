@@ -13,18 +13,14 @@
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end %>
-<!--
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), method: :post, class:"links-devise-rs" %><br />
-  <% end %>
-<% end %>
 
- -->
-<%- if devise_mapping.omniauthable? %>
+ <%- if devise_mapping.omniauthable? %>
+
   <div class="omniauth-links">
-    <%= link_to image_tag('facebook.png' , :size => "40x40"), "/users/auth/facebook", method: :post, class:"omniauth-facebook" %>
-    <%= link_to image_tag('github.png' , :size => "40x40"), "/users/auth/github", method: :post, class:"omniauth-github" %>
-    <%= link_to image_tag('logo-google.png' , :size => "40x40"), "/users/auth/google_oauth2", method: :post, class:"omniauth-google" %>
-  </div>
+      <%= link_to image_tag('facebook.png' , :size => "40x40"), "/users/auth/facebook", method: :post, class:"omniauth-facebook" %>
+
+      <%= link_to image_tag('github.png' , :size => "40x40"), "/users/auth/github", method: :post, class:"omniauth-github" %>
+
+      <%= link_to image_tag('logo-google.png' , :size => "40x40"), "/users/auth/google_oauth2", method: :post, class:"omniauth-google" %>
+</div>
 <% end %>
