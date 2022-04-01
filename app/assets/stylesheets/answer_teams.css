@@ -1,0 +1,11 @@
+#error_message_team {
+    display: none;
+}
+
+#params_answer_team_1, #params_answer_team_2, #params_answer_team_3, #params_answer_team_4 {
+    display: none;
+}
+
+#manager, #commercial, #finance, #entreprenership {
+    display: none;
+}

@@ -1,0 +1,42 @@
+<div class="container mt-5 text-center">
+  <h1>Mon profil   <span><i class="fa fa-user"></i></span></h1>
+  <div class="row d-flex justify-content-center mt-5" >
+    <div class="col-md-8" id="profile-card" >
+      <div  class="card p-3 py-4">
+        <div  class="text-center mt-1">
+          <% if !@user.username.nil? %>
+            <% if @user.avatar.attached? %>
+              <%= image_tag @user.avatar.variant(resize: "200x200"), class:"bd-placeholder-img rounded-circle" %>
+            <% end %>
+            <h1 id="username-title" class="mt-2 mb-0"><%=@user.username%></h1>
+          <% end %>
+          <br/>
+          <h4 id="title-email">Email :</h4>
+          <h5><%= @user.email%></h5>
+          <br/>
+          <div id="div-s-profile" class="px-4 mt-1">
+            <% if  !@user.startup.nil?  && !@user.startup.scores.last.name.nil? %>
+              <%= link_to startup_path(current_user.startup.id) do %>
+                <%= image_tag "dashboard.png", :size => "40x40"  %>
+              <% end %>
+            <% end %>
+            <% if !@user.startup.nil? %>
+              <h4 id="title-s-profile">Ma startup :</h4>
+              <h5><%=@user.startup.name%></h5>
+              <br/>
+              <h6><%=@user.startup.description%></h6>
+            <% end %>
+          </div>
+          <br/>
+          <div class="buttons">
+            <%= link_to "Paramètres", edit_user_registration_path(@user.username) , class:"btn btn-signup px-4 ms-3"%>
+            <%= link_to "Editer profil", edit_user_path(@user.username) , class:"btn btn-signup px-4 ms-3"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-end">
+    <%= link_to image_tag("home.gif", :size => "60x60"), root_path, class:"btn btn-home" %>
+  </div>
+</div>

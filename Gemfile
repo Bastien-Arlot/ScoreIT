@@ -66,3 +66,16 @@ gem 'stripe'
 gem 'letter_opener'
 gem 'rubocop'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'wicked_pdf'
+gem "wkhtmltopdf-binary", group: :development
+gem "wkhtmltopdf-heroku", group: :production
+gem 'rails-i18n'
+gem 'devise-i18n'
+gem "image_processing", ">= 1.2"
+gem 'aws-sdk-s3', require: false
+gem 'friendly_id', '~> 5.4.0'

@@ -1,0 +1,116 @@
+.team {
+    background: linear-gradient(180deg, rgba(158, 69, 209, 1) 0%, rgba(102, 206, 214, 1) 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    border-radius: 17px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.team-title {
+    /* border: solid;
+    border-color: blueviolet;  */
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: var(--light);
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+}
+
+.bd-placeholder-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.teamdiv {
+    justify-content: center;
+}
+
+.marketing #teamcard {
+    text-align: center;
+}
+
+#teamcard {
+    /* border: solid;
+    border-color: green; */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-left: 17px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    max-width: 60vw;
+}
+
+.name {
+    margin-top: 10px;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+}
+
+.personnal-link {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.github {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.github {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    transform: scale(1);
+    animation: pulse-github 2.5s infinite;
+}
+
+@keyframes pulse-github {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 17px rgba(128, 101, 230, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(128, 101, 230, 0);
+    }
+}
+
+.linkedin-team {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.linkedin-team {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgb(101, 178, 230);
+    transform: scale(1);
+    animation: pulse-linkedin-team 2.5s infinite;
+}
+
+@keyframes pulse-linkedin-team {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgb(0, 149, 248);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 17px rgba(128, 101, 230, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(128, 101, 230, 0);
+    }
+}

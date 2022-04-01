@@ -1,0 +1,113 @@
+<div class="container">
+  <span id="error_message_market"><%= @answer_market.errors.full_messages%></span>
+  <h1 class="mt-4 text-color">Marché</h1>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <p class="mt-3"><span class="text-color">1)</span> Votre projet a-t-il une concurrence directe ?<span class="text-danger">*</span></p>
+    <%if params[:answer_market_1].to_i == 1%>
+      <%= label_tag :answer_market_1, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_market_1, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 1%><br>
+    <%end%>
+    <%if params[:answer_market_1].to_i == 2%>
+      <%= label_tag :answer_market_1, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 2, true%>
+    <%else%>
+      <%= label_tag :answer_market_1, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_1, 2%>
+    <%end%>
+    <p class="mt-3"><span class="text-color">2)</span> L’agressivité des prix est-elle un instrument pour gagner des parts de marché ?<span class="text-danger">*</span></p>
+    <%if params[:answer_market_2].to_i == 1%>
+      <%= label_tag :answer_market_2, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_market_2, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 1%><br>
+    <%end%>
+    <%if params[:answer_market_2].to_i == 2%>
+      <%= label_tag :answer_market_2, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 2, true%>
+    <%else%>
+      <%= label_tag :answer_market_2, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_2, 2%>
+    <%end%>
+    <p class="mt-3"><span class="text-color">3)</span> Quelle est la taille du marché actuellement ciblé ?<span class="text-danger">*</span> <i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="top" title="Il s'agit d'évaluer l'ensemble du Chiffre d'Affaires des acteurs de votre marché sur votre zone géographique."></i></p>
+    <span id="params_answer_market_3"><%=params[:answer_market_3]%></span>
+    <%= range_field_tag :answer_market_3,params[:answer_market_3], min: 1...100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id='sizemarket' ><%=params[:answer_market_3]%></span><span id="millions"> Millions d'euros</span></p>
+    <p class="mt-3"> <span class="text-color">4)</span>Quelle part du marché comptez-vous occuper dans 3 ans ? (En %)<span class="text-danger">*</span></p>
+    <span id="params_answer_market_4"><%=params[:answer_market_4]%></span>
+    <%= range_field_tag :answer_market_4,params[:answer_market_4], min: 1...100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id='target' ><%=params[:answer_market_4]%></span><span id="percentage"> %</span></p>
+    <p class="mt-3" ><span class="text-color">5)</span> A combien de défi(s), problème(s), manque(s) du marché souhaitez-vous répondre avec votre projet ?<span class="text-danger">*</span></p>
+    <% 10.times do |t|%>
+      <%if !params[:answer_market_5].nil? && params[:answer_market_5].to_i == t%>
+        <%= radio_button_tag :answer_market_5, t, true%>
+        <%= label_tag :answer_market_5, t, class:"mx-2" %>
+        <br>
+      <%else%>
+        <%= radio_button_tag :answer_market_5, t%>
+        <%= label_tag :answer_market_5, t, class:"mx-2" %>
+        <br>
+      <%end%>
+    <%end%>
+    <%= radio_button_tag :answer_market_5, 10%>
+    <%= label_tag :answer_market_5, "10+", class:"mx-2" %><br>
+    <p class="mt-3"><span class="text-color">6)</span> La réglementation permet-elle des expérimentations dans votre domaine ?<span class="text-danger">*</span></p>
+    <%if params[:answer_market_6].to_i == 1%>
+      <%= label_tag :answer_market_6, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_market_6, "Oui", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 1%><br>
+    <%end%>
+    <%if params[:answer_market_6].to_i == 2%>
+      <%= label_tag :answer_market_6, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 2, true%>
+    <%else%>
+      <%= label_tag :answer_market_6, "Non", class:"mx-2" %>
+      <%= radio_button_tag :answer_market_6, 2%>
+    <%end%>
+    <p class="mt-3"><span class="text-color">7)</span> Combien de clients avez-vous à date ?<span class="text-danger">*</span></p>
+    <% 10.times do |t|%>
+      <%if !params[:answer_market_7].nil? && params[:answer_market_7].to_i == t%>
+        <%= radio_button_tag :answer_market_7, t, true%>
+        <%= label_tag :answer_market_7, t, class:"mx-2" %>
+      <%else%>
+        <%= radio_button_tag :answer_market_7, t%>
+        <%= label_tag :answer_market_7, t, class:"mx-2" %>
+      <%end%>
+      <br>
+    <%end%>
+    <%if params[:answer_market_7].to_i == 10%>
+      <%= radio_button_tag :answer_market_7, 10, true%>
+      <%= label_tag :answer_market_7, "10+", class:"mx-2" %><br>
+    <%else%>
+      <%= radio_button_tag :answer_market_7, 10%>
+      <%= label_tag :answer_market_7, "10+", class:"mx-2" %><br>
+    <%end%>
+    <p class="mt-3"><span class="text-color">8)</span> Quel est le niveau de satisfaction de vos clients ? (sur une échelle de 1 à 10)<span class="text-danger">*</span></p>
+    <% 10.times do |t|%>
+      <%if !params[:answer_market_8].nil? && params[:answer_market_8].to_i == t%>
+        <%= radio_button_tag :answer_market_8, t, true%>
+        <%= label_tag :answer_market_8, t, class:"mx-2" %>
+        <br>
+      <%else%>
+        <%= radio_button_tag :answer_market_8, t%>
+        <%= label_tag :answer_market_8, t, class:"mx-2" %>
+        <br>
+      <%end%>
+    <%end%>
+    <%if params[:answer_market_8].to_i == 10%>
+      <%= radio_button_tag :answer_market_8, 10, true%>
+      <%= label_tag :answer_market_8, "10+", class:"mx-2 mb-3"%><br>
+    <%else%>
+      <%= radio_button_tag :answer_market_8, 10%>
+      <%= label_tag :answer_market_8, "10+", class:"mx-2 mb-3"%><br>
+    <%end%>
+    <br>
+    <small class="text-danger"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+    <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn-form mb-5" %>
+  <% end %>
+</div>

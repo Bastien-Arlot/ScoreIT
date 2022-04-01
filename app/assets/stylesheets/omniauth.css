@@ -1,0 +1,44 @@
+.omniauth-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.omniauth-facebook {
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    transform: scale(1);
+    animation: pulse-github 2.5s infinite;
+}
+
+.omniauth-github {
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    transform: scale(1);
+    animation: pulse-github 2.5s infinite;
+}
+
+.omniauth-google {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    transform: scale(1);
+    animation: pulse-omniauth 2.5s infinite;
+}
+
+@keyframes pulse-omniauth {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(128, 101, 230, 1);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 17px rgba(128, 101, 230, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(128, 101, 230, 0);
+    }
+}

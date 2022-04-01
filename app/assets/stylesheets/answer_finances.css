@@ -1,0 +1,20 @@
+#error_message_finance {
+    display: none;
+}
+
+.btn-form {
+    color: #fff;
+    background-color: #66ced6;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+
+.btn-form:hover {
+    color: #66ced6;
+    background-color: #fff;
+}
+
+#params_answer_finance_1 {
+    display: none;
+}

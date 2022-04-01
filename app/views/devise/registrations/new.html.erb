@@ -1,0 +1,38 @@
+<div class="signin-title">
+  <h1>Tu peux t'inscrire et gagner des millions! (minimum 😏)</h1>
+</div>
+<div class="container signin-container">
+  <div class="box signin-box">
+    <span></span>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="form-group signin-form-group">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, autofocus: true, autocomplete: "Username" ,class:"form-control", id:"InputUserName" %>
+      </div>
+      <div class="form-group signin-form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autocomplete: "email", class:"form-control", id:"InputEmail" %>
+      </div>
+      <div class="form-group signin-form-group">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password",class:"form-control", id:"InputPassword"  %>
+      </div>
+      <div class="form-group signin-form-group">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"InputPassword"  %>
+      </div>
+      <div class="links-submit-form">
+        <%= render "devise/shared/links" %>
+      </div>
+      <div class="submit signin-submit">
+        <%= f.submit "Sign up", id:"register", class:"btn btn-lg rounded-pill" %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to image_tag("home.gif", :size => "60x60"), root_path, class:"btn btn-home" %>
+  
+</div>

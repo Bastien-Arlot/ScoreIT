@@ -1,0 +1,59 @@
+
+#profile-card {
+    align-items: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card{
+  border: none !important;
+}
+
+#title-s-profile {
+    color: var(--prim);
+
+}
+
+#title-email {
+    color: var(--prim);
+}
+
+#username-title {
+    font-size: 40px;
+
+}
+
+
+#div-s-profile {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(192, 188, 188);
+    border-radius: 5px;
+}
+
+.btn-change {
+    margin-top: 20px;
+
+    background-color: var(--second) !important;
+    color: #fff !important;
+    font-weight: 400;
+}
+
+.btn-change:hover {
+    border-color: var(--second) !important;
+    background-color: #fff !important;
+    color: var(--second) !important;
+    font-weight: 400;
+}
+
+#btn-search {
+    border-color: var(--prim) !important;
+    background-color: #fff !important;
+    border-width: 3px !important;
+    color: black !important;
+}
+
+#btn-search:hover {
+    color: black !important;
+}

@@ -1,0 +1,37 @@
+.admin-index-title {
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+    color: var(--prim);
+}
+
+.admin-col {
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+    color: var(--prim) !important;
+    margin-bottom: 10px !important;
+    font-size: 1rem;
+}
+
+.table-admin {
+    border-style: none !important;
+    border-color: var(--prim) !important;
+}
+
+.admin-index-td {
+    font-size: 1.2rem;
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
+}
+
+.show-admin {
+    padding: 3px 3px;
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.admin-show-title {
+    padding-bottom: 10px;
+    font-size: 1.5rem !important;
+}
+
+#admin_show_dashboard {
+    margin-top: 300px !important;
+}

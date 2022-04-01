@@ -1,0 +1,109 @@
+.edit-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.edit-title {
+    justify-self: center;
+}
+
+.title-edit {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+
+.edit-box {
+    margin-top: 20px;
+    background: rgba(247, 247, 247, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.box-delete {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.form-group {
+    max-width: 500px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.edit-form-group {
+    width: auto;
+    margin-left: 20px !important;
+    margin-right: 15px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.form-edit-control {
+    border: solid !important;
+    border-color: var(--prim) !important;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: auto;
+    margin-bottom: 10px;
+}
+
+.submit {
+    max-width: 500px !important;
+    justify-items: center;
+    align-items: center;
+}
+
+.edit-submit {
+    margin-left: -30px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#jumbutton-delete {
+    color: var(--danger);
+    background-color: #fff;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
+
+#jumbutton-delete:hover {
+    background-color: var(--danger);
+    color: #fff;
+}
+
+#back-profile-btn {
+    color: #fff;
+    background-color: var(--medium-ligth);
+}
+
+#back-profile-btn:hover {
+    border-color: var(--second);
+    color: var(--second);
+    background-color: #fff;
+}
+
+#btn-go {
+    margin-top: 15px;
+    background-color: #66ced6;
+    color: #fff;
+    font-weight: 300;
+}
+
+#btn-go:hover {
+    background-color: #fff;
+    color: var(--second);
+    border-color: var(--second);
+}

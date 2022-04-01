@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>La startup peut se faire noter!</h1>
+    <p>Récapitulatif:</p>
+    <p>- Le nom de la startup: <%= @startup.name %> </p>
+    <p>- Description: <%= @startup.description %></p>
+    <p> Il est possible de changer votre description de startup ultérieurement, de votre dashboard. </p>
+    <br>
+    <p>
+      Il est maintenant le moment que tu attends le plus, évaluer <%= @startup.name %>!
+    </p>
+    <br>
+    <p>
+      Pour accéder à ton espace client puis faire noter ta startup, connecte-toi via :  <%= link_to 'Se connecter', @url %>.
+    </p>
+    <br>
+    <p>À très vite sur ScoreIt !
+    </body>
+  </html>

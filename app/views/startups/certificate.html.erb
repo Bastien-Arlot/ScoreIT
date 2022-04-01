@@ -1,0 +1,43 @@
+  
+<div class="pdf_content">
+  <h1>Certificat de notation Score<span class="text-color">IT</span></h1>
+  <h2>le présent certificat est attribué à la société <span class="text-color"><%=@startup.name%></span> notation effectuée le <span class="text-color"><%=@score.name%></span>,</h2>
+  <p class="text-certificate">numéro d'identification: <%=@score.certificatenumber%></p>
+  <h2 style="font-size:7rem;"><span class="text-color"><%= @score.total_100 %></span>/100</h2>
+  <div class="one">
+    <div class="card_startup">
+      <h3>Innovation :</h3>
+      <h5 class="text-color"><%=  @score.category_innovation.total_100_innovation %>/100</h5>
+    </div>
+  </div>
+  <div class="two">
+    <div class="card_startup">
+      <h3>Finance :</h3>
+      <h5 class="text-color"><%=  @score.category_finance.total_100_finance %>/100</h5>
+    </div>
+  </div>
+  <div class="three">
+    <div class="card_startup">
+      <h3>Marché :</h3>
+      <h5 class="text-color"><%=  @score.category_market.total_100_market %>/100</h5>
+    </div>
+  </div>
+  <div class="four">
+    <div class="card_startup">
+      <h3>Stratégie :</h3>
+      <h5 class="text-color"><%=  @score.category_strategy.total_100_strategy %>/100</h5>
+    </div>
+  </div>
+  <div class="five">
+    <div class="card_startup">
+      <h3>Offre :</h3>
+      <h5 class="text-color"><%=  @score.category_offer.total_100_offer %>/100</h5>
+    </div>
+  </div>
+  <div class="six">
+    <div class="card_startup">
+      <h3>Equipe :</h3>
+      <h5 class="text-color"><%=  @score.category_team.total_100_team %>/100</h5>
+    </div>
+  </div>
+</div>

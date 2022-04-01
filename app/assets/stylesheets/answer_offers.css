@@ -1,0 +1,11 @@
+#error_message_offer {
+    display: none;
+}
+
+#params_answer_offer_2, #params_answer_offer_3, #params_answer_offer_4, #params_answer_offer_5, #params_answer_offer_6, #params_answer_offer_7 {
+    display: none;
+}
+
+#loyalty, #simplicity, #technology, #economy, #innovation, #product {
+    display: none;
+}

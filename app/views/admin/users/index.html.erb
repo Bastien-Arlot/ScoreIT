@@ -1,0 +1,83 @@
+<div id="dashboard">
+  <div class="container" id="content">
+    <div class="row g-3">
+      <div class="row g-3">
+        <div class="col-12 card_startup text-center">
+          <h1 class="admin-index-title"> Vue d'ensemble </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="dashboard">
+  <div class="container" id="content">
+    <div class="row g-3">
+      <div class="col-12 card_startup">
+        <table class="table table-admin">
+          <thead>
+          <tr>
+            <th scope="col" class="admin-col"></th>
+            <th scope="col" class="admin-col">Nom de l'utilisateur</th>
+            <th scope="col" class="admin-col">Nom de la startup</th>
+            <th scope="col" class="admin-col">Nombre de notations</th>
+            <th scope="col" class="admin-col">Dernière notation finie ?</th>
+            <th scope="col" class="admin-col">Eligible à une nouvelle notation ?</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @users.each do |user| %>
+            <% if user.is_admin == false %>
+              <tr>
+                <td class="admin-index-td"><a href="<%= admin_user_path(user.id) %>">
+                  <%= image_tag "eye.gif", :size => "40x40"%>
+                </a>
+                <td class="admin-index-td"><%= user.username %></td>
+                <% if !user.startup.nil? %>
+                  <td class="admin-index-td"><%= user.startup.name %></td>
+                  <% if !user.startup.scores.nil? %>
+                    <td class="admin-index-td"> <%= user.startup.scores.length %></td>
+                    <td class="admin-index-td">
+                      <% if user.startup.scores.last.name == nil %>
+                        Non
+                      <% else %>
+                        Oui
+                      <% end %>
+                    </td>
+                    <td class="admin-index-td">
+                      <% if !user.startup.scores.last.name.nil? %>
+                        <% if (user.startup.scores.last.name.to_date + 90) < DateTime.now %>
+                          Oui
+                        <% else %>
+                          Non, pas avant le : <%= user.startup.scores.last.name.to_date + 90 %> (aaaa/mm/jj)
+                        <% end %>
+                      <% else %>
+                        -
+                      <% end %>
+
+                    </td>
+
+                  <% end %>
+                <% else %>
+                  <td class="admin-index-td">Pas de Startup</td>
+                  <td class="admin-index-td"></td>
+                  <td class="admin-index-td"></td>
+                  <td class="admin-index-td"></td>
+                <% end %>
+              </tr>
+            <% end %>
+
+          <% end %>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

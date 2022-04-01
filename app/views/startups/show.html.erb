@@ -1,0 +1,59 @@
+<div class="container text-center">
+  <h1 class="pt-3 text-color"><strong>Tableau de bord</strong></h1>
+  <%if @score_completed.last.isbuy == false%>
+    <% if !current_user.startup.scores.last.name.nil? || current_user.startup.scores.length >1 %>
+      <%= form_tag orders_path do %>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <div class="container text-center align-items pt-3">
+          <%= submit_tag("Commander son dernier certificat du #{@score.name}", class:"btn btn-primary btn-lg rounded-pill") %>
+        </div>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Acheter votre certificat"
+        data-amount="3500"
+        data-locale="auto"
+        data-currency="eur"></script>
+        <script>
+          document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+          document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+        </script>
+      <% end %>
+    <% end %>
+  <%end%>
+  <%if !@all_my_rate.last.name.nil? && @all_my_rate.last.name.to_date + 90 > Date.today && current_user.startup.havecredit == false%>
+    <%= form_tag order_timers_path do %>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <div class="container text-center align-items pt-3">
+        <%= submit_tag("Acheter un pass notation pour vous refaire noter", class:"btn btn-outline-primary btn-lg rounded-pill") %>
+      </div>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Achat une nouvelle notation"
+        data-amount="15000"
+        data-locale="auto"
+        data-currency="eur"></script>
+      <script>
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+        document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+      </script>
+    <% end %>
+  <% end %>
+</div>
+<div id="dashboard" >
+  <%= render "score", startup:@startup, score:@score%>
+</div>
+<span id="score_name"><%=@score.name%></span>
+<span id="score_category_team"><%=@score.category_team.total_100_team%></span>
+<span id="score_category_finance"><%=@score.category_finance.total_100_finance%></span>
+<span id="score_category_innovation"><%=@score.category_innovation.total_100_innovation%></span>
+<span id="score_category_market"><%=@score.category_market.total_100_market%></span>
+<span id="score_category_offer"><%=@score.category_offer.total_100_offer%></span>
+<span id="score_category_strategy"><%=@score.category_strategy.total_100_strategy%></span>

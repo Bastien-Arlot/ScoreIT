@@ -1,0 +1,74 @@
+<div class="bs-component">
+  <nav class="navbar  navbar-expand-lg navbar-ligth ">
+    <div class="container-fluid">
+      <a id="logonavbar" href="<%=root_path%>" >
+        <%= image_tag "logo.png", :size => "60x60"%>
+      </a>
+      <button class="navbar-toggler custom-toggler" id="btn-burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul id="burger-ul" class="navbar-nav ">
+          <li class="nav-item mt-2 ">
+            <%= link_to "Equipe", home_team_path , class:"btn btn-nav"%>
+          </li>
+          <li class="nav-item mt-2 ">
+            <%= link_to "Authentifier un certificat", certificates_path , class:"btn btn-nav"%>
+          </li>
+          <%  if user_signed_in? && current_user.is_admin? %>
+            <li class="nav-item mt-2">
+              <%= link_to "Gestion 🛠", [:admin, User], class:"btn btn-nav"%>
+            </li>
+          <% end %>
+          <% if user_signed_in? && current_user.startup.nil? %>
+            <li class="nav-item mt-2">
+              <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.length == 1 && current_user.startup.scores.last.category_team.nil? && current_user.startup.scores.last.category_finance.nil? && current_user.startup.scores.last.category_innovation.nil? && current_user.startup.scores.last.category_market.nil? && current_user.startup.scores.last.category_strategy.nil? && current_user.startup.scores.last.category_offer.nil?%>
+            <li class="nav-item mt-2">
+              <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? && !current_user.startup.scores.last.name.nil? %>
+            <li class="nav-item mt-2">
+              <%= link_to "Démarrer ma notation", startup_scores_path(current_user.startup.id), method:"post" , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.last.name.nil?%>
+            <li class="nav-item mt-2">
+              <%= link_to "Continuer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-signup"%>
+            </li>
+          <% end %>
+          <% if user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil?%>
+            <li class="nav-item mt-2">
+              <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+            </li>
+          <% elsif user_signed_in? && !current_user.startup.nil?  && current_user.startup.scores.length > 1%>
+            <li class="nav-item mt-2">
+              <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup"%>
+            </li>
+          <%end%>
+          <%  if user_signed_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  btn btn-signup mt-2" id="drop-profile" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;Mon profil  </a>
+              <div class="dropdown-menu dropdown-menu-right ">
+                <%= link_to "Mon profil", user_path(current_user.username) , class:"dropdown-btn  m-4"%>
+                <hr>
+                <%= link_to "Déconnexion", destroy_user_session_path , method: :delete, class:"dropdown-btn m-4"%>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn btn-signup mt-2" id="drop-signup" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rejoins-nous!</a>
+              <div class="dropdown-menu ">
+                <%= link_to "S'inscrire", new_user_registration_path , class:"dropdown-btn m-4"%>
+                <hr>
+                <%= link_to "Se connecter", new_user_session_path , class:"dropdown-btn m-4"%>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="string"></div>
+</div>

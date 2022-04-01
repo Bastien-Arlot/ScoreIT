@@ -1,0 +1,10 @@
+.searchbar {
+    width: clamp(25rem, 50%, 100rem);
+    border: 1px solid rgb(212, 212, 212);
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+.searchcontent {
+    min-height: 50vh;
+}

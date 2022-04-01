@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Résultats</h1>
+    <p>
+      Le <%= @score.name %>: <%= @startup.name %> obtient un score de <%= @score.total_100 %>/100.
+    </p>
+    <br>
+    <p>Résultats détaillés:</p>
+    <p> Finance: <%= @finance %>/100</p>
+    <p> Innovation: <%= @innovation %>/100</p>
+    <p> Marché: <%= @market %>/100</p>
+    <p> Offre: <%=@offer %>/100</p>
+    <p> Stratégie: <%=@strategy %>/100</p>
+    <p> Equipe: <%= @team %>/100</p>
+    <br>
+    <p>
+      Pour accéder à ton espace client puis ajouter ta startup, connecte-toi via : <%= link_to 'Se connecter', @url %>.
+    </p>
+    <p>À très vite sur ScoreIt !
+    </body>
+  </html>

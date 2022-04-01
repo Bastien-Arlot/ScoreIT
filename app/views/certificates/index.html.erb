@@ -1,0 +1,44 @@
+<div class=" container text-center mt-5 mb-5 searchcontent">
+  <h1>Authentifier un certificat</h1>
+  <h2>Vous avez un doute sur l'authenticité d'un certificat ?</h2>
+  <p>Faites une recherche directement en rentrant le numéro de certificat présent sur ce dernier</p>
+  <%= form_tag certificates_path, method: "get" do %>
+    <p><%=text_field_tag :search ,nil, placeholder: 'Entrez votre numero de certificat ici...', class: "searchbar"%></p>
+    <%= submit_tag "Envoyer", class: 'card-btn' %>
+  <%end%>
+  <div id="searchresult">
+    <%if params[:search] != nil%>
+      <h3 class= "m-5">Résultats :</h3>
+      <% @scores.each do |score|%>
+        <%if score.certificatenumber == params[:search]%>
+          <table class="table table-admin">
+            <thead>
+              <tr>
+                <th scope="col">Startup</th>
+                <th scope="col">Date notation <i class="fa-solid fa-circle-info"  data-toggle="tooltip" data-placement="bottom" title="Format : aaaa/mm/jj"></i></th>
+                <th scope="col">Numéro certificat</th>
+                <th scope="col">validité du certificat <i class="fa-solid fa-circle-info"  data-toggle="tooltip" data-placement="bottom" title="certificat datant de moins de 3 mois"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%=score.startup.name%></td>
+                <td><%= score.name %></td>
+                <td><%= score.certificatenumber %></td>
+                <% if score.name.to_date + 90 >= DateTime.current.to_date %>
+                  <td>Valide</td>
+                <%else%>
+                  <td>Non Valide</td>
+                <%end%>
+              </tr>
+            </tbody>
+          </table>
+          <%@find = 1%>
+        <%end%>
+      <%end%>
+      <%if @find == 0%>
+        <p>Aucun Résultat</p>
+      <%end%>
+    <%end%>
+  </div>
+</div>

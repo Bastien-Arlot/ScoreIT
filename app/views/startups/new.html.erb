@@ -1,0 +1,51 @@
+<span id="error_message_startup"><%= @startup.errors.full_messages%></span>
+<div class="title-container">
+  <h3>Bienvenue sur le formulaire de votre Start Up</h3>
+</div>
+<div class="startup-form-container">
+  <div class="col-lg-6 banner-startupform">
+    <%= image_tag "startup-form.png", class:"img-banner-startup" %>
+    <h3 class="startupform-h3">Renseignez les champs afin que votre start-up soit connue de tous</h3>
+  </div>
+  <div class="col-lg-6 col-md-6 formside">
+    <%= form_tag startups_path, method: "post" do %>
+      <div class="form-group col-md-12 col-sm-12 col-xs-12">
+        <label for="exampleFormControlInput1" >Nom de l'entreprise</label>
+        <%= text_field_tag 'name', @startup.name , class: "form-control"%>
+        <% if @startup.errors.any? %>
+          <% @startup.errors.full_messages.each do |message| %>
+            <% if message == "Title can't be blank" %>
+              <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% if @startup.errors.any? %>
+          <% @startup.errors.full_messages.each do |message| %>
+            <% if message == "Title is too short (minimum is 3 characters)" %>
+              <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% if @startup.errors.any? %>
+          <% @startup.errors.full_messages.each do |message| %>
+            <% if message == "Title is too long (maximum is 14 characters)" %>
+              <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+        <label for="exampleFormControlTextarea1">Description</label>
+        <%= text_area_tag 'description', @startup.description , class: "form-control"%>
+        <% if @startup.errors.any? %>
+          <% @startup.errors.full_messages.each do |message| %>
+            <% if message == "Content can't be blank" %>
+              <div class="container alert alert-danger d-flex align-items-center p-1 mt-1" role="alert"><%= message %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+        <div class="col-sm-offset-2 col-sm-10 mt-3">
+          <%= submit_tag "Envoyer", id:"send-st", class:"btn btn-lg rounded-pill" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

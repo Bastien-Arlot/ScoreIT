@@ -1,0 +1,42 @@
+#form-ctn {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(192, 188, 188);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#scr-table {
+    width: 100%;
+
+}
+
+.scr-td {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.scr-th {
+    text-align: center;
+    width: 150px;
+}
+
+
+.scr-tr:hover {
+    background-color: rgba(102, 206, 214, 0.4);
+}
+
+.scores {
+    color: var(--prim);
+}
+
+#btn-finance, #btn-innovation, #btn-market, #btn-strategy, #btn-offer, #btn-teamss {
+
+    background-color: #66ced6;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+

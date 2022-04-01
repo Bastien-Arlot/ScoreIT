@@ -1,0 +1,33 @@
+.rocket {
+    position: absolute;
+    animation: move 2s ease-out;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(-40deg);
+        top: 250%;
+        right: 30%
+    }
+    60% {
+        transform: rotate(-40deg);
+        top: 200%;
+        right: 30%
+    }
+    78% {
+        transform: rotate(360deg);
+        top: 195%;
+        right: 30%
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+    82% {
+        transform: rotate(410deg);
+    }
+    100% {
+        transform: rotate(410deg);
+        top: 160%;
+        right: 110%
+    }
+}

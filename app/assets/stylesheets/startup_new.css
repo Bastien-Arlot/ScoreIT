@@ -1,0 +1,125 @@
+.title-container {
+    /* border: solid;
+    border-color: green ; */
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 20vh;
+    text-align: center;
+}
+
+.title-container h3 {
+    margin-top: 50px;
+    color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+}
+
+.startup-form-container {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.banner-startupform {
+    background: rgb(158, 69, 209) !important;
+    background: linear-gradient(121deg, rgba(158, 69, 209, 1) 0%, rgba(158, 69, 209, 1) 50%, rgba(197, 145, 227, 1) 100%) !important;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.banner-startupform .startupform-h3 {
+    width: 70% !important;
+    color: var(--light) !important;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+}
+
+.img-banner-startup {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.formside {
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+    display: grid !important;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+.form-control {
+    margin-top: 6px !important;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+#StartupDescription {
+    width: 80% !important;
+}
+
+@media (max-width: 800px) {
+    .banner-startupform {
+        display: none !important;
+    }
+
+    form {
+        width: 100% !important;
+    }
+
+    #StartupDescription {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .formside {
+        min-width: 100% !important;
+    }
+
+    form {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .formside {
+        max-width: 100% !important;
+    }
+
+    form {
+        width: 100% !important;
+    }
+}
+
+.startupform-button-submit {
+    margin-top: 15px;
+    margin-left: 130px;
+    background-color: #66ced6;
+    color: #fff;
+    font-weight: 300;
+}
+
+.startupform-button-submit:hover {
+    color: #66ced6;
+    background-color: #fff;
+}
+
+#error_message_startup {
+    display: none;
+}
+
+#send-st {
+    margin-top: 15px;
+    margin-left: 45%;
+    background-color: #66ced6;
+    color: #fff;
+    font-weight: 300;
+}

@@ -1,5 +1,7 @@
 {
   "name": "Scoreit_thp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "chart.js": "^3.7.1"
+  }
 }

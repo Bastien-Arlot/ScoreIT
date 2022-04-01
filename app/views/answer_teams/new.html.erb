@@ -1,0 +1,157 @@
+<div class="container">
+  <span id="error_message_team"><%= @answer_team.errors.full_messages%></span>
+  <h1 class="mt-4 text-color">Équipe</h1>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <p class="mt-3"><span class="text-color">1)</span> Sur une échelle de 10 évaluez votre expérience et vos compétences managériales:<span class="text-danger">*</span></p>
+    <span id="params_answer_team_1"><%=params[:answer_team_1]%></span>
+    <%= range_field_tag :answer_team_1, params[:answer_team_1], in: 1..100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id='manager' ><%=params[:answer_team_1]%></span></p>
+    <p class="mt-3"><span class="text-color">2)</span> Sur une échelle de 10 évaluez votre expérience et vos compétences commerciales:<span class="text-danger">*</span></p>
+    <span id="params_answer_team_2"><%=params[:answer_team_2]%></span>
+    <%= range_field_tag :answer_team_2, params[:answer_team_2], in: 1..100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id="commercial"><%=params[:answer_market_2]%></span></p>
+    <p class="mt-3"><span class="text-color">3)</span> Sur une échelle de 10 évaluez votre expérience et vos compétences financière:<span class="text-danger">*</span></p>
+    <span id="params_answer_team_3"><%=params[:answer_team_3]%></span>
+    <%= range_field_tag :answer_team_3,params[:answer_team_3], in: 1..100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id='finance' ><%=params[:answer_market_3]%></span></p>
+    <p class="mt-3"><span class="text-color">4)</span> Sur une échelle de 10 évaluez votre expérience et vos compétences entrepreneuriales:<span class="text-danger">*</span></p>
+    <span id="params_answer_team_4"><%=params[:answer_team_4]%></span>
+    <%= range_field_tag :answer_team_4,params[:answer_team_4], in: 1..100, step: 1, class:"d-inline"%>
+    <p class="mx-3 d-inline align-top"><span id='entreprenership' ><%=params[:answer_market_4]%></span></p>
+    <p class="mt-3"><span class="text-color">5)</span> La startup possède plus de 2 dirigeants avec une complémentarité de compétence ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_5].to_i == 1%>
+      <%= label_tag :answer_team_5, "Oui" %>
+      <%= radio_button_tag :answer_team_5, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_5, "Oui" %>
+      <%= radio_button_tag :answer_team_5, 1%><br>
+    <%end%>
+    <%if params[:answer_team_5].to_i == 2%>
+      <%= label_tag :answer_team_5, "Non" %>
+      <%= radio_button_tag :answer_team_5, 2, true%>
+    <%else%>
+      <%= label_tag :answer_team_5, "Non" %>
+      <%= radio_button_tag :answer_team_5, 2 %>
+    <%end%>
+    <p class="mt-3"><span class="text-color">6)</span> Combien de salariés employez-vous (Équivalent Temps Plein) actuellement ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_6].to_i == 1%>
+      <%= label_tag :answer_team_6, "0" %>
+      <%= radio_button_tag :answer_team_6, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_6, "0" %>
+      <%= radio_button_tag :answer_team_6, 1%><br>
+    <%end%>
+    <%if params[:answer_team_6].to_i == 2%>
+      <%= label_tag :answer_team_6, "1" %>
+      <%= radio_button_tag :answer_team_6, 2, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_6, "1" %>
+      <%= radio_button_tag :answer_team_6, 2 %><br>
+    <%end%>
+    <%if params[:answer_team_6].to_i == 3%>
+      <%= label_tag :answer_team_6, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_6, 3, true%>
+    <%else%>
+      <%= label_tag :answer_team_6, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_6, 3 %>
+    <%end%>
+    <p class="mt-3"><span class="text-color">7)</span> Avec combien de freelances collaborez-vous actuellement ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_7].to_i == 1%>
+      <%= label_tag :answer_team_7, "0" %>
+      <%= radio_button_tag :answer_team_7, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_7, "0" %>
+      <%= radio_button_tag :answer_team_7, 1%><br>
+    <%end%>
+    <%if params[:answer_team_7].to_i == 2%>
+      <%= label_tag :answer_team_7, "1" %>
+      <%= radio_button_tag :answer_team_7, 2, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_7, "1" %>
+      <%= radio_button_tag :answer_team_7, 2 %><br>
+    <%end%>
+    <%if params[:answer_team_7].to_i == 3%>
+      <%= label_tag :answer_team_7, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_7, 3, true%>
+    <%else%>
+      <%= label_tag :answer_team_7, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_7, 3 %>
+    <%end%>
+    <p class="mt-3"><span class="text-color">8)</span> Combien d'apprenants (stagiaires, apprentis, etc) employez-vous actuellement ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_8].to_i == 1%>
+      <%= label_tag :answer_team_8, "0" %>
+      <%= radio_button_tag :answer_team_8, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_8, "0" %>
+      <%= radio_button_tag :answer_team_8, 1%><br>
+    <%end%>
+    <%if params[:answer_team_8].to_i == 2%>
+      <%= label_tag :answer_team_8, "1" %>
+      <%= radio_button_tag :answer_team_8, 2, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_8, "1" %>
+      <%= radio_button_tag :answer_team_8, 2 %><br>
+    <%end%>
+    <%if params[:answer_team_8].to_i == 3%>
+      <%= label_tag :answer_team_8, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_8, 3, true%>
+    <%else%>
+      <%= label_tag :answer_team_8, "2 ou plus" %>
+      <%= radio_button_tag :answer_team_8, 3 %>
+    <%end%>
+    <p class="mt-3"><span class="text-color">9)</span> Y’a-t-il eu des abandons de fondateur(s) depuis la naissance du projet ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_9].to_i == 1%>
+      <%= label_tag :answer_team_9, "Oui" %>
+      <%= radio_button_tag :answer_team_9, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_9, "Oui" %>
+      <%= radio_button_tag :answer_team_9, 1%><br>
+    <%end%>
+    <%if params[:answer_team_9].to_i == 2%>
+      <%= label_tag :answer_team_9, "Non" %>
+      <%= radio_button_tag :answer_team_9, 2, true%>
+    <%else%>
+      <%= label_tag :answer_team_9, "Non" %>
+      <%= radio_button_tag :answer_team_9, 2 %>
+    <%end%>
+    <p class="mt-3"><span class="text-color">10)</span> Combien de personnes ont quitté le projet depuis son lancement ?<span class="text-danger">*</span></p>
+    <%if params[:answer_team_10].to_i == 1%>
+      <%= label_tag :answer_team_10, "0" %>
+      <%= radio_button_tag :answer_team_10, 1, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_10, "0" %>
+      <%= radio_button_tag :answer_team_10, 1%><br>
+    <%end%>
+    <%if params[:answer_team_10].to_i == 2%>
+      <%= label_tag :answer_team_10, "1" %>
+      <%= radio_button_tag :answer_team_10, 2, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_10, "1" %>
+      <%= radio_button_tag :answer_team_10, 2 %><br>
+    <%end%>
+    <%if params[:answer_team_10].to_i == 3%>
+      <%= label_tag :answer_team_10, "2" %>
+      <%= radio_button_tag :answer_team_10, 3, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_10, "2" %>
+      <%= radio_button_tag :answer_team_10, 3 %><br>
+    <%end%>
+    <%if params[:answer_team_10].to_i == 4%>
+      <%= label_tag :answer_team_10, "3" %>
+      <%= radio_button_tag :answer_team_10, 4, true%><br>
+    <%else%>
+      <%= label_tag :answer_team_10, "3" %>
+      <%= radio_button_tag :answer_team_10, 4 %><br>
+    <%end%>
+    <%if params[:answer_team_10].to_i == 5%>
+      <%= label_tag :answer_team_10, "4+", class:"mb-3" %>
+      <%= radio_button_tag :answer_team_10, 5, true%>
+    <%else%>
+      <%= label_tag :answer_team_10, "4+", class:"mb-3" %>
+      <%= radio_button_tag :answer_team_10, 5 %>
+    <%end%>
+    <br>
+    <small class="text-danger"><em>*Les questions portant un astérisque sont obligatoires</em></small><br>
+    <%= submit_tag "Valider mes réponses", data: { confirm: 'Etes-vous sûr de valider vos réponses, une fois enregistrées vous ne pourrez plus les modifier' }, class:"btn-form mb-5" %>
+  <% end %>
+</div>

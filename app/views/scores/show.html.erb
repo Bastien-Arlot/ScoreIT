@@ -1,0 +1,115 @@
+<div class="text-center m-5 mt-5">
+  <h1>Formulaires <span><%= image_tag "form-online.png", :size => "70x70" %></span></h1>
+  <h4 class="mt-5">Pour savoir si votre startup est sur la bonne voie, nous avons rédigé un formulaire sur chacune des 6 catégories.
+    Veillez a remplir tous les formulaires pour pouvoir obtenir votre note. </h4>
+</div>
+<div id="form-ctn" class="container col-lg-10 col-md-10 col-sm-10 mt-5 mb-5">
+  <table id="scr-table" class="text-center">
+    <tr class="scr-tr">
+      <th class="scr-th">Formulaire</th>
+      <th class="scr-th">Score</th>
+      <th class="scr-th">Statut</th>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_finance.total_100_finance.nil?, "Finance", new_startup_score_category_finance_answer_finance_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_finance.id) , class:"btn btn-md ", id:"btn-finance"%>
+      </td>
+      <td class="scr-td"> <% if !@score.category_finance.total_100_finance.nil? %>
+          <span class="scores"><%=  @score.category_finance.total_100_finance %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"> <% if !@score.category_finance.total_100_finance.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_innovation.total_100_innovation.nil?, "Innovation", new_startup_score_category_innovation_answer_innovation_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_innovation.id) , class:"btn btn-md ", id:"btn-innovation"%>
+      </td>
+      <td class="scr-td"> <% if !@score.category_innovation.total_100_innovation.nil? %>
+          <span class="scores"><%=  @score.category_innovation.total_100_innovation %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"><% if !@score.category_innovation.total_100_innovation.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_market.total_100_market.nil?, "Marché", new_startup_score_category_market_answer_market_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_innovation.id) , class:"btn btn-md ", id:"btn-market"%>
+      </td>
+      <td class="scr-td"> <% if !@score.category_market.total_100_market.nil? %>
+          <span class="scores"><%=  @score.category_market.total_100_market %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"><% if !@score.category_market.total_100_market.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_strategy.total_100_strategy.nil?, "Stratégie", new_startup_score_category_strategy_answer_strategy_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_innovation.id) , class:"btn btn-md ", id:"btn-strategy"%>
+      </td>
+      <td class="scr-td"> <% if !@score.category_strategy.total_100_strategy.nil? %>
+          <span class="scores"><%=  @score.category_strategy.total_100_strategy %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"><% if !@score.category_strategy.total_100_strategy.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_offer.total_100_offer.nil?, "Offre", new_startup_score_category_offer_answer_offer_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_innovation.id) , class:"btn btn-md ", id:"btn-offer"%>
+      </td>
+      <td class="scr-td"> <% if !@score.category_offer.total_100_offer.nil? %>
+          <span class="scores"><%=  @score.category_offer.total_100_offer %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"><% if !@score.category_offer.total_100_offer.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+    <tr class="scr-tr">
+      <td class="scr-td">  <%= link_to_unless !@score.category_team.total_100_team.nil?, "Équipe", new_startup_score_category_team_answer_team_path(@startup.id, @startup.scores.last.id, @startup.scores.last.category_team.id) , class:"btn btn-md ", id:"btn-teamss"%>
+      </td>
+      <td class="scr-td">  <% if !@score.category_team.total_100_team.nil? %>
+          <span class="scores"><%=  @score.category_team.total_100_team %></span>/100
+        <% else %>
+          <span><i class="fa fa-question"></i></span>
+        <% end %>
+      </td>
+      <td class="scr-td"><% if !@score.category_team.total_100_team.nil? %>
+          <%= image_tag "verify.png", :size => "30x30" %>
+        <% else %>
+          <%= image_tag "square.png", :size => "30x30" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="text-center">
+  <% if user_signed_in? && !current_user.startup.nil?  && !current_user.startup.scores.last.name.nil? %>
+    <%= link_to "Tableau de bord", startup_path(current_user.startup.id) , class:"btn btn-signup mb-5"%>
+  <% end %>
+</div>

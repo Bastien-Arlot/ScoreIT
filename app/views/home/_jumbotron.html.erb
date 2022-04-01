@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <div class="container  m-5">
+    <h1 class="display-1" id="jumbotext1">ScoreIT</h1>
+    <h3 class="display-6 text-secondary" >Analyse de start-up.</h3>
+    <p  class="text-dark" id="jumbotext3" >Certifiez la solidité de votre startup<br>
+      en vous faisant <span class="text-color">noter</span>.</p>
+      <% if user_signed_in? && current_user.startup.nil? %>
+        <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-lg rounded-pill jumbutton"%>
+      <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.length == 1 && current_user.startup.scores.last.category_team.nil? && current_user.startup.scores.last.category_finance.nil? && current_user.startup.scores.last.category_innovation.nil? && current_user.startup.scores.last.category_market.nil? && current_user.startup.scores.last.category_strategy.nil? && current_user.startup.scores.last.category_offer.nil?%>
+        <%= link_to "Démarrer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-lg rounded-pill jumbutton"%>
+      <% elsif user_signed_in? && !current_user.startup.nil? && !current_user.startup.scores.last.name.nil? %>
+        <%= link_to "Démarrer ma notation", startup_scores_path(current_user.startup.id), method:"post" , class:"btn btn-lg rounded-pill jumbutton"%>
+      <% elsif user_signed_in? && !current_user.startup.nil? && current_user.startup.scores.last.name.nil?%>
+        <%= link_to "Continuer ma notation", startup_score_path(current_user.startup.id, current_user.startup.scores.last.id) , class:"btn btn-lg rounded-pill jumbutton"%>
+      <% else %>
+        <%= link_to "Démarrer ma notation", new_startup_path, class:"btn btn-lg rounded-pill jumbutton"%>
+      <% end %>
+    </div>
+  </div>

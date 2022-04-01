@@ -1,0 +1,90 @@
+<footer id="ftr" class="bd-footer py-2 mt-2">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-12 col-lg-2 offset-lg-1 mb-3 mt-lg-4">
+        <h5>
+          Affinez votre modèle, valorisez votre startup et soyez la licorne
+          de demain !
+        </h5>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5 class="titl-footer">Equipe</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a class="footerlink" href="https://github.com/alegarn"
+                  >Alex G</a
+                >
+          </li>
+          <li>
+            <a class="footerlink" href="https://github.com/Non0-13"
+                  >Arnaud L</a
+                >
+          </li>
+          <li>
+            <a class="footerlink" href="https://github.com/Bastien-Arlot"
+                  >Bastien A</a
+                >
+          </li>
+          <li>
+            <a class="footerlink" href="https://github.com/guillaume-rygn"
+                  >Guillaume R</a
+                >
+          </li>
+          <li>
+            <a class="footerlink" href="https://github.com/PierreSARAZIN1"
+                  >Pierre S</a
+                >
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3 mb-3">
+        <h5 id="contact">Contact</h5>
+        <ul class="list-unstyled">
+          <li>
+            <div id="mail-adress">
+              <i id="envelope" class="fa fa-envelope"></i>
+              <p class="footerlink">score.it@yahoo.com</p>
+            </div>
+            <h5 class="titl-footer">S'inscrire</h5>
+          </li>
+          <li><%= link_to "En tant que start-up", new_user_registration_path , class:"footerlink"%></li>
+          <li>
+            <%= link_to "Authentifier un certificat", certificates_path , class:"footerlink"%>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-2 offset-lg-1 mb-3 mt-lg-4">
+        <a href="<%=root_path%>"><%= image_tag 'logo.png', style: 'width:60px;', id:"logofooter"%></a>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-social-buttons">
+    <a
+          class="social-button facebook"
+          href="https://www.facebook.com/"
+          target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+    <a
+          class="social-button twitter"
+          href="https://www.twitter.com/"
+          target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+    <a
+          class="social-button linkedin"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+    <a
+          class="social-button instagram"
+          href="https://www.instagram.com/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  </div>
+  <div class="container text-center mt-3">
+    <p id="cprt">Copyrigth © 2022 ScoreIT - Tous droits réservés</p>
+  </div>
+</footer>

@@ -1,0 +1,8 @@
+<div class="container my-5">
+  <h2>Merci pour votre achat, le certificat arrivera dans quelques minutes directement dans votre boîte mail.</h2>
+  <p>Ce dernier est valable pendant 3 mois.</p>
+  <br>
+  <p>Vous allez être redirigé automatiquement dans <span id="countdown">7</span> secondes.</span>
+  <p>Pour être redirigé directement cliquez <%= link_to 'ici', startup_path(current_user.startup.id) %>.</p>
+</div>
+<%= link_to "Tableau de bord", startup_path(current_user.startup.id) , id:"redirect_dashboard"%>

@@ -1,0 +1,26 @@
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Vous avez déjà un compte? 😎", new_session_path(resource_name), class:"btn-login" %><br />
+<% end %>
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Vous n'avez pas encore de compte ? 😡", new_registration_path(resource_name), class:"btn-login" %><br />
+<% end %>
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Si t'as oublié ton mot de passe, viens par ici 🤙", new_password_path(resource_name), class:"btn-login" %><br />
+<% end %>
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+<% end %>
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+<% end %>
+
+ <%- if devise_mapping.omniauthable? %>
+
+  <div class="omniauth-links">
+      <%= link_to image_tag('facebook.png' , :size => "40x40"), "/users/auth/facebook", method: :post, class:"omniauth-facebook" %>
+
+      <%= link_to image_tag('github.png' , :size => "40x40"), "/users/auth/github", method: :post, class:"omniauth-github" %>
+
+      <%= link_to image_tag('logo-google.png' , :size => "40x40"), "/users/auth/google_oauth2", method: :post, class:"omniauth-google" %>
+</div>
+<% end %>

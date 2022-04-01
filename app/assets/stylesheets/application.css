@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@100;200&family=Roboto:wght@100;300&family=Ubuntu&display=swap');
+:root {
+    --prim: #9e45d1 !important;
+    --second: #66ced6 !important;
+    --dark: #020003 !important;
+    --medium-ligth: #777578 !important;
+    --light: #f5f0fa !important;
+    --danger: rgb(255, 44, 44) !important;
+    --success: rgb(50, 163, 5) !important;
+}
+
+body {
+    background-color: #f5f0fa !important;
+    margin: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
+}
+
+p,
+h4 {
+    font-family: 'Maven Pro', 'Roboto', 'Poppins', 'Ubuntu', sans-serif;
+}
+
+.main {
+    min-height: 80vh;
+}
