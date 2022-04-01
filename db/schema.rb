@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_124349) do
+ActiveRecord::Schema.define(version: 2022_04_01_132957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -187,13 +187,24 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.index ["score_id"], name: "index_category_teams_on_score_id"
   end
 
-  create_table "orders", force: :cascade do |t|
+  create_table "order_timers", force: :cascade do |t|
     t.string "email"
     t.string "username"
-    t.string "startup_id"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "startup_id"
+    t.index ["startup_id"], name: "index_order_timers_on_startup_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "email"
+    t.string "username"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "startup_id"
+    t.index ["startup_id"], name: "index_orders_on_startup_id"
   end
 
   create_table "scores", force: :cascade do |t|
@@ -205,6 +216,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.datetime "updated_at", null: false
     t.bigint "startup_id"
     t.string "certificatenumber"
+    t.boolean "isbuy", default: false
     t.index ["startup_id"], name: "index_scores_on_startup_id"
   end
 
@@ -214,6 +226,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.boolean "havecredit", default: false
     t.index ["user_id"], name: "index_startups_on_user_id"
   end
 
@@ -249,6 +262,8 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
   add_foreign_key "category_offers", "scores"
   add_foreign_key "category_strategies", "scores"
   add_foreign_key "category_teams", "scores"
+  add_foreign_key "order_timers", "startups"
+  add_foreign_key "orders", "startups"
   add_foreign_key "scores", "startups"
   add_foreign_key "startups", "users"
 end

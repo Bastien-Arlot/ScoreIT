@@ -1,4 +1,6 @@
 class Startup < ApplicationRecord
+  has_many :orders
+  has_many :order_timers
   belongs_to :user
   has_many :scores, dependent: :destroy
 
