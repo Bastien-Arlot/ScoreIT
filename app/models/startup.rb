@@ -19,7 +19,7 @@ class Startup < ApplicationRecord
   end
 
   def startup_registration_mail
-  #  UserMailer.new_startup_email(self).deliver_now
+   UserMailer.new_startup_email(self).deliver_now
   end
 
 end
