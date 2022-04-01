@@ -4,5 +4,5 @@ class CertificatesController < ApplicationController
     @scores = Score.all
     @find = 0
   end
-  
+
 end

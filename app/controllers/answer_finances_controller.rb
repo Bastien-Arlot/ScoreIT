@@ -6,10 +6,9 @@ class AnswerFinancesController < ApplicationController
 
   def create
     @answer_finance = AnswerFinance.new(answer_finance_params)
-    if  @answer_finance.save
+    if @answer_finance.save
       redirect_to startup_score_path(params[:startup_id], params[:score_id])
     else
-      puts @answer_finance.errors.full_messages
       render 'new'
     end
 
