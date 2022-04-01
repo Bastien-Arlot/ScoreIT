@@ -4,43 +4,33 @@
     <title>ScoreitThp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
-
     <%= stylesheet_link_tag 'fontawesome', media: 'all' %>
     <%= javascript_include_tag 'fontawesome', media: 'all' %>
-
     <%= stylesheet_link_tag 'notyf.min', media: 'all' %>
     <%= javascript_include_tag 'notyf.min', media: 'all' %>
 
     <%= javascript_include_tag 'chart.min', media: 'all' %>
     <%= stylesheet_link_tag 'chart.min', media: 'all' %>
-
     <%= javascript_include_tag 'randomColor.min', media: 'all' %>
     <%= javascript_include_tag 'slim.min', media: 'all' %>
     <%= javascript_include_tag 'popper.min', media: 'all' %>
 
-
-
-
-    <%= favicon_link_tag asset_path('logo.ico') %>
-
+   <%= favicon_link_tag asset_path('logo.ico') %>
 
   </head>
-
   <body>
 
     <%= render 'layouts/navbar'  %>
     <%= render 'layouts/flash'  %>
     <div class="main">
-    <%= yield %>
+      <%= yield %>
     </div>
-     <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' %>
   </body>
 
 </html>
