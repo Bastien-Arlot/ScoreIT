@@ -17,7 +17,7 @@ class StartupsController < ApplicationController
     )
 
     if @startup.save
-      redirect_to startup_score_path(current_user.startup.id, current_user.startup.scores.last.id)
+      redirect_to root_path
     else
       render 'new'
     end
@@ -30,6 +30,8 @@ class StartupsController < ApplicationController
     @scores = Score.all
     @score_last = @startup.scores.last
     select_score()
+
+    @myscore = @scores.where(startup_id: current_user.startup.id, isbuy: true)
 
     respond_to do |format|
       format.html { }

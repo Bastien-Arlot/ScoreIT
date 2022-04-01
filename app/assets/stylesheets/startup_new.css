@@ -17,38 +17,40 @@
     font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.form-container {
+.startup-form-container {
     margin-top: 10px;
     margin-bottom: 100px;
     display: flex;
-    height: 80vh;
+    height: 100%;
     justify-content: center;
 }
 
 .banner-startupform {
     background: rgb(158, 69, 209)!important;
     background: linear-gradient(121deg, rgba(158, 69, 209, 1) 0%, rgba(158, 69, 209, 1) 50%, rgba(197, 145, 227, 1) 100%)!important;
-    text-align: center!important;
-    align-items: center!important;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
 .banner-startupform .startupform-h3 {
     width: 70%!important;
-    justify-self: center!important;
-    margin-top: 30px!important;
     color: var(--light)!important;
-    margin-left: 15%!important;
     font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
 }
 
 .img-banner-startup {
-    margin-top: 5%!important;
     width: 200px!important;
     height: 200px!important;
 }
 
 .formside {
     font-family: Ubuntu!important;
+    display: grid!important;
+    padding-top: 4%;
+    padding-left: 5%;
 }
 
 .form-control {
@@ -106,14 +108,14 @@
     background-color: #fff;
 }
 
-#error_message_startup{
+#error_message_startup {
     display: none;
 }
 
 #send-st {
     margin-top: 15px;
-    margin-left: 130px;
+    margin-left: 45%;
     background-color: #66ced6;
     color: #fff;
-    font-weight:300;
+    font-weight: 300;
 }
