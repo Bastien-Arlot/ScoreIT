@@ -8,7 +8,7 @@
     margin-top: 40px;
     padding-bottom: 10px;
     text-align: center;
-    font-family: Ubuntu;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
     color: black;
 }
 
@@ -46,15 +46,14 @@
     margin-left: 130px;
     background-color: #66ced6;
     color: #fff;
-    font-weight:300;
+    font-weight: 300;
 }
 
 #register {
     margin-top: 15px;
-   
     background-color: #66ced6;
     color: #fff;
-    font-weight:300;
+    font-weight: 300;
 }
 
 .signin-form-check {
@@ -80,7 +79,7 @@
     border-color: var(--prim)!important;
     border-radius: 20px!important;
     border-width: 1.5px!important;
-    font-family: Ubuntu!important;
+    font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
     color: var(--prim)!important;
     font-size: 20px!important;
 }
