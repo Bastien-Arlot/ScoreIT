@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_04_01_132957) do
 
   # These are extensions that must be enabled in order to support this database
@@ -186,17 +185,6 @@ ActiveRecord::Schema.define(version: 2022_04_01_132957) do
     t.datetime "updated_at", null: false
     t.bigint "score_id"
     t.index ["score_id"], name: "index_category_teams_on_score_id"
-  end
-
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string "slug", null: false
-    t.integer "sluggable_id", null: false
-    t.string "sluggable_type", limit: 50
-    t.string "scope"
-    t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "order_timers", force: :cascade do |t|
