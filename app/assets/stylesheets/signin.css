@@ -19,12 +19,12 @@
     justify-content: center;
     width: 60vh;
     height: auto;
-    background: rgba( 247, 247, 247, 0.35);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 6px);
-    -webkit-backdrop-filter: blur( 6px);
+    background: rgba(247, 247, 247, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .signin-form-group {
@@ -36,8 +36,8 @@
 }
 
 .form-control {
-    border: solid!important;
-    border-color: var(--prim)!important;
+    border: solid !important;
+    border-color: var(--prim) !important;
 }
 
 #letsgo {
@@ -72,22 +72,22 @@
 }
 
 .btn-signinform {
-    margin-top: 10px!important;
-    background-color: none!important;
-    height: 90px!important;
-    width: 130px!important;
-    border-color: var(--prim)!important;
-    border-radius: 20px!important;
-    border-width: 1.5px!important;
+    margin-top: 10px !important;
+    background-color: none !important;
+    height: 90px !important;
+    width: 130px !important;
+    border-color: var(--prim) !important;
+    border-radius: 20px !important;
+    border-width: 1.5px !important;
     font-family: 'Ubuntu', 'Roboto', 'Poppins', 'Maven Pro', sans-serif;
-    color: var(--prim)!important;
-    font-size: 20px!important;
+    color: var(--prim) !important;
+    font-size: 20px !important;
 }
 
 .btn-signinform:hover {
-    background-color: var(--prim)!important;
-    color: var(--light)!important;
-    border-color: none!important;
+    background-color: var(--prim) !important;
+    color: var(--light) !important;
+    border-color: none !important;
 }
 
 .links-submit-form {
