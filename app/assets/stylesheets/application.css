@@ -14,8 +14,7 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@100;200&family=Roboto:wght@100;300&family=Ubuntu:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@100;200&family=Roboto:wght@100;300&family=Ubuntu&display=swap');
 :root {
     --prim: #9e45d1 !important;
     --second: #66ced6 !important;
