@@ -71,7 +71,6 @@ class Score < ApplicationRecord
   validate :score_exist?, on: :create
   validate :delay_score, on: :create
 
-
   def score_exist?
 
     @score_exist = Score.where(startup_id: self.startup_id).last
@@ -91,15 +90,12 @@ class Score < ApplicationRecord
 
       @last_score = @score.last
 
-      @now_90 =  @last_score.name.to_date + 90
-      puts @now_90
+      @now_90 = @last_score.name.to_date + 90
       if @now_90 < Date.today || @last_score.startup.havecredit == true
-        puts "$"*850
         return true
       else
-      puts "€"*850
-      puts  errors.add(:score_delay, "Error, not enough delay. The delay should be 90 days.")
-      return false
+        puts errors.add(:score_delay, "Error, not enough delay. The delay should be 90 days.")
+        return false
       end
     else
       return true
@@ -119,6 +115,5 @@ class Score < ApplicationRecord
     )
     @category_finance.save
   end
-
 
 end

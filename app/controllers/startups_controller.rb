@@ -23,10 +23,9 @@ class StartupsController < ApplicationController
     end
   end
 
-
   def show
 
-    @startup = Startup.find_by(user_id:current_user.id)
+    @startup = Startup.find_by(user_id: current_user.id)
     @scores = Score.all
     @score_last = @startup.scores.last
     @all_my_rate = @scores.where(startup_id: current_user.startup.id)
@@ -35,12 +34,12 @@ class StartupsController < ApplicationController
     @myscore = @scores.where(startup_id: current_user.startup.id, isbuy: true)
 
     respond_to do |format|
-      format.html { }
-      format.js { }
+      format.html {}
+      format.js {}
 
       format.pdf do
 
-        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ",template: "startups/certificate.html.erb"
+        render pdf: "Certificat notation pour #{@startup.name} du #{@score.name} ", template: "startups/certificate.html.erb"
 
       end
     end
@@ -50,7 +49,7 @@ class StartupsController < ApplicationController
   end
 
   def destroy
-    @startup = Startup.find_by(user_id:current_user.id).destroy()
+    @startup = Startup.find_by(user_id: current_user.id).destroy()
     redirect_to root_path
   end
 

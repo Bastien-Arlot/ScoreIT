@@ -15,38 +15,32 @@ class AnswerFinance < ApplicationRecord
     @total = 0
 
     case self.answer_finance_1
-      when 0..3
-        @total = @total - 1
-      when 3..10
-        @total = @total
-      else
-        @total = @total + 1
+    when 0..3
+      @total = @total - 1
+    when 3..10
+      @total = @total
+    else
+      @total = @total + 1
     end
-    puts @total
 
     if self.answer_finance_2 == 1
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_finance_3 == 2
       @total = @total + 1
     end
-    puts @total
 
     case self.answer_finance_4
-      when 1..2
-        @total = @total + 1
-      else
-        @total = @total
+    when 1..2
+      @total = @total + 1
+    else
+      @total = @total
     end
-    puts @total
 
     if self.answer_finance_5 == 1
       @total = @total + 1
     end
-    puts @total
-
 
     @total_max = 5
 
@@ -54,10 +48,12 @@ class AnswerFinance < ApplicationRecord
       @total = 0
     end
 
-    @total_100 = (@total.to_i*100)/@total_max.to_i
+    @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryFinance.find(self.category_finance_id)
+
     @category.update(total_rate_finance:@total, max_rate_finance:@total_max, total_100_finance:@total_100.floor)
+
 
   end
 

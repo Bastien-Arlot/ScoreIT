@@ -20,40 +20,32 @@ class AnswerInnovation < ApplicationRecord
     if self.answer_innovation_1 == 1
       @total = @total + 2
     end
-    puts @total
 
     if self.answer_innovation_2 == 4
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_innovation_3.to_i > 20
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_innovation_4 == 1
       @total = @total + 2
     end
-    puts @total
 
     if self.answer_innovation_5.to_i > 1
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_innovation_6 == 1
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_innovation_7 == 1
-      @total = @total +1
+      @total = @total + 1
     else
       @total = @total - 1
     end
-    puts @total
-
 
     @total_max = 9
 
@@ -61,11 +53,12 @@ class AnswerInnovation < ApplicationRecord
       @total = 0
     end
 
-    @total_100 = (@total.to_i*100)/@total_max.to_i
-
+    @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryInnovation.find(self.category_innovation_id)
+
     @category.update(total_rate_innovation:@total, max_rate_innovation:@total_max, total_100_innovation:@total_100.floor)
+
   end
 
 end
