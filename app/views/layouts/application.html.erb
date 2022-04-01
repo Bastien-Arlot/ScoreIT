@@ -8,8 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-  
-    <!--------- Bootstrap ------------>
+
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
     <%= javascript_include_tag 'bootstrap.min', media: 'all' %>
 
@@ -18,7 +17,7 @@
 
     <%= stylesheet_link_tag 'notyf.min', media: 'all' %>
     <%= javascript_include_tag 'notyf.min', media: 'all' %>
-    
+
     <%= javascript_include_tag 'chart.min', media: 'all' %>
     <%= stylesheet_link_tag 'chart.min', media: 'all' %>
 
@@ -29,14 +28,13 @@
 
 
 
-    <!--------- Favicon ------------>
     <%= favicon_link_tag asset_path('logo.ico') %>
-    
+
 
   </head>
 
   <body>
-    
+
     <%= render 'layouts/navbar'  %>
     <%= render 'layouts/flash'  %>
     <div class="main">
@@ -45,4 +43,4 @@
      <%= render 'layouts/footer' %>
   </body>
 
-</html> 
+</html>
