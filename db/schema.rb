@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_124349) do
+ActiveRecord::Schema.define(version: 2022_04_01_083449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -187,6 +187,26 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.index ["score_id"], name: "index_category_teams_on_score_id"
   end
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "order_timers", force: :cascade do |t|
+    t.string "email"
+    t.string "username"
+    t.string "startup_id"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "email"
     t.string "username"
@@ -205,6 +225,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.datetime "updated_at", null: false
     t.bigint "startup_id"
     t.string "certificatenumber"
+    t.boolean "isbuy", default: false
     t.index ["startup_id"], name: "index_scores_on_startup_id"
   end
 
@@ -214,6 +235,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_124349) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.boolean "havecredit", default: false
     t.index ["user_id"], name: "index_startups_on_user_id"
   end
 
