@@ -19,85 +19,72 @@ class AnswerStrategy < ApplicationRecord
 
   def scoring_strategy
 
-    puts "$"*800
-
     @total = 0
 
     case self.answer_strategy_1
-      when 1
-        @total = @total + 2
-      when 2..5
-        @total = @total + 1
-      else
-        @total = @total
+    when 1
+      @total = @total + 2
+    when 2..5
+      @total = @total + 1
+    else
+      @total = @total
     end
 
-    puts @total
     if self.answer_strategy_2 == 1
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_strategy_3 == 1
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_strategy_4 == 1
       @total = @total - 1
     end
-    puts @total
 
     if self.answer_strategy_5 == 1
       @total = @total + 1
     end
-    puts @total
 
     case self.answer_strategy_6
-      when 1
-        @total = @total 
-      when 2..3
-        @total = @total + 1
-      else
-        @total = @total + 2
+    when 1
+      @total = @total
+    when 2..3
+      @total = @total + 1
+    else
+      @total = @total + 2
     end
 
     if self.answer_strategy_7 == 1
       @total = @total + 2
     end
-    puts @total
 
     if self.answer_strategy_8 == 1
       @total = @total + 1
     end
-    puts @total
 
     case self.answer_strategy_9
-      when 1
-        @total = @total + 1
-      else
-        @total = @total - 1
+    when 1
+      @total = @total + 1
+    else
+      @total = @total - 1
     end
 
     case self.answer_strategy_10
-      when 1
-        @total = @total + 1
-      else
-        @total = @total - 1
+    when 1
+      @total = @total + 1
+    else
+      @total = @total - 1
     end
 
     case self.answer_strategy_11
-      when 1..4
-        @total = @total - 1
-      when 5..7
-        @total = @total + 1
-      else
-        @total = @total + 2
+    when 1..4
+      @total = @total - 1
+    when 5..7
+      @total = @total + 1
+    else
+      @total = @total + 2
     end
-
-
-
-
 
     @total_max = 14
 
@@ -105,11 +92,10 @@ class AnswerStrategy < ApplicationRecord
       @total = 0
     end
 
-    @total_100 = (@total.to_i*100)/@total_max.to_i
-
+    @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryStrategy.find(self.category_strategy_id)
-    @category.update(total_notation_strategy:@total, max_notation_strategy:@total_max, total_100_strategy:@total_100.floor)
+    @category.update(total_notation_strategy: @total, max_notation_strategy: @total_max, total_100_strategy: @total_100.floor)
   end
 
 end

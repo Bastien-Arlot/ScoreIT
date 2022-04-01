@@ -21,58 +21,50 @@ class AnswerMarket < ApplicationRecord
     if self.answer_market_1 == 1
       @total = @total - 1
     end
-    puts @total
     if self.answer_market_2 == 1
       @total = @total - 3
     end
-    puts @total
 
     if self.answer_market_3.to_i > 50
       @total = @total + 1
     end
-    puts @total
 
     if self.answer_market_3.to_i > 50 && self.answer_market_4.to_i > 50
       @total = @total - 1
     elsif self.answer_market_4 < 15
       @total = @total + 1
     end
-    puts @total
 
     case self.answer_market_5
-      when 0
-        @total = @total
-      when 2..10
-        @total = @total + 2
-      else
-        @total = @total + 1
+    when 0
+      @total = @total
+    when 2..10
+      @total = @total + 2
+    else
+      @total = @total + 1
     end
-    puts @total
 
     if self.answer_market_6 == 1
       @total = @total + 1
     end
-    puts @total
 
     case self.answer_market_7
-      when 2..9
-        @total = @total + 1
-      when 10
-        @total = @total + 3
-      else
-        @total = @total
+    when 2..9
+      @total = @total + 1
+    when 10
+      @total = @total + 3
+    else
+      @total = @total
     end
-    puts @total
 
     case self.answer_market_8
-      when 5..7
-        @total = @total + 1
-      when 8..10
-        @total = @total + 2
-      else
-        @total = @total
+    when 5..7
+      @total = @total + 1
+    when 8..10
+      @total = @total + 2
+    else
+      @total = @total
     end
-    puts @total
 
     @total_max = 10
 
@@ -80,11 +72,10 @@ class AnswerMarket < ApplicationRecord
       @total = 0
     end
 
-    @total_100 = (@total.to_i*100)/@total_max.to_i
-
+    @total_100 = (@total.to_i * 100) / @total_max.to_i
 
     @category = CategoryMarket.find(self.category_market_id)
-    @category.update(total_notation_market:@total, max_notation_market:@total_max, total_100_market:@total_100.floor)
+    @category.update(total_notation_market: @total, max_notation_market: @total_max, total_100_market: @total_100.floor)
   end
 
 end
