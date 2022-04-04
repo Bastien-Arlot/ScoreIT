@@ -35,3 +35,7 @@
 #admin_show_dashboard {
     margin-top: 300px !important;
 }
+
+.text-color-danger {
+    color: var(--danger);
+}
